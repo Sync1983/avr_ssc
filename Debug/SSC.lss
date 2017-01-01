@@ -1,0 +1,4311 @@
+
+SSC.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  00800100  000018ea  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00001876  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000196  00800100  00800100  000018ea  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  000018ea  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  0000191c  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 000000a0  00000000  00000000  0000195c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   0000471f  00000000  00000000  000019fc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00001890  00000000  00000000  0000611b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   0000125b  00000000  00000000  000079ab  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  000006f8  00000000  00000000  00008c08  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    000015c3  00000000  00000000  00009300  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00001b7a  00000000  00000000  0000a8c3  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000048  00000000  00000000  0000c43d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+       0:	0c 94 63 00 	jmp	0xc6	; 0xc6 <__ctors_end>
+       4:	0c 94 80 00 	jmp	0x100	; 0x100 <__bad_interrupt>
+       8:	0c 94 80 00 	jmp	0x100	; 0x100 <__bad_interrupt>
+       c:	0c 94 80 00 	jmp	0x100	; 0x100 <__bad_interrupt>
+      10:	0c 94 80 00 	jmp	0x100	; 0x100 <__bad_interrupt>
+      14:	0c 94 80 00 	jmp	0x100	; 0x100 <__bad_interrupt>
+      18:	0c 94 80 00 	jmp	0x100	; 0x100 <__bad_interrupt>
+      1c:	0c 94 80 00 	jmp	0x100	; 0x100 <__bad_interrupt>
+      20:	0c 94 80 00 	jmp	0x100	; 0x100 <__bad_interrupt>
+      24:	0c 94 80 00 	jmp	0x100	; 0x100 <__bad_interrupt>
+      28:	0c 94 4c 01 	jmp	0x298	; 0x298 <__vector_10>
+      2c:	0c 94 72 01 	jmp	0x2e4	; 0x2e4 <__vector_11>
+      30:	0c 94 80 00 	jmp	0x100	; 0x100 <__bad_interrupt>
+      34:	0c 94 80 00 	jmp	0x100	; 0x100 <__bad_interrupt>
+      38:	0c 94 80 00 	jmp	0x100	; 0x100 <__bad_interrupt>
+      3c:	0c 94 80 00 	jmp	0x100	; 0x100 <__bad_interrupt>
+      40:	0c 94 80 00 	jmp	0x100	; 0x100 <__bad_interrupt>
+      44:	0c 94 80 00 	jmp	0x100	; 0x100 <__bad_interrupt>
+      48:	0c 94 80 00 	jmp	0x100	; 0x100 <__bad_interrupt>
+      4c:	0c 94 80 00 	jmp	0x100	; 0x100 <__bad_interrupt>
+      50:	0c 94 80 00 	jmp	0x100	; 0x100 <__bad_interrupt>
+      54:	0c 94 98 01 	jmp	0x330	; 0x330 <__vector_21>
+      58:	0c 94 d5 01 	jmp	0x3aa	; 0x3aa <__vector_22>
+      5c:	0c 94 80 00 	jmp	0x100	; 0x100 <__bad_interrupt>
+      60:	0c 94 80 00 	jmp	0x100	; 0x100 <__bad_interrupt>
+      64:	0c 94 80 00 	jmp	0x100	; 0x100 <__bad_interrupt>
+      68:	0c 94 80 00 	jmp	0x100	; 0x100 <__bad_interrupt>
+      6c:	0c 94 80 00 	jmp	0x100	; 0x100 <__bad_interrupt>
+      70:	0c 94 80 00 	jmp	0x100	; 0x100 <__bad_interrupt>
+      74:	0c 94 80 00 	jmp	0x100	; 0x100 <__bad_interrupt>
+      78:	0c 94 80 00 	jmp	0x100	; 0x100 <__bad_interrupt>
+      7c:	0c 94 80 00 	jmp	0x100	; 0x100 <__bad_interrupt>
+      80:	0c 94 80 00 	jmp	0x100	; 0x100 <__bad_interrupt>
+      84:	0c 94 80 00 	jmp	0x100	; 0x100 <__bad_interrupt>
+      88:	0c 94 80 00 	jmp	0x100	; 0x100 <__bad_interrupt>
+      8c:	0c 94 80 00 	jmp	0x100	; 0x100 <__bad_interrupt>
+      90:	0c 94 80 00 	jmp	0x100	; 0x100 <__bad_interrupt>
+      94:	0c 94 80 00 	jmp	0x100	; 0x100 <__bad_interrupt>
+      98:	0c 94 80 00 	jmp	0x100	; 0x100 <__bad_interrupt>
+      9c:	0c 94 80 00 	jmp	0x100	; 0x100 <__bad_interrupt>
+      a0:	0c 94 80 00 	jmp	0x100	; 0x100 <__bad_interrupt>
+      a4:	0c 94 80 00 	jmp	0x100	; 0x100 <__bad_interrupt>
+      a8:	0c 94 80 00 	jmp	0x100	; 0x100 <__bad_interrupt>
+      ac:	5d 09       	sbc	r21, r13
+      ae:	61 09       	sbc	r22, r1
+      b0:	77 09       	sbc	r23, r7
+      b2:	63 09       	sbc	r22, r3
+      b4:	77 09       	sbc	r23, r7
+      b6:	65 09       	sbc	r22, r5
+      b8:	6c 09       	sbc	r22, r12
+      ba:	89 09       	sbc	r24, r9
+      bc:	89 09       	sbc	r24, r9
+      be:	70 09       	sbc	r23, r0
+      c0:	89 09       	sbc	r24, r9
+      c2:	89 09       	sbc	r24, r9
+
+000000c4 <__ctors_start>:
+      c4:	08 03       	fmul	r16, r16
+
+000000c6 <__ctors_end>:
+      c6:	11 24       	eor	r1, r1
+      c8:	1f be       	out	0x3f, r1	; 63
+      ca:	cf ef       	ldi	r28, 0xFF	; 255
+      cc:	da e0       	ldi	r29, 0x0A	; 10
+      ce:	de bf       	out	0x3e, r29	; 62
+      d0:	cd bf       	out	0x3d, r28	; 61
+
+000000d2 <__do_clear_bss>:
+      d2:	22 e0       	ldi	r18, 0x02	; 2
+      d4:	a0 e0       	ldi	r26, 0x00	; 0
+      d6:	b1 e0       	ldi	r27, 0x01	; 1
+      d8:	01 c0       	rjmp	.+2      	; 0xdc <.do_clear_bss_start>
+
+000000da <.do_clear_bss_loop>:
+      da:	1d 92       	st	X+, r1
+
+000000dc <.do_clear_bss_start>:
+      dc:	a6 39       	cpi	r26, 0x96	; 150
+      de:	b2 07       	cpc	r27, r18
+      e0:	e1 f7       	brne	.-8      	; 0xda <.do_clear_bss_loop>
+
+000000e2 <__do_global_ctors>:
+      e2:	10 e0       	ldi	r17, 0x00	; 0
+      e4:	c3 e6       	ldi	r28, 0x63	; 99
+      e6:	d0 e0       	ldi	r29, 0x00	; 0
+      e8:	04 c0       	rjmp	.+8      	; 0xf2 <__do_global_ctors+0x10>
+      ea:	21 97       	sbiw	r28, 0x01	; 1
+      ec:	fe 01       	movw	r30, r28
+      ee:	0e 94 33 0c 	call	0x1866	; 0x1866 <__tablejump2__>
+      f2:	c2 36       	cpi	r28, 0x62	; 98
+      f4:	d1 07       	cpc	r29, r17
+      f6:	c9 f7       	brne	.-14     	; 0xea <__do_global_ctors+0x8>
+      f8:	0e 94 b2 02 	call	0x564	; 0x564 <main>
+      fc:	0c 94 39 0c 	jmp	0x1872	; 0x1872 <_exit>
+
+00000100 <__bad_interrupt>:
+     100:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000104 <_ZN10ledControl6addPinEhP5pinIO>:
+ #include <util/delay.h>
+ #include "led.h"
+ #include "../pincontrol.h"
+
+ void ledControl::addPin(uint8_t num, pinIO *control){
+    if( num > 7 ){
+     104:	68 30       	cpi	r22, 0x08	; 8
+     106:	40 f4       	brcc	.+16     	; 0x118 <_ZN10ledControl6addPinEhP5pinIO+0x14>
+      return;
+    }
+    this->ledPin[num] = control;
+     108:	70 e0       	ldi	r23, 0x00	; 0
+     10a:	66 0f       	add	r22, r22
+     10c:	77 1f       	adc	r23, r23
+     10e:	fc 01       	movw	r30, r24
+     110:	e6 0f       	add	r30, r22
+     112:	f7 1f       	adc	r31, r23
+     114:	51 83       	std	Z+1, r21	; 0x01
+     116:	40 83       	st	Z, r20
+     118:	08 95       	ret
+
+0000011a <_ZN10ledControl5blinkEhjj>:
+ }
+
+ void ledControl::blink(uint8_t leds,uint16_t tOn, uint16_t tOff){
+     11a:	7f 92       	push	r7
+     11c:	8f 92       	push	r8
+     11e:	9f 92       	push	r9
+     120:	af 92       	push	r10
+     122:	bf 92       	push	r11
+     124:	cf 92       	push	r12
+     126:	df 92       	push	r13
+     128:	ef 92       	push	r14
+     12a:	ff 92       	push	r15
+     12c:	0f 93       	push	r16
+     12e:	1f 93       	push	r17
+     130:	cf 93       	push	r28
+     132:	df 93       	push	r29
+     134:	76 2e       	mov	r7, r22
+     136:	ea 01       	movw	r28, r20
+     138:	89 01       	movw	r16, r18
+     13a:	c8 2e       	mov	r12, r24
+     13c:	d9 2e       	mov	r13, r25
+     13e:	a8 2e       	mov	r10, r24
+     140:	b9 2e       	mov	r11, r25
+     142:	e1 2c       	mov	r14, r1
+     144:	f1 2c       	mov	r15, r1
+    uint8_t mask,i;
+    for(i = 0; i<7; i++){
+      mask = 1<<i;
+     146:	88 24       	eor	r8, r8
+     148:	83 94       	inc	r8
+     14a:	91 2c       	mov	r9, r1
+     14c:	c4 01       	movw	r24, r8
+     14e:	0e 2c       	mov	r0, r14
+     150:	02 c0       	rjmp	.+4      	; 0x156 <_ZN10ledControl5blinkEhjj+0x3c>
+     152:	88 0f       	add	r24, r24
+     154:	99 1f       	adc	r25, r25
+     156:	0a 94       	dec	r0
+     158:	e2 f7       	brpl	.-8      	; 0x152 <_ZN10ledControl5blinkEhjj+0x38>
+      if( ( (leds&mask) == mask ) && (this->ledPin[i] != 0) ){
+     15a:	97 2d       	mov	r25, r7
+     15c:	98 23       	and	r25, r24
+     15e:	98 13       	cpse	r25, r24
+     160:	07 c0       	rjmp	.+14     	; 0x170 <_ZN10ledControl5blinkEhjj+0x56>
+     162:	f5 01       	movw	r30, r10
+     164:	80 81       	ld	r24, Z
+     166:	91 81       	ldd	r25, Z+1	; 0x01
+     168:	00 97       	sbiw	r24, 0x00	; 0
+     16a:	11 f0       	breq	.+4      	; 0x170 <_ZN10ledControl5blinkEhjj+0x56>
+        this->ledPin[i]->Set();
+     16c:	0e 94 37 03 	call	0x66e	; 0x66e <_ZN5pinIO3SetEv>
+     170:	ff ef       	ldi	r31, 0xFF	; 255
+     172:	ef 1a       	sub	r14, r31
+     174:	ff 0a       	sbc	r15, r31
+     176:	22 e0       	ldi	r18, 0x02	; 2
+     178:	a2 0e       	add	r10, r18
+     17a:	b1 1c       	adc	r11, r1
+    this->ledPin[num] = control;
+ }
+
+ void ledControl::blink(uint8_t leds,uint16_t tOn, uint16_t tOff){
+    uint8_t mask,i;
+    for(i = 0; i<7; i++){
+     17c:	87 e0       	ldi	r24, 0x07	; 7
+     17e:	e8 16       	cp	r14, r24
+     180:	f1 04       	cpc	r15, r1
+     182:	21 f7       	brne	.-56     	; 0x14c <_ZN10ledControl5blinkEhjj+0x32>
+      if( ( (leds&mask) == mask ) && (this->ledPin[i] != 0) ){
+        this->ledPin[i]->Set();
+      }
+    }
+
+    while(tOn--){
+     184:	20 97       	sbiw	r28, 0x00	; 0
+     186:	91 f1       	breq	.+100    	; 0x1ec <_ZN10ledControl5blinkEhjj+0xd2>
+     188:	ae 01       	movw	r20, r28
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+     18a:	e9 ef       	ldi	r30, 0xF9	; 249
+     18c:	f0 e0       	ldi	r31, 0x00	; 0
+     18e:	31 97       	sbiw	r30, 0x01	; 1
+     190:	f1 f7       	brne	.-4      	; 0x18e <_ZN10ledControl5blinkEhjj+0x74>
+     192:	00 c0       	rjmp	.+0      	; 0x194 <_ZN10ledControl5blinkEhjj+0x7a>
+     194:	00 00       	nop
+     196:	41 50       	subi	r20, 0x01	; 1
+     198:	51 09       	sbc	r21, r1
+     19a:	b9 f7       	brne	.-18     	; 0x18a <_ZN10ledControl5blinkEhjj+0x70>
+     19c:	27 c0       	rjmp	.+78     	; 0x1ec <_ZN10ledControl5blinkEhjj+0xd2>
+      _delay_us(1000);
+    }
+
+    for(i = 0; i<7; i++){
+      mask = 1<<i;
+     19e:	c7 01       	movw	r24, r14
+     1a0:	0c 2e       	mov	r0, r28
+     1a2:	02 c0       	rjmp	.+4      	; 0x1a8 <_ZN10ledControl5blinkEhjj+0x8e>
+     1a4:	88 0f       	add	r24, r24
+     1a6:	99 1f       	adc	r25, r25
+     1a8:	0a 94       	dec	r0
+     1aa:	e2 f7       	brpl	.-8      	; 0x1a4 <_ZN10ledControl5blinkEhjj+0x8a>
+      if( ( (leds&mask) == mask ) && (this->ledPin[i] != 0) ){
+     1ac:	97 2d       	mov	r25, r7
+     1ae:	98 23       	and	r25, r24
+     1b0:	98 13       	cpse	r25, r24
+     1b2:	07 c0       	rjmp	.+14     	; 0x1c2 <_ZN10ledControl5blinkEhjj+0xa8>
+     1b4:	f6 01       	movw	r30, r12
+     1b6:	80 81       	ld	r24, Z
+     1b8:	91 81       	ldd	r25, Z+1	; 0x01
+     1ba:	00 97       	sbiw	r24, 0x00	; 0
+     1bc:	11 f0       	breq	.+4      	; 0x1c2 <_ZN10ledControl5blinkEhjj+0xa8>
+        this->ledPin[i]->Clr();
+     1be:	0e 94 48 03 	call	0x690	; 0x690 <_ZN5pinIO3ClrEv>
+     1c2:	21 96       	adiw	r28, 0x01	; 1
+     1c4:	f2 e0       	ldi	r31, 0x02	; 2
+     1c6:	cf 0e       	add	r12, r31
+     1c8:	d1 1c       	adc	r13, r1
+
+    while(tOn--){
+      _delay_us(1000);
+    }
+
+    for(i = 0; i<7; i++){
+     1ca:	c7 30       	cpi	r28, 0x07	; 7
+     1cc:	d1 05       	cpc	r29, r1
+     1ce:	39 f7       	brne	.-50     	; 0x19e <_ZN10ledControl5blinkEhjj+0x84>
+      if( ( (leds&mask) == mask ) && (this->ledPin[i] != 0) ){
+        this->ledPin[i]->Clr();
+      }
+    }
+
+    while(tOff--){
+     1d0:	01 15       	cp	r16, r1
+     1d2:	11 05       	cpc	r17, r1
+     1d4:	89 f0       	breq	.+34     	; 0x1f8 <_ZN10ledControl5blinkEhjj+0xde>
+     1d6:	98 01       	movw	r18, r16
+     1d8:	89 ef       	ldi	r24, 0xF9	; 249
+     1da:	90 e0       	ldi	r25, 0x00	; 0
+     1dc:	01 97       	sbiw	r24, 0x01	; 1
+     1de:	f1 f7       	brne	.-4      	; 0x1dc <_ZN10ledControl5blinkEhjj+0xc2>
+     1e0:	00 c0       	rjmp	.+0      	; 0x1e2 <_ZN10ledControl5blinkEhjj+0xc8>
+     1e2:	00 00       	nop
+     1e4:	21 50       	subi	r18, 0x01	; 1
+     1e6:	31 09       	sbc	r19, r1
+     1e8:	b9 f7       	brne	.-18     	; 0x1d8 <_ZN10ledControl5blinkEhjj+0xbe>
+     1ea:	06 c0       	rjmp	.+12     	; 0x1f8 <_ZN10ledControl5blinkEhjj+0xde>
+      if( ( (leds&mask) == mask ) && (this->ledPin[i] != 0) ){
+        this->ledPin[i]->Set();
+      }
+    }
+
+    while(tOn--){
+     1ec:	c0 e0       	ldi	r28, 0x00	; 0
+     1ee:	d0 e0       	ldi	r29, 0x00	; 0
+      _delay_us(1000);
+    }
+
+    for(i = 0; i<7; i++){
+      mask = 1<<i;
+     1f0:	ee 24       	eor	r14, r14
+     1f2:	e3 94       	inc	r14
+     1f4:	f1 2c       	mov	r15, r1
+     1f6:	d3 cf       	rjmp	.-90     	; 0x19e <_ZN10ledControl5blinkEhjj+0x84>
+    }
+
+    while(tOff--){
+      _delay_us(1000);
+    }
+     1f8:	df 91       	pop	r29
+     1fa:	cf 91       	pop	r28
+     1fc:	1f 91       	pop	r17
+     1fe:	0f 91       	pop	r16
+     200:	ff 90       	pop	r15
+     202:	ef 90       	pop	r14
+     204:	df 90       	pop	r13
+     206:	cf 90       	pop	r12
+     208:	bf 90       	pop	r11
+     20a:	af 90       	pop	r10
+     20c:	9f 90       	pop	r9
+     20e:	8f 90       	pop	r8
+     210:	7f 90       	pop	r7
+     212:	08 95       	ret
+
+00000214 <_Z11onGetStatusP3USB>:
+  stepControl.onRise(&stepControl);
+  TIFR0 &= ~(1<<OCR0B);
+}
+
+bool onGetStatus(USB *handle){    
+  handle->writeBuf((const uint8_t*)&status,sizeof(DEVICE_STATUS),16);  
+     214:	20 e1       	ldi	r18, 0x10	; 16
+     216:	4d e0       	ldi	r20, 0x0D	; 13
+     218:	6d e2       	ldi	r22, 0x2D	; 45
+     21a:	71 e0       	ldi	r23, 0x01	; 1
+     21c:	0e 94 f1 06 	call	0xde2	; 0xde2 <_ZN3USB8writeBufEPKhhh>
+  return true;  
+}
+     220:	81 e0       	ldi	r24, 0x01	; 1
+     222:	08 95       	ret
+
+00000224 <_Z9onSetDataP3USB>:
+
+bool onSetData(USB *handle){    
+     224:	0f 93       	push	r16
+  uint16_t cnt = UEBCX;
+     226:	40 91 f2 00 	lds	r20, 0x00F2	; 0x8000f2 <__TEXT_REGION_LENGTH__+0x7e00f2>
+     22a:	50 91 f3 00 	lds	r21, 0x00F3	; 0x8000f3 <__TEXT_REGION_LENGTH__+0x7e00f3>
+  uint8_t mask = PORTF & 0b11100000;
+     22e:	21 b3       	in	r18, 0x11	; 17
+
+  handle->readBuf((uint8_t*)&dp, cnt);
+     230:	66 e2       	ldi	r22, 0x26	; 38
+     232:	71 e0       	ldi	r23, 0x01	; 1
+     234:	0e 94 e4 06 	call	0xdc8	; 0xdc8 <_ZN3USB7readBufEPhh>
+  isError = !stepControl.isDone();  
+     238:	82 e5       	ldi	r24, 0x52	; 82
+     23a:	91 e0       	ldi	r25, 0x01	; 1
+     23c:	0e 94 88 03 	call	0x710	; 0x710 <_ZN11StepControl6isDoneEv>
+     240:	91 e0       	ldi	r25, 0x01	; 1
+     242:	89 27       	eor	r24, r25
+     244:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <_edata>
+  mask = stepControl.goTo(dp.posX, dp.posY, dp.posZ, dp.coils);
+     248:	e6 e2       	ldi	r30, 0x26	; 38
+     24a:	f1 e0       	ldi	r31, 0x01	; 1
+     24c:	24 81       	ldd	r18, Z+4	; 0x04
+     24e:	35 81       	ldd	r19, Z+5	; 0x05
+     250:	42 81       	ldd	r20, Z+2	; 0x02
+     252:	53 81       	ldd	r21, Z+3	; 0x03
+     254:	60 81       	ld	r22, Z
+     256:	71 81       	ldd	r23, Z+1	; 0x01
+     258:	06 81       	ldd	r16, Z+6	; 0x06
+     25a:	82 e5       	ldi	r24, 0x52	; 82
+     25c:	91 e0       	ldi	r25, 0x01	; 1
+     25e:	0e 94 be 03 	call	0x77c	; 0x77c <_ZN11StepControl4goToEiiih>
+  if( mask & (1<<2) ) {
+     262:	82 fd       	sbrc	r24, 2
+    mask |= (1<<4);
+     264:	80 61       	ori	r24, 0x10	; 16
+  }
+  PORTF = mask;
+     266:	81 bb       	out	0x11, r24	; 17
+
+  fullPosition++;
+     268:	80 91 03 01 	lds	r24, 0x0103	; 0x800103 <fullPosition>
+     26c:	90 91 04 01 	lds	r25, 0x0104	; 0x800104 <fullPosition+0x1>
+     270:	a0 91 05 01 	lds	r26, 0x0105	; 0x800105 <fullPosition+0x2>
+     274:	b0 91 06 01 	lds	r27, 0x0106	; 0x800106 <fullPosition+0x3>
+     278:	01 96       	adiw	r24, 0x01	; 1
+     27a:	a1 1d       	adc	r26, r1
+     27c:	b1 1d       	adc	r27, r1
+     27e:	80 93 03 01 	sts	0x0103, r24	; 0x800103 <fullPosition>
+     282:	90 93 04 01 	sts	0x0104, r25	; 0x800104 <fullPosition+0x1>
+     286:	a0 93 05 01 	sts	0x0105, r26	; 0x800105 <fullPosition+0x2>
+     28a:	b0 93 06 01 	sts	0x0106, r27	; 0x800106 <fullPosition+0x3>
+  isWork = true;
+     28e:	81 e0       	ldi	r24, 0x01	; 1
+     290:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <isWork>
+  
+  return true;
+}
+     294:	0f 91       	pop	r16
+     296:	08 95       	ret
+
+00000298 <__vector_10>:
+uint32_t fullPosition = 0;
+bool isInit = false;
+bool isWork = false;
+bool isError = false;
+
+ISR(USB_GEN_vect, ISR_BLOCK){
+     298:	1f 92       	push	r1
+     29a:	0f 92       	push	r0
+     29c:	0f b6       	in	r0, 0x3f	; 63
+     29e:	0f 92       	push	r0
+     2a0:	11 24       	eor	r1, r1
+     2a2:	2f 93       	push	r18
+     2a4:	3f 93       	push	r19
+     2a6:	4f 93       	push	r20
+     2a8:	5f 93       	push	r21
+     2aa:	6f 93       	push	r22
+     2ac:	7f 93       	push	r23
+     2ae:	8f 93       	push	r24
+     2b0:	9f 93       	push	r25
+     2b2:	af 93       	push	r26
+     2b4:	bf 93       	push	r27
+     2b6:	ef 93       	push	r30
+     2b8:	ff 93       	push	r31
+  USB::onGenEvent((USB*)&usbControl);  
+     2ba:	86 e7       	ldi	r24, 0x76	; 118
+     2bc:	91 e0       	ldi	r25, 0x01	; 1
+     2be:	0e 94 a0 08 	call	0x1140	; 0x1140 <_ZN3USB10onGenEventEPS_>
+}
+     2c2:	ff 91       	pop	r31
+     2c4:	ef 91       	pop	r30
+     2c6:	bf 91       	pop	r27
+     2c8:	af 91       	pop	r26
+     2ca:	9f 91       	pop	r25
+     2cc:	8f 91       	pop	r24
+     2ce:	7f 91       	pop	r23
+     2d0:	6f 91       	pop	r22
+     2d2:	5f 91       	pop	r21
+     2d4:	4f 91       	pop	r20
+     2d6:	3f 91       	pop	r19
+     2d8:	2f 91       	pop	r18
+     2da:	0f 90       	pop	r0
+     2dc:	0f be       	out	0x3f, r0	; 63
+     2de:	0f 90       	pop	r0
+     2e0:	1f 90       	pop	r1
+     2e2:	18 95       	reti
+
+000002e4 <__vector_11>:
+
+ISR(USB_COM_vect, ISR_BLOCK) { 
+     2e4:	1f 92       	push	r1
+     2e6:	0f 92       	push	r0
+     2e8:	0f b6       	in	r0, 0x3f	; 63
+     2ea:	0f 92       	push	r0
+     2ec:	11 24       	eor	r1, r1
+     2ee:	2f 93       	push	r18
+     2f0:	3f 93       	push	r19
+     2f2:	4f 93       	push	r20
+     2f4:	5f 93       	push	r21
+     2f6:	6f 93       	push	r22
+     2f8:	7f 93       	push	r23
+     2fa:	8f 93       	push	r24
+     2fc:	9f 93       	push	r25
+     2fe:	af 93       	push	r26
+     300:	bf 93       	push	r27
+     302:	ef 93       	push	r30
+     304:	ff 93       	push	r31
+  USB::onComEvent((USB*)&usbControl);
+     306:	86 e7       	ldi	r24, 0x76	; 118
+     308:	91 e0       	ldi	r25, 0x01	; 1
+     30a:	0e 94 1c 09 	call	0x1238	; 0x1238 <_ZN3USB10onComEventEPS_>
+}
+     30e:	ff 91       	pop	r31
+     310:	ef 91       	pop	r30
+     312:	bf 91       	pop	r27
+     314:	af 91       	pop	r26
+     316:	9f 91       	pop	r25
+     318:	8f 91       	pop	r24
+     31a:	7f 91       	pop	r23
+     31c:	6f 91       	pop	r22
+     31e:	5f 91       	pop	r21
+     320:	4f 91       	pop	r20
+     322:	3f 91       	pop	r19
+     324:	2f 91       	pop	r18
+     326:	0f 90       	pop	r0
+     328:	0f be       	out	0x3f, r0	; 63
+     32a:	0f 90       	pop	r0
+     32c:	1f 90       	pop	r1
+     32e:	18 95       	reti
+
+00000330 <__vector_21>:
+
+ISR(TIMER0_COMPA_vect, ISR_NOBLOCK){
+     330:	78 94       	sei
+     332:	1f 92       	push	r1
+     334:	0f 92       	push	r0
+     336:	0f b6       	in	r0, 0x3f	; 63
+     338:	0f 92       	push	r0
+     33a:	11 24       	eor	r1, r1
+     33c:	2f 93       	push	r18
+     33e:	3f 93       	push	r19
+     340:	4f 93       	push	r20
+     342:	5f 93       	push	r21
+     344:	6f 93       	push	r22
+     346:	7f 93       	push	r23
+     348:	8f 93       	push	r24
+     34a:	9f 93       	push	r25
+     34c:	af 93       	push	r26
+     34e:	bf 93       	push	r27
+     350:	ef 93       	push	r30
+     352:	ff 93       	push	r31
+  uint8_t mask = stepControl.onFall(&stepControl) & 0b111;
+     354:	82 e5       	ldi	r24, 0x52	; 82
+     356:	91 e0       	ldi	r25, 0x01	; 1
+     358:	0e 94 4e 05 	call	0xa9c	; 0xa9c <_ZN11StepControl6onFallEPS_>
+  PORTF &= (0b00011111) | ( mask << 5);  
+     35c:	91 b3       	in	r25, 0x11	; 17
+     35e:	82 95       	swap	r24
+     360:	88 0f       	add	r24, r24
+     362:	80 7e       	andi	r24, 0xE0	; 224
+     364:	8f 61       	ori	r24, 0x1F	; 31
+     366:	98 23       	and	r25, r24
+     368:	91 bb       	out	0x11, r25	; 17
+  TIFR0 &= ~(1<<OCR0A);
+     36a:	37 b5       	in	r19, 0x27	; 39
+     36c:	25 b3       	in	r18, 0x15	; 21
+     36e:	81 e0       	ldi	r24, 0x01	; 1
+     370:	90 e0       	ldi	r25, 0x00	; 0
+     372:	02 c0       	rjmp	.+4      	; 0x378 <__vector_21+0x48>
+     374:	88 0f       	add	r24, r24
+     376:	99 1f       	adc	r25, r25
+     378:	3a 95       	dec	r19
+     37a:	e2 f7       	brpl	.-8      	; 0x374 <__vector_21+0x44>
+     37c:	80 95       	com	r24
+     37e:	90 95       	com	r25
+     380:	30 e0       	ldi	r19, 0x00	; 0
+     382:	82 23       	and	r24, r18
+     384:	93 23       	and	r25, r19
+     386:	85 bb       	out	0x15, r24	; 21
+}
+     388:	ff 91       	pop	r31
+     38a:	ef 91       	pop	r30
+     38c:	bf 91       	pop	r27
+     38e:	af 91       	pop	r26
+     390:	9f 91       	pop	r25
+     392:	8f 91       	pop	r24
+     394:	7f 91       	pop	r23
+     396:	6f 91       	pop	r22
+     398:	5f 91       	pop	r21
+     39a:	4f 91       	pop	r20
+     39c:	3f 91       	pop	r19
+     39e:	2f 91       	pop	r18
+     3a0:	0f 90       	pop	r0
+     3a2:	0f be       	out	0x3f, r0	; 63
+     3a4:	0f 90       	pop	r0
+     3a6:	1f 90       	pop	r1
+     3a8:	18 95       	reti
+
+000003aa <__vector_22>:
+
+ISR(TIMER0_COMPB_vect, ISR_NOBLOCK){
+     3aa:	78 94       	sei
+     3ac:	1f 92       	push	r1
+     3ae:	0f 92       	push	r0
+     3b0:	0f b6       	in	r0, 0x3f	; 63
+     3b2:	0f 92       	push	r0
+     3b4:	11 24       	eor	r1, r1
+     3b6:	2f 93       	push	r18
+     3b8:	3f 93       	push	r19
+     3ba:	4f 93       	push	r20
+     3bc:	5f 93       	push	r21
+     3be:	6f 93       	push	r22
+     3c0:	7f 93       	push	r23
+     3c2:	8f 93       	push	r24
+     3c4:	9f 93       	push	r25
+     3c6:	af 93       	push	r26
+     3c8:	bf 93       	push	r27
+     3ca:	ef 93       	push	r30
+     3cc:	ff 93       	push	r31
+  PORTF |= 0b11100000;
+     3ce:	81 b3       	in	r24, 0x11	; 17
+     3d0:	80 6e       	ori	r24, 0xE0	; 224
+     3d2:	81 bb       	out	0x11, r24	; 17
+  stepControl.onRise(&stepControl);
+     3d4:	82 e5       	ldi	r24, 0x52	; 82
+     3d6:	91 e0       	ldi	r25, 0x01	; 1
+     3d8:	0e 94 18 05 	call	0xa30	; 0xa30 <_ZN11StepControl6onRiseEPS_>
+  TIFR0 &= ~(1<<OCR0B);
+     3dc:	38 b5       	in	r19, 0x28	; 40
+     3de:	25 b3       	in	r18, 0x15	; 21
+     3e0:	81 e0       	ldi	r24, 0x01	; 1
+     3e2:	90 e0       	ldi	r25, 0x00	; 0
+     3e4:	02 c0       	rjmp	.+4      	; 0x3ea <__vector_22+0x40>
+     3e6:	88 0f       	add	r24, r24
+     3e8:	99 1f       	adc	r25, r25
+     3ea:	3a 95       	dec	r19
+     3ec:	e2 f7       	brpl	.-8      	; 0x3e6 <__vector_22+0x3c>
+     3ee:	80 95       	com	r24
+     3f0:	90 95       	com	r25
+     3f2:	30 e0       	ldi	r19, 0x00	; 0
+     3f4:	82 23       	and	r24, r18
+     3f6:	93 23       	and	r25, r19
+     3f8:	85 bb       	out	0x15, r24	; 21
+}
+     3fa:	ff 91       	pop	r31
+     3fc:	ef 91       	pop	r30
+     3fe:	bf 91       	pop	r27
+     400:	af 91       	pop	r26
+     402:	9f 91       	pop	r25
+     404:	8f 91       	pop	r24
+     406:	7f 91       	pop	r23
+     408:	6f 91       	pop	r22
+     40a:	5f 91       	pop	r21
+     40c:	4f 91       	pop	r20
+     40e:	3f 91       	pop	r19
+     410:	2f 91       	pop	r18
+     412:	0f 90       	pop	r0
+     414:	0f be       	out	0x3f, r0	; 63
+     416:	0f 90       	pop	r0
+     418:	1f 90       	pop	r1
+     41a:	18 95       	reti
+
+0000041c <_Z7initUSBv>:
+  isWork = true;
+  
+  return true;
+}
+
+void initUSB(){
+     41c:	8f 92       	push	r8
+     41e:	9f 92       	push	r9
+     420:	af 92       	push	r10
+     422:	cf 92       	push	r12
+     424:	ef 92       	push	r14
+     426:	ff 92       	push	r15
+     428:	0f 93       	push	r16
+     42a:	1f 93       	push	r17
+     42c:	cf 93       	push	r28
+     42e:	df 93       	push	r29
+     430:	cd b7       	in	r28, 0x3d	; 61
+     432:	de b7       	in	r29, 0x3e	; 62
+     434:	28 97       	sbiw	r28, 0x08	; 8
+     436:	0f b6       	in	r0, 0x3f	; 63
+     438:	f8 94       	cli
+     43a:	de bf       	out	0x3e, r29	; 62
+     43c:	0f be       	out	0x3f, r0	; 63
+     43e:	cd bf       	out	0x3d, r28	; 61
+  USB_Endpoint_Definition ep;
+    
+  ep.type     = INT;
+     440:	83 e0       	ldi	r24, 0x03	; 3
+     442:	8a 83       	std	Y+2, r24	; 0x02
+  ep.dir      = IN;
+     444:	81 e0       	ldi	r24, 0x01	; 1
+     446:	8b 83       	std	Y+3, r24	; 0x03
+  ep.size     = SIZE16;
+     448:	8c 83       	std	Y+4, r24	; 0x04
+  ep.bank     = ONE;
+     44a:	1d 82       	std	Y+5, r1	; 0x05
+  ep.interval = 250;
+     44c:	8a ef       	ldi	r24, 0xFA	; 250
+     44e:	8e 83       	std	Y+6, r24	; 0x06
+  ep.sync     = NO_SYNC;
+     450:	1f 82       	std	Y+7, r1	; 0x07
+  ep.iType    = DATA;
+     452:	18 86       	std	Y+8, r1	; 0x08
+
+  usbControl.init(VID,PID,2.0,false,true,false,500);    
+     454:	0f 2e       	mov	r0, r31
+     456:	f4 ef       	ldi	r31, 0xF4	; 244
+     458:	8f 2e       	mov	r8, r31
+     45a:	99 24       	eor	r9, r9
+     45c:	93 94       	inc	r9
+     45e:	f0 2d       	mov	r31, r0
+     460:	a1 2c       	mov	r10, r1
+     462:	cc 24       	eor	r12, r12
+     464:	c3 94       	inc	r12
+     466:	e1 2c       	mov	r14, r1
+     468:	00 e0       	ldi	r16, 0x00	; 0
+     46a:	10 e0       	ldi	r17, 0x00	; 0
+     46c:	20 e0       	ldi	r18, 0x00	; 0
+     46e:	30 e4       	ldi	r19, 0x40	; 64
+     470:	4f ef       	ldi	r20, 0xFF	; 255
+     472:	50 e0       	ldi	r21, 0x00	; 0
+     474:	60 e0       	ldi	r22, 0x00	; 0
+     476:	7f ef       	ldi	r23, 0xFF	; 255
+     478:	86 e7       	ldi	r24, 0x76	; 118
+     47a:	91 e0       	ldi	r25, 0x01	; 1
+     47c:	0e 94 58 07 	call	0xeb0	; 0xeb0 <_ZN3USB4initEjjfbbbj>
+
+  usbControl.initEndpoint(1,ep);
+     480:	e9 80       	ldd	r14, Y+1	; 0x01
+     482:	fa 80       	ldd	r15, Y+2	; 0x02
+     484:	0b 81       	ldd	r16, Y+3	; 0x03
+     486:	1c 81       	ldd	r17, Y+4	; 0x04
+     488:	2d 81       	ldd	r18, Y+5	; 0x05
+     48a:	3e 81       	ldd	r19, Y+6	; 0x06
+     48c:	4f 81       	ldd	r20, Y+7	; 0x07
+     48e:	58 85       	ldd	r21, Y+8	; 0x08
+     490:	61 e0       	ldi	r22, 0x01	; 1
+     492:	86 e7       	ldi	r24, 0x76	; 118
+     494:	91 e0       	ldi	r25, 0x01	; 1
+     496:	0e 94 f9 05 	call	0xbf2	; 0xbf2 <_ZN3USB12initEndpointEh23USB_Endpoint_Definition>
+  ep.size     = SIZE16;
+  ep.bank     = ONE;
+  ep.interval = 25;
+  ep.sync     = NO_SYNC;
+  ep.iType    = DATA;
+  usbControl.initEndpoint(2,ep);
+     49a:	e9 80       	ldd	r14, Y+1	; 0x01
+     49c:	fa 80       	ldd	r15, Y+2	; 0x02
+     49e:	00 e0       	ldi	r16, 0x00	; 0
+     4a0:	1c 81       	ldd	r17, Y+4	; 0x04
+     4a2:	2d 81       	ldd	r18, Y+5	; 0x05
+     4a4:	39 e1       	ldi	r19, 0x19	; 25
+     4a6:	4f 81       	ldd	r20, Y+7	; 0x07
+     4a8:	58 85       	ldd	r21, Y+8	; 0x08
+     4aa:	62 e0       	ldi	r22, 0x02	; 2
+     4ac:	86 e7       	ldi	r24, 0x76	; 118
+     4ae:	91 e0       	ldi	r25, 0x01	; 1
+     4b0:	0e 94 f9 05 	call	0xbf2	; 0xbf2 <_ZN3USB12initEndpointEh23USB_Endpoint_Definition>
+
+  usbControl.registerCallback(1, (functptr) &onGetStatus);
+     4b4:	4a e0       	ldi	r20, 0x0A	; 10
+     4b6:	51 e0       	ldi	r21, 0x01	; 1
+     4b8:	61 e0       	ldi	r22, 0x01	; 1
+     4ba:	86 e7       	ldi	r24, 0x76	; 118
+     4bc:	91 e0       	ldi	r25, 0x01	; 1
+     4be:	0e 94 8f 08 	call	0x111e	; 0x111e <_ZN3USB16registerCallbackEhPFbPvE>
+  usbControl.registerCallback(2, (functptr) &onSetData);
+     4c2:	42 e1       	ldi	r20, 0x12	; 18
+     4c4:	51 e0       	ldi	r21, 0x01	; 1
+     4c6:	62 e0       	ldi	r22, 0x02	; 2
+     4c8:	86 e7       	ldi	r24, 0x76	; 118
+     4ca:	91 e0       	ldi	r25, 0x01	; 1
+     4cc:	0e 94 8f 08 	call	0x111e	; 0x111e <_ZN3USB16registerCallbackEhPFbPvE>
+}
+     4d0:	28 96       	adiw	r28, 0x08	; 8
+     4d2:	0f b6       	in	r0, 0x3f	; 63
+     4d4:	f8 94       	cli
+     4d6:	de bf       	out	0x3e, r29	; 62
+     4d8:	0f be       	out	0x3f, r0	; 63
+     4da:	cd bf       	out	0x3d, r28	; 61
+     4dc:	df 91       	pop	r29
+     4de:	cf 91       	pop	r28
+     4e0:	1f 91       	pop	r17
+     4e2:	0f 91       	pop	r16
+     4e4:	ff 90       	pop	r15
+     4e6:	ef 90       	pop	r14
+     4e8:	cf 90       	pop	r12
+     4ea:	af 90       	pop	r10
+     4ec:	9f 90       	pop	r9
+     4ee:	8f 90       	pop	r8
+     4f0:	08 95       	ret
+
+000004f2 <_Z4initv>:
+
+void init(){
+  DDRB    = 0xFF;
+     4f2:	8f ef       	ldi	r24, 0xFF	; 255
+     4f4:	84 b9       	out	0x04, r24	; 4
+  DDRC    = 0xFF;
+     4f6:	87 b9       	out	0x07, r24	; 7
+  DDRD    = 0b11100000;
+     4f8:	90 ee       	ldi	r25, 0xE0	; 224
+     4fa:	9a b9       	out	0x0a, r25	; 10
+  DDRF    = 0xFF;
+     4fc:	80 bb       	out	0x10, r24	; 16
+
+  TCCR0A  = 0b00000010;
+     4fe:	82 e0       	ldi	r24, 0x02	; 2
+     500:	84 bd       	out	0x24, r24	; 36
+  TCCR0B  = 0;  
+     502:	15 bc       	out	0x25, r1	; 37
+
+  OCR0A   = 130;
+     504:	82 e8       	ldi	r24, 0x82	; 130
+     506:	87 bd       	out	0x27, r24	; 39
+  OCR0B   = 65;  
+     508:	81 e4       	ldi	r24, 0x41	; 65
+     50a:	88 bd       	out	0x28, r24	; 40
+  TCNT0   = 0x0;  
+     50c:	16 bc       	out	0x26, r1	; 38
+
+  TIMSK0  |= (1<<OCIE0A) | (1<<OCIE0B);  
+     50e:	ee e6       	ldi	r30, 0x6E	; 110
+     510:	f0 e0       	ldi	r31, 0x00	; 0
+     512:	80 81       	ld	r24, Z
+     514:	86 60       	ori	r24, 0x06	; 6
+     516:	80 83       	st	Z, r24
+
+  ledCtrl.addPin(0,&ledA);
+     518:	43 e2       	ldi	r20, 0x23	; 35
+     51a:	51 e0       	ldi	r21, 0x01	; 1
+     51c:	60 e0       	ldi	r22, 0x00	; 0
+     51e:	87 e0       	ldi	r24, 0x07	; 7
+     520:	91 e0       	ldi	r25, 0x01	; 1
+     522:	0e 94 82 00 	call	0x104	; 0x104 <_ZN10ledControl6addPinEhP5pinIO>
+  ledCtrl.addPin(1,&ledB);
+     526:	40 e2       	ldi	r20, 0x20	; 32
+     528:	51 e0       	ldi	r21, 0x01	; 1
+     52a:	61 e0       	ldi	r22, 0x01	; 1
+     52c:	87 e0       	ldi	r24, 0x07	; 7
+     52e:	91 e0       	ldi	r25, 0x01	; 1
+     530:	0e 94 82 00 	call	0x104	; 0x104 <_ZN10ledControl6addPinEhP5pinIO>
+     534:	08 95       	ret
+
+00000536 <_Z15initStepControlv>:
+
+  //PORTB |= 0x60 | 0x80 | 0x40 | 0x10;
+}
+
+void initStepControl(){
+  stepControl.init(&dirA,&dirB,&dirC);
+     536:	27 e1       	ldi	r18, 0x17	; 23
+     538:	31 e0       	ldi	r19, 0x01	; 1
+     53a:	4a e1       	ldi	r20, 0x1A	; 26
+     53c:	51 e0       	ldi	r21, 0x01	; 1
+     53e:	6d e1       	ldi	r22, 0x1D	; 29
+     540:	71 e0       	ldi	r23, 0x01	; 1
+     542:	82 e5       	ldi	r24, 0x52	; 82
+     544:	91 e0       	ldi	r25, 0x01	; 1
+     546:	0e 94 6e 03 	call	0x6dc	; 0x6dc <_ZN11StepControl4initEP5pinIOS1_S1_>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+     54a:	2f ef       	ldi	r18, 0xFF	; 255
+     54c:	80 e7       	ldi	r24, 0x70	; 112
+     54e:	92 e0       	ldi	r25, 0x02	; 2
+     550:	21 50       	subi	r18, 0x01	; 1
+     552:	80 40       	sbci	r24, 0x00	; 0
+     554:	90 40       	sbci	r25, 0x00	; 0
+     556:	e1 f7       	brne	.-8      	; 0x550 <_Z15initStepControlv+0x1a>
+     558:	00 c0       	rjmp	.+0      	; 0x55a <_Z15initStepControlv+0x24>
+     55a:	00 00       	nop
+  _delay_ms(50);
+  ENABLE;
+     55c:	47 9a       	sbi	0x08, 7	; 8
+  TIMER_STEP_START;  
+     55e:	82 e0       	ldi	r24, 0x02	; 2
+     560:	85 bd       	out	0x25, r24	; 37
+     562:	08 95       	ret
+
+00000564 <main>:
+  status.status      = (isError << 2) | (isWork<<1) | (isInit);
+}
+
+int main(void) {
+
+  init();
+     564:	0e 94 79 02 	call	0x4f2	; 0x4f2 <_Z4initv>
+  initUSB();  
+     568:	0e 94 0e 02 	call	0x41c	; 0x41c <_Z7initUSBv>
+
+  while(!usbControl.isEnumerate()){
+     56c:	09 c0       	rjmp	.+18     	; 0x580 <main+0x1c>
+    ledCtrl.blink(0b11,150,150);
+     56e:	26 e9       	ldi	r18, 0x96	; 150
+     570:	30 e0       	ldi	r19, 0x00	; 0
+     572:	46 e9       	ldi	r20, 0x96	; 150
+     574:	50 e0       	ldi	r21, 0x00	; 0
+     576:	63 e0       	ldi	r22, 0x03	; 3
+     578:	87 e0       	ldi	r24, 0x07	; 7
+     57a:	91 e0       	ldi	r25, 0x01	; 1
+     57c:	0e 94 8d 00 	call	0x11a	; 0x11a <_ZN10ledControl5blinkEhjj>
+int main(void) {
+
+  init();
+  initUSB();  
+
+  while(!usbControl.isEnumerate()){
+     580:	86 e7       	ldi	r24, 0x76	; 118
+     582:	91 e0       	ldi	r25, 0x01	; 1
+     584:	0e 94 c2 06 	call	0xd84	; 0xd84 <_ZN3USB11isEnumerateEv>
+     588:	88 23       	and	r24, r24
+     58a:	89 f3       	breq	.-30     	; 0x56e <main+0xa>
+    ledCtrl.blink(0b11,150,150);
+  }
+
+  initStepControl();
+     58c:	0e 94 9b 02 	call	0x536	; 0x536 <_Z15initStepControlv>
+  TIMER_STEP_START;  
+}
+
+inline void saveStatus(){  
+  
+  status.position   = fullPosition;
+     590:	cd e2       	ldi	r28, 0x2D	; 45
+     592:	d1 e0       	ldi	r29, 0x01	; 1
+  status.point.posX = stepControl.getPosA();
+  status.point.posY = stepControl.getPosB();
+  status.point.posZ = stepControl.getPosC();
+  status.point.coils = stepControl.getCoils();
+  status.inputs      = 0xAA;
+     594:	1a ea       	ldi	r17, 0xAA	; 170
+  TIMER_STEP_START;  
+}
+
+inline void saveStatus(){  
+  
+  status.position   = fullPosition;
+     596:	80 91 03 01 	lds	r24, 0x0103	; 0x800103 <fullPosition>
+     59a:	90 91 04 01 	lds	r25, 0x0104	; 0x800104 <fullPosition+0x1>
+     59e:	a0 91 05 01 	lds	r26, 0x0105	; 0x800105 <fullPosition+0x2>
+     5a2:	b0 91 06 01 	lds	r27, 0x0106	; 0x800106 <fullPosition+0x3>
+     5a6:	89 87       	std	Y+9, r24	; 0x09
+     5a8:	9a 87       	std	Y+10, r25	; 0x0a
+     5aa:	ab 87       	std	Y+11, r26	; 0x0b
+     5ac:	bc 87       	std	Y+12, r27	; 0x0c
+  status.point.posX = stepControl.getPosA();
+     5ae:	82 e5       	ldi	r24, 0x52	; 82
+     5b0:	91 e0       	ldi	r25, 0x01	; 1
+     5b2:	0e 94 a9 03 	call	0x752	; 0x752 <_ZN11StepControl7getPosAEv>
+     5b6:	99 83       	std	Y+1, r25	; 0x01
+     5b8:	88 83       	st	Y, r24
+  status.point.posY = stepControl.getPosB();
+     5ba:	82 e5       	ldi	r24, 0x52	; 82
+     5bc:	91 e0       	ldi	r25, 0x01	; 1
+     5be:	0e 94 af 03 	call	0x75e	; 0x75e <_ZN11StepControl7getPosBEv>
+     5c2:	9b 83       	std	Y+3, r25	; 0x03
+     5c4:	8a 83       	std	Y+2, r24	; 0x02
+  status.point.posZ = stepControl.getPosC();
+     5c6:	82 e5       	ldi	r24, 0x52	; 82
+     5c8:	91 e0       	ldi	r25, 0x01	; 1
+     5ca:	0e 94 b5 03 	call	0x76a	; 0x76a <_ZN11StepControl7getPosCEv>
+     5ce:	9d 83       	std	Y+5, r25	; 0x05
+     5d0:	8c 83       	std	Y+4, r24	; 0x04
+  status.point.coils = stepControl.getCoils();
+     5d2:	82 e5       	ldi	r24, 0x52	; 82
+     5d4:	91 e0       	ldi	r25, 0x01	; 1
+     5d6:	0e 94 bb 03 	call	0x776	; 0x776 <_ZN11StepControl8getCoilsEv>
+     5da:	8e 83       	std	Y+6, r24	; 0x06
+  status.inputs      = 0xAA;
+     5dc:	1f 83       	std	Y+7, r17	; 0x07
+  status.status      = (isError << 2) | (isWork<<1) | (isInit);
+     5de:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <_edata>
+     5e2:	98 2f       	mov	r25, r24
+     5e4:	99 0f       	add	r25, r25
+     5e6:	99 0f       	add	r25, r25
+     5e8:	80 91 01 01 	lds	r24, 0x0101	; 0x800101 <isWork>
+     5ec:	88 0f       	add	r24, r24
+     5ee:	89 2b       	or	r24, r25
+     5f0:	90 91 02 01 	lds	r25, 0x0102	; 0x800102 <isInit>
+     5f4:	89 2b       	or	r24, r25
+     5f6:	88 87       	std	Y+8, r24	; 0x08
+  initStepControl();
+  
+  
+  while (1) {
+    saveStatus();    
+    isWork = false;
+     5f8:	10 92 01 01 	sts	0x0101, r1	; 0x800101 <isWork>
+    ledCtrl.blink(0b01,1500,500);    
+     5fc:	24 ef       	ldi	r18, 0xF4	; 244
+     5fe:	31 e0       	ldi	r19, 0x01	; 1
+     600:	4c ed       	ldi	r20, 0xDC	; 220
+     602:	55 e0       	ldi	r21, 0x05	; 5
+     604:	61 e0       	ldi	r22, 0x01	; 1
+     606:	87 e0       	ldi	r24, 0x07	; 7
+     608:	91 e0       	ldi	r25, 0x01	; 1
+     60a:	0e 94 8d 00 	call	0x11a	; 0x11a <_ZN10ledControl5blinkEhjj>
+  status.point.coils = stepControl.getCoils();
+  status.inputs      = 0xAA;
+  status.status      = (isError << 2) | (isWork<<1) | (isInit);
+}
+
+int main(void) {
+     60e:	c3 cf       	rjmp	.-122    	; 0x596 <main+0x32>
+
+00000610 <_GLOBAL__sub_I_usbControl>:
+{
+
+public:
+
+    RingBufferT()
+        : mSize( SIZE ), mLength( 0 ), mIndex( 0 )
+     610:	ea e3       	ldi	r30, 0x3A	; 58
+     612:	f1 e0       	ldi	r31, 0x01	; 1
+     614:	83 e0       	ldi	r24, 0x03	; 3
+     616:	85 8b       	std	Z+21, r24	; 0x15
+     618:	16 8a       	std	Z+22, r1	; 0x16
+     61a:	17 8a       	std	Z+23, r1	; 0x17
+StepControl stepControl;
+RingBufferT<DEVICE_POINT, uint8_t,3> rBuf;
+volatile DEVICE_STATUS status;
+DEVICE_POINT dp;
+
+pinIO ledA(&PORTD,PIND5);
+     61c:	45 e0       	ldi	r20, 0x05	; 5
+     61e:	6b e2       	ldi	r22, 0x2B	; 43
+     620:	70 e0       	ldi	r23, 0x00	; 0
+     622:	83 e2       	ldi	r24, 0x23	; 35
+     624:	91 e0       	ldi	r25, 0x01	; 1
+     626:	0e 94 32 03 	call	0x664	; 0x664 <_ZN5pinIOC1EPVhh>
+pinIO ledB(&PORTB,PINB0);
+     62a:	40 e0       	ldi	r20, 0x00	; 0
+     62c:	65 e2       	ldi	r22, 0x25	; 37
+     62e:	70 e0       	ldi	r23, 0x00	; 0
+     630:	80 e2       	ldi	r24, 0x20	; 32
+     632:	91 e0       	ldi	r25, 0x01	; 1
+     634:	0e 94 32 03 	call	0x664	; 0x664 <_ZN5pinIOC1EPVhh>
+
+
+pinIO dirA(&PORTF,PINF4);
+     638:	44 e0       	ldi	r20, 0x04	; 4
+     63a:	61 e3       	ldi	r22, 0x31	; 49
+     63c:	70 e0       	ldi	r23, 0x00	; 0
+     63e:	8d e1       	ldi	r24, 0x1D	; 29
+     640:	91 e0       	ldi	r25, 0x01	; 1
+     642:	0e 94 32 03 	call	0x664	; 0x664 <_ZN5pinIOC1EPVhh>
+pinIO dirB(&PORTF,PINF1);
+     646:	41 e0       	ldi	r20, 0x01	; 1
+     648:	61 e3       	ldi	r22, 0x31	; 49
+     64a:	70 e0       	ldi	r23, 0x00	; 0
+     64c:	8a e1       	ldi	r24, 0x1A	; 26
+     64e:	91 e0       	ldi	r25, 0x01	; 1
+     650:	0e 94 32 03 	call	0x664	; 0x664 <_ZN5pinIOC1EPVhh>
+pinIO dirC(&PORTF,PINF0);
+     654:	40 e0       	ldi	r20, 0x00	; 0
+     656:	61 e3       	ldi	r22, 0x31	; 49
+     658:	70 e0       	ldi	r23, 0x00	; 0
+     65a:	87 e1       	ldi	r24, 0x17	; 23
+     65c:	91 e0       	ldi	r25, 0x01	; 1
+     65e:	0e 94 32 03 	call	0x664	; 0x664 <_ZN5pinIOC1EPVhh>
+     662:	08 95       	ret
+
+00000664 <_ZN5pinIOC1EPVhh>:
+#include "pincontrol.h"
+
+pinIO::pinIO(volatile uint8_t* PORT, uint8_t PIN){
+  this->port = PORT;
+     664:	fc 01       	movw	r30, r24
+     666:	71 83       	std	Z+1, r23	; 0x01
+     668:	60 83       	st	Z, r22
+  this->pin  = PIN;
+     66a:	42 83       	std	Z+2, r20	; 0x02
+     66c:	08 95       	ret
+
+0000066e <_ZN5pinIO3SetEv>:
+}
+
+void pinIO::Set(){
+  *port |= (1<<pin);
+     66e:	dc 01       	movw	r26, r24
+     670:	12 96       	adiw	r26, 0x02	; 2
+     672:	3c 91       	ld	r19, X
+     674:	12 97       	sbiw	r26, 0x02	; 2
+     676:	ed 91       	ld	r30, X+
+     678:	fc 91       	ld	r31, X
+     67a:	20 81       	ld	r18, Z
+     67c:	81 e0       	ldi	r24, 0x01	; 1
+     67e:	90 e0       	ldi	r25, 0x00	; 0
+     680:	02 c0       	rjmp	.+4      	; 0x686 <_ZN5pinIO3SetEv+0x18>
+     682:	88 0f       	add	r24, r24
+     684:	99 1f       	adc	r25, r25
+     686:	3a 95       	dec	r19
+     688:	e2 f7       	brpl	.-8      	; 0x682 <_ZN5pinIO3SetEv+0x14>
+     68a:	82 2b       	or	r24, r18
+     68c:	80 83       	st	Z, r24
+     68e:	08 95       	ret
+
+00000690 <_ZN5pinIO3ClrEv>:
+}
+
+void pinIO::Clr(){
+  *port &= ~(1<<pin);
+     690:	dc 01       	movw	r26, r24
+     692:	12 96       	adiw	r26, 0x02	; 2
+     694:	3c 91       	ld	r19, X
+     696:	12 97       	sbiw	r26, 0x02	; 2
+     698:	ed 91       	ld	r30, X+
+     69a:	fc 91       	ld	r31, X
+     69c:	20 81       	ld	r18, Z
+     69e:	81 e0       	ldi	r24, 0x01	; 1
+     6a0:	90 e0       	ldi	r25, 0x00	; 0
+     6a2:	02 c0       	rjmp	.+4      	; 0x6a8 <_ZN5pinIO3ClrEv+0x18>
+     6a4:	88 0f       	add	r24, r24
+     6a6:	99 1f       	adc	r25, r25
+     6a8:	3a 95       	dec	r19
+     6aa:	e2 f7       	brpl	.-8      	; 0x6a4 <_ZN5pinIO3ClrEv+0x14>
+     6ac:	80 95       	com	r24
+     6ae:	90 95       	com	r25
+     6b0:	30 e0       	ldi	r19, 0x00	; 0
+     6b2:	82 23       	and	r24, r18
+     6b4:	93 23       	and	r25, r19
+     6b6:	80 83       	st	Z, r24
+     6b8:	08 95       	ret
+
+000006ba <_ZN5pinIO6ToggleEv>:
+}
+
+void pinIO::Toggle(){
+  *port ^= (1<<pin);  
+     6ba:	dc 01       	movw	r26, r24
+     6bc:	12 96       	adiw	r26, 0x02	; 2
+     6be:	3c 91       	ld	r19, X
+     6c0:	12 97       	sbiw	r26, 0x02	; 2
+     6c2:	ed 91       	ld	r30, X+
+     6c4:	fc 91       	ld	r31, X
+     6c6:	20 81       	ld	r18, Z
+     6c8:	81 e0       	ldi	r24, 0x01	; 1
+     6ca:	90 e0       	ldi	r25, 0x00	; 0
+     6cc:	02 c0       	rjmp	.+4      	; 0x6d2 <_ZN5pinIO6ToggleEv+0x18>
+     6ce:	88 0f       	add	r24, r24
+     6d0:	99 1f       	adc	r25, r25
+     6d2:	3a 95       	dec	r19
+     6d4:	e2 f7       	brpl	.-8      	; 0x6ce <_ZN5pinIO6ToggleEv+0x14>
+     6d6:	82 27       	eor	r24, r18
+     6d8:	80 83       	st	Z, r24
+     6da:	08 95       	ret
+
+000006dc <_ZN11StepControl4initEP5pinIOS1_S1_>:
+
+#include <avr/interrupt.h>
+#include <stdlib.h>
+#include "stepControl.h"
+
+void StepControl::init(pinIO *DIR_A, pinIO *DIR_B, pinIO *DIR_C){  
+     6dc:	fc 01       	movw	r30, r24
+
+  dirStepA = DIR_A;
+     6de:	77 8f       	std	Z+31, r23	; 0x1f
+     6e0:	66 8f       	std	Z+30, r22	; 0x1e
+  dirStepB = DIR_B;
+     6e2:	51 a3       	std	Z+33, r21	; 0x21
+     6e4:	40 a3       	std	Z+32, r20	; 0x20
+  dirStepC = DIR_C;
+     6e6:	33 a3       	std	Z+35, r19	; 0x23
+     6e8:	22 a3       	std	Z+34, r18	; 0x22
+
+  posA = posB = posC = 0;
+     6ea:	15 82       	std	Z+5, r1	; 0x05
+     6ec:	14 82       	std	Z+4, r1	; 0x04
+     6ee:	13 82       	std	Z+3, r1	; 0x03
+     6f0:	12 82       	std	Z+2, r1	; 0x02
+     6f2:	11 82       	std	Z+1, r1	; 0x01
+     6f4:	10 82       	st	Z, r1
+  setA = setB = setC = newA = newB = newC = 0;  
+     6f6:	13 86       	std	Z+11, r1	; 0x0b
+     6f8:	12 86       	std	Z+10, r1	; 0x0a
+     6fa:	11 86       	std	Z+9, r1	; 0x09
+     6fc:	10 86       	std	Z+8, r1	; 0x08
+     6fe:	17 82       	std	Z+7, r1	; 0x07
+     700:	16 82       	std	Z+6, r1	; 0x06
+     702:	17 8a       	std	Z+23, r1	; 0x17
+     704:	16 8a       	std	Z+22, r1	; 0x16
+     706:	15 8a       	std	Z+21, r1	; 0x15
+     708:	14 8a       	std	Z+20, r1	; 0x14
+     70a:	13 8a       	std	Z+19, r1	; 0x13
+     70c:	12 8a       	std	Z+18, r1	; 0x12
+     70e:	08 95       	ret
+
+00000710 <_ZN11StepControl6isDoneEv>:
+}
+
+bool StepControl::isDone(){
+  return this->isOnPoint;
+}
+     710:	fc 01       	movw	r30, r24
+     712:	85 8d       	ldd	r24, Z+29	; 0x1d
+     714:	08 95       	ret
+
+00000716 <_ZN11StepControl8setCoilsEv>:
+
+void StepControl::setCoils(){
+  uint8_t mask = PORTB & (0b00010000);
+     716:	25 b1       	in	r18, 0x05	; 5
+     718:	20 71       	andi	r18, 0x10	; 16
+  mask |= (this->nowCoils&(1<<3))?0x80:0;
+     71a:	fc 01       	movw	r30, r24
+     71c:	81 8d       	ldd	r24, Z+25	; 0x19
+     71e:	83 fd       	sbrc	r24, 3
+     720:	02 c0       	rjmp	.+4      	; 0x726 <_ZN11StepControl8setCoilsEv+0x10>
+     722:	90 e0       	ldi	r25, 0x00	; 0
+     724:	01 c0       	rjmp	.+2      	; 0x728 <_ZN11StepControl8setCoilsEv+0x12>
+     726:	90 e8       	ldi	r25, 0x80	; 128
+     728:	29 2b       	or	r18, r25
+  mask |= (this->nowCoils&(1<<2))?0x60:0;
+     72a:	82 fd       	sbrc	r24, 2
+     72c:	02 c0       	rjmp	.+4      	; 0x732 <_ZN11StepControl8setCoilsEv+0x1c>
+     72e:	90 e0       	ldi	r25, 0x00	; 0
+     730:	01 c0       	rjmp	.+2      	; 0x734 <_ZN11StepControl8setCoilsEv+0x1e>
+     732:	90 e6       	ldi	r25, 0x60	; 96
+     734:	29 2b       	or	r18, r25
+  mask |= (this->nowCoils&(1<<1))?0x40:0;
+     736:	81 fd       	sbrc	r24, 1
+     738:	02 c0       	rjmp	.+4      	; 0x73e <_ZN11StepControl8setCoilsEv+0x28>
+     73a:	90 e0       	ldi	r25, 0x00	; 0
+     73c:	01 c0       	rjmp	.+2      	; 0x740 <_ZN11StepControl8setCoilsEv+0x2a>
+     73e:	90 e4       	ldi	r25, 0x40	; 64
+     740:	29 2b       	or	r18, r25
+  mask |= (this->nowCoils&(1<<0))?0x10:0;
+     742:	80 fd       	sbrc	r24, 0
+     744:	02 c0       	rjmp	.+4      	; 0x74a <_ZN11StepControl8setCoilsEv+0x34>
+     746:	80 e0       	ldi	r24, 0x00	; 0
+     748:	01 c0       	rjmp	.+2      	; 0x74c <_ZN11StepControl8setCoilsEv+0x36>
+     74a:	80 e1       	ldi	r24, 0x10	; 16
+     74c:	28 2b       	or	r18, r24
+  PORTB = mask;
+     74e:	25 b9       	out	0x05, r18	; 5
+     750:	08 95       	ret
+
+00000752 <_ZN11StepControl7getPosAEv>:
+}
+
+int16_t StepControl::getPosA(){
+  return (this->posA >> 1);
+     752:	fc 01       	movw	r30, r24
+     754:	80 81       	ld	r24, Z
+     756:	91 81       	ldd	r25, Z+1	; 0x01
+}
+     758:	95 95       	asr	r25
+     75a:	87 95       	ror	r24
+     75c:	08 95       	ret
+
+0000075e <_ZN11StepControl7getPosBEv>:
+
+int16_t StepControl::getPosB(){
+  return (this->posB >> 1);
+     75e:	fc 01       	movw	r30, r24
+     760:	82 81       	ldd	r24, Z+2	; 0x02
+     762:	93 81       	ldd	r25, Z+3	; 0x03
+}
+     764:	95 95       	asr	r25
+     766:	87 95       	ror	r24
+     768:	08 95       	ret
+
+0000076a <_ZN11StepControl7getPosCEv>:
+
+int16_t StepControl::getPosC(){
+  return (this->posC >> 1);
+     76a:	fc 01       	movw	r30, r24
+     76c:	84 81       	ldd	r24, Z+4	; 0x04
+     76e:	95 81       	ldd	r25, Z+5	; 0x05
+}
+     770:	95 95       	asr	r25
+     772:	87 95       	ror	r24
+     774:	08 95       	ret
+
+00000776 <_ZN11StepControl8getCoilsEv>:
+
+uint8_t StepControl::getCoils(){
+  return this->nowCoils;
+}
+     776:	fc 01       	movw	r30, r24
+     778:	81 8d       	ldd	r24, Z+25	; 0x19
+     77a:	08 95       	ret
+
+0000077c <_ZN11StepControl4goToEiiih>:
+
+uint8_t StepControl::goTo(int16_t A, int16_t B, int16_t C, uint8_t coils){    
+     77c:	2f 92       	push	r2
+     77e:	3f 92       	push	r3
+     780:	4f 92       	push	r4
+     782:	5f 92       	push	r5
+     784:	6f 92       	push	r6
+     786:	7f 92       	push	r7
+     788:	8f 92       	push	r8
+     78a:	9f 92       	push	r9
+     78c:	af 92       	push	r10
+     78e:	bf 92       	push	r11
+     790:	cf 92       	push	r12
+     792:	df 92       	push	r13
+     794:	ef 92       	push	r14
+     796:	ff 92       	push	r15
+     798:	0f 93       	push	r16
+     79a:	1f 93       	push	r17
+     79c:	cf 93       	push	r28
+     79e:	df 93       	push	r29
+     7a0:	cd b7       	in	r28, 0x3d	; 61
+     7a2:	de b7       	in	r29, 0x3e	; 62
+     7a4:	2c 97       	sbiw	r28, 0x0c	; 12
+     7a6:	0f b6       	in	r0, 0x3f	; 63
+     7a8:	f8 94       	cli
+     7aa:	de bf       	out	0x3e, r29	; 62
+     7ac:	0f be       	out	0x3f, r0	; 63
+     7ae:	cd bf       	out	0x3d, r28	; 61
+     7b0:	2c 01       	movw	r4, r24
+  const float fMax = 200.0f;
+  float a,b,c;
+  uint8_t mask = 0;
+
+  newA = A*2;
+     7b2:	3b 01       	movw	r6, r22
+     7b4:	66 0c       	add	r6, r6
+     7b6:	77 1c       	adc	r7, r7
+     7b8:	dc 01       	movw	r26, r24
+     7ba:	17 96       	adiw	r26, 0x07	; 7
+     7bc:	7c 92       	st	X, r7
+     7be:	6e 92       	st	-X, r6
+     7c0:	16 97       	sbiw	r26, 0x06	; 6
+  newB = B*2;
+     7c2:	5a 01       	movw	r10, r20
+     7c4:	aa 0c       	add	r10, r10
+     7c6:	bb 1c       	adc	r11, r11
+     7c8:	19 96       	adiw	r26, 0x09	; 9
+     7ca:	bc 92       	st	X, r11
+     7cc:	ae 92       	st	-X, r10
+     7ce:	18 97       	sbiw	r26, 0x08	; 8
+  newC = C*2;
+     7d0:	19 01       	movw	r2, r18
+     7d2:	22 0c       	add	r2, r2
+     7d4:	33 1c       	adc	r3, r3
+     7d6:	1b 96       	adiw	r26, 0x0b	; 11
+     7d8:	3c 92       	st	X, r3
+     7da:	2e 92       	st	-X, r2
+     7dc:	1a 97       	sbiw	r26, 0x0a	; 10
+
+  a = abs(posA - newA);
+     7de:	8d 90       	ld	r8, X+
+     7e0:	9c 90       	ld	r9, X
+     7e2:	c4 01       	movw	r24, r8
+     7e4:	86 19       	sub	r24, r6
+     7e6:	97 09       	sbc	r25, r7
+     7e8:	bc 01       	movw	r22, r24
+     7ea:	22 f4       	brpl	.+8      	; 0x7f4 <_ZN11StepControl4goToEiiih+0x78>
+     7ec:	66 27       	eor	r22, r22
+     7ee:	77 27       	eor	r23, r23
+     7f0:	68 1b       	sub	r22, r24
+     7f2:	79 0b       	sbc	r23, r25
+     7f4:	07 2e       	mov	r0, r23
+     7f6:	00 0c       	add	r0, r0
+     7f8:	88 0b       	sbc	r24, r24
+     7fa:	99 0b       	sbc	r25, r25
+     7fc:	0e 94 11 0b 	call	0x1622	; 0x1622 <__floatsisf>
+     800:	69 83       	std	Y+1, r22	; 0x01
+     802:	7a 83       	std	Y+2, r23	; 0x02
+     804:	8b 83       	std	Y+3, r24	; 0x03
+     806:	9c 83       	std	Y+4, r25	; 0x04
+  b = abs(posB - newB);
+     808:	f2 01       	movw	r30, r4
+     80a:	c2 80       	ldd	r12, Z+2	; 0x02
+     80c:	d3 80       	ldd	r13, Z+3	; 0x03
+     80e:	c6 01       	movw	r24, r12
+     810:	8a 19       	sub	r24, r10
+     812:	9b 09       	sbc	r25, r11
+     814:	bc 01       	movw	r22, r24
+     816:	22 f4       	brpl	.+8      	; 0x820 <_ZN11StepControl4goToEiiih+0xa4>
+     818:	66 27       	eor	r22, r22
+     81a:	77 27       	eor	r23, r23
+     81c:	68 1b       	sub	r22, r24
+     81e:	79 0b       	sbc	r23, r25
+     820:	07 2e       	mov	r0, r23
+     822:	00 0c       	add	r0, r0
+     824:	88 0b       	sbc	r24, r24
+     826:	99 0b       	sbc	r25, r25
+     828:	0e 94 11 0b 	call	0x1622	; 0x1622 <__floatsisf>
+     82c:	6d 83       	std	Y+5, r22	; 0x05
+     82e:	7e 83       	std	Y+6, r23	; 0x06
+     830:	8f 83       	std	Y+7, r24	; 0x07
+     832:	98 87       	std	Y+8, r25	; 0x08
+  c = abs(posC - newC);
+     834:	d2 01       	movw	r26, r4
+     836:	14 96       	adiw	r26, 0x04	; 4
+     838:	ed 90       	ld	r14, X+
+     83a:	fc 90       	ld	r15, X
+     83c:	15 97       	sbiw	r26, 0x05	; 5
+     83e:	c7 01       	movw	r24, r14
+     840:	82 19       	sub	r24, r2
+     842:	93 09       	sbc	r25, r3
+     844:	bc 01       	movw	r22, r24
+     846:	22 f4       	brpl	.+8      	; 0x850 <_ZN11StepControl4goToEiiih+0xd4>
+     848:	66 27       	eor	r22, r22
+     84a:	77 27       	eor	r23, r23
+     84c:	68 1b       	sub	r22, r24
+     84e:	79 0b       	sbc	r23, r25
+     850:	07 2e       	mov	r0, r23
+     852:	00 0c       	add	r0, r0
+     854:	88 0b       	sbc	r24, r24
+     856:	99 0b       	sbc	r25, r25
+     858:	0e 94 11 0b 	call	0x1622	; 0x1622 <__floatsisf>
+     85c:	69 87       	std	Y+9, r22	; 0x09
+     85e:	7a 87       	std	Y+10, r23	; 0x0a
+     860:	8b 87       	std	Y+11, r24	; 0x0b
+     862:	9c 87       	std	Y+12, r25	; 0x0c
+  if( a > fMax ) a = fMax;
+     864:	20 e0       	ldi	r18, 0x00	; 0
+     866:	30 e0       	ldi	r19, 0x00	; 0
+     868:	48 e4       	ldi	r20, 0x48	; 72
+     86a:	53 e4       	ldi	r21, 0x43	; 67
+     86c:	69 81       	ldd	r22, Y+1	; 0x01
+     86e:	7a 81       	ldd	r23, Y+2	; 0x02
+     870:	8b 81       	ldd	r24, Y+3	; 0x03
+     872:	9c 81       	ldd	r25, Y+4	; 0x04
+     874:	0e 94 9d 0b 	call	0x173a	; 0x173a <__gesf2>
+     878:	18 16       	cp	r1, r24
+     87a:	44 f4       	brge	.+16     	; 0x88c <_ZN11StepControl4goToEiiih+0x110>
+     87c:	80 e0       	ldi	r24, 0x00	; 0
+     87e:	90 e0       	ldi	r25, 0x00	; 0
+     880:	a8 e4       	ldi	r26, 0x48	; 72
+     882:	b3 e4       	ldi	r27, 0x43	; 67
+     884:	89 83       	std	Y+1, r24	; 0x01
+     886:	9a 83       	std	Y+2, r25	; 0x02
+     888:	ab 83       	std	Y+3, r26	; 0x03
+     88a:	bc 83       	std	Y+4, r27	; 0x04
+  if( b > fMax ) b = fMax;
+     88c:	20 e0       	ldi	r18, 0x00	; 0
+     88e:	30 e0       	ldi	r19, 0x00	; 0
+     890:	48 e4       	ldi	r20, 0x48	; 72
+     892:	53 e4       	ldi	r21, 0x43	; 67
+     894:	6d 81       	ldd	r22, Y+5	; 0x05
+     896:	7e 81       	ldd	r23, Y+6	; 0x06
+     898:	8f 81       	ldd	r24, Y+7	; 0x07
+     89a:	98 85       	ldd	r25, Y+8	; 0x08
+     89c:	0e 94 9d 0b 	call	0x173a	; 0x173a <__gesf2>
+     8a0:	18 16       	cp	r1, r24
+     8a2:	44 f4       	brge	.+16     	; 0x8b4 <_ZN11StepControl4goToEiiih+0x138>
+     8a4:	80 e0       	ldi	r24, 0x00	; 0
+     8a6:	90 e0       	ldi	r25, 0x00	; 0
+     8a8:	a8 e4       	ldi	r26, 0x48	; 72
+     8aa:	b3 e4       	ldi	r27, 0x43	; 67
+     8ac:	8d 83       	std	Y+5, r24	; 0x05
+     8ae:	9e 83       	std	Y+6, r25	; 0x06
+     8b0:	af 83       	std	Y+7, r26	; 0x07
+     8b2:	b8 87       	std	Y+8, r27	; 0x08
+  if( c > fMax ) c = fMax;
+     8b4:	20 e0       	ldi	r18, 0x00	; 0
+     8b6:	30 e0       	ldi	r19, 0x00	; 0
+     8b8:	48 e4       	ldi	r20, 0x48	; 72
+     8ba:	53 e4       	ldi	r21, 0x43	; 67
+     8bc:	69 85       	ldd	r22, Y+9	; 0x09
+     8be:	7a 85       	ldd	r23, Y+10	; 0x0a
+     8c0:	8b 85       	ldd	r24, Y+11	; 0x0b
+     8c2:	9c 85       	ldd	r25, Y+12	; 0x0c
+     8c4:	0e 94 9d 0b 	call	0x173a	; 0x173a <__gesf2>
+     8c8:	18 16       	cp	r1, r24
+     8ca:	44 f4       	brge	.+16     	; 0x8dc <_ZN11StepControl4goToEiiih+0x160>
+     8cc:	80 e0       	ldi	r24, 0x00	; 0
+     8ce:	90 e0       	ldi	r25, 0x00	; 0
+     8d0:	a8 e4       	ldi	r26, 0x48	; 72
+     8d2:	b3 e4       	ldi	r27, 0x43	; 67
+     8d4:	89 87       	std	Y+9, r24	; 0x09
+     8d6:	9a 87       	std	Y+10, r25	; 0x0a
+     8d8:	ab 87       	std	Y+11, r26	; 0x0b
+     8da:	bc 87       	std	Y+12, r27	; 0x0c
+    
+  cntA = setA = 3 + (fMax / a);
+     8dc:	29 81       	ldd	r18, Y+1	; 0x01
+     8de:	3a 81       	ldd	r19, Y+2	; 0x02
+     8e0:	4b 81       	ldd	r20, Y+3	; 0x03
+     8e2:	5c 81       	ldd	r21, Y+4	; 0x04
+     8e4:	60 e0       	ldi	r22, 0x00	; 0
+     8e6:	70 e0       	ldi	r23, 0x00	; 0
+     8e8:	88 e4       	ldi	r24, 0x48	; 72
+     8ea:	93 e4       	ldi	r25, 0x43	; 67
+     8ec:	0e 94 6e 0a 	call	0x14dc	; 0x14dc <__divsf3>
+     8f0:	20 e0       	ldi	r18, 0x00	; 0
+     8f2:	30 e0       	ldi	r19, 0x00	; 0
+     8f4:	40 e4       	ldi	r20, 0x40	; 64
+     8f6:	50 e4       	ldi	r21, 0x40	; 64
+     8f8:	0e 94 02 0a 	call	0x1404	; 0x1404 <__addsf3>
+     8fc:	0e 94 e0 0a 	call	0x15c0	; 0x15c0 <__fixunssfsi>
+     900:	d2 01       	movw	r26, r4
+     902:	53 96       	adiw	r26, 0x13	; 19
+     904:	7c 93       	st	X, r23
+     906:	6e 93       	st	-X, r22
+     908:	52 97       	sbiw	r26, 0x12	; 18
+     90a:	1d 96       	adiw	r26, 0x0d	; 13
+     90c:	7c 93       	st	X, r23
+     90e:	6e 93       	st	-X, r22
+     910:	1c 97       	sbiw	r26, 0x0c	; 12
+  cntB = setB = 3 + (fMax / b);
+     912:	2d 81       	ldd	r18, Y+5	; 0x05
+     914:	3e 81       	ldd	r19, Y+6	; 0x06
+     916:	4f 81       	ldd	r20, Y+7	; 0x07
+     918:	58 85       	ldd	r21, Y+8	; 0x08
+     91a:	60 e0       	ldi	r22, 0x00	; 0
+     91c:	70 e0       	ldi	r23, 0x00	; 0
+     91e:	88 e4       	ldi	r24, 0x48	; 72
+     920:	93 e4       	ldi	r25, 0x43	; 67
+     922:	0e 94 6e 0a 	call	0x14dc	; 0x14dc <__divsf3>
+     926:	20 e0       	ldi	r18, 0x00	; 0
+     928:	30 e0       	ldi	r19, 0x00	; 0
+     92a:	40 e4       	ldi	r20, 0x40	; 64
+     92c:	50 e4       	ldi	r21, 0x40	; 64
+     92e:	0e 94 02 0a 	call	0x1404	; 0x1404 <__addsf3>
+     932:	0e 94 e0 0a 	call	0x15c0	; 0x15c0 <__fixunssfsi>
+     936:	f2 01       	movw	r30, r4
+     938:	75 8b       	std	Z+21, r23	; 0x15
+     93a:	64 8b       	std	Z+20, r22	; 0x14
+     93c:	77 87       	std	Z+15, r23	; 0x0f
+     93e:	66 87       	std	Z+14, r22	; 0x0e
+  cntC = setC = 3 + (fMax / c);
+     940:	29 85       	ldd	r18, Y+9	; 0x09
+     942:	3a 85       	ldd	r19, Y+10	; 0x0a
+     944:	4b 85       	ldd	r20, Y+11	; 0x0b
+     946:	5c 85       	ldd	r21, Y+12	; 0x0c
+     948:	60 e0       	ldi	r22, 0x00	; 0
+     94a:	70 e0       	ldi	r23, 0x00	; 0
+     94c:	88 e4       	ldi	r24, 0x48	; 72
+     94e:	93 e4       	ldi	r25, 0x43	; 67
+     950:	0e 94 6e 0a 	call	0x14dc	; 0x14dc <__divsf3>
+     954:	20 e0       	ldi	r18, 0x00	; 0
+     956:	30 e0       	ldi	r19, 0x00	; 0
+     958:	40 e4       	ldi	r20, 0x40	; 64
+     95a:	50 e4       	ldi	r21, 0x40	; 64
+     95c:	0e 94 02 0a 	call	0x1404	; 0x1404 <__addsf3>
+     960:	0e 94 e0 0a 	call	0x15c0	; 0x15c0 <__fixunssfsi>
+     964:	d2 01       	movw	r26, r4
+     966:	57 96       	adiw	r26, 0x17	; 23
+     968:	7c 93       	st	X, r23
+     96a:	6e 93       	st	-X, r22
+     96c:	56 97       	sbiw	r26, 0x16	; 22
+     96e:	51 96       	adiw	r26, 0x11	; 17
+     970:	7c 93       	st	X, r23
+     972:	6e 93       	st	-X, r22
+     974:	50 97       	sbiw	r26, 0x10	; 16
+    
+  dirA = (posA <= newA) ? 1 : -1;
+     976:	68 14       	cp	r6, r8
+     978:	79 04       	cpc	r7, r9
+     97a:	14 f4       	brge	.+4      	; 0x980 <_ZN11StepControl4goToEiiih+0x204>
+     97c:	8f ef       	ldi	r24, 0xFF	; 255
+     97e:	01 c0       	rjmp	.+2      	; 0x982 <_ZN11StepControl4goToEiiih+0x206>
+     980:	81 e0       	ldi	r24, 0x01	; 1
+     982:	f2 01       	movw	r30, r4
+     984:	82 8f       	std	Z+26, r24	; 0x1a
+  dirB = (posB <= newB) ? 1 : -1;
+     986:	ac 14       	cp	r10, r12
+     988:	bd 04       	cpc	r11, r13
+     98a:	9c f0       	brlt	.+38     	; 0x9b2 <_ZN11StepControl4goToEiiih+0x236>
+     98c:	91 e0       	ldi	r25, 0x01	; 1
+     98e:	93 8f       	std	Z+27, r25	; 0x1b
+  dirC = (posC <= newC) ? 1 : -1;
+     990:	2e 14       	cp	r2, r14
+     992:	3f 04       	cpc	r3, r15
+     994:	a4 f4       	brge	.+40     	; 0x9be <_ZN11StepControl4goToEiiih+0x242>
+     996:	23 c0       	rjmp	.+70     	; 0x9de <_ZN11StepControl4goToEiiih+0x262>
+  if( dirA > 0 ){
+    mask |= 1<<0;
+  }
+
+  if( dirB > 0 ){
+    mask |= 1<<1;
+     998:	12 60       	ori	r17, 0x02	; 2
+  }
+
+  if( dirC > 0){
+     99a:	18 16       	cp	r1, r24
+     99c:	4c f5       	brge	.+82     	; 0x9f0 <_ZN11StepControl4goToEiiih+0x274>
+    mask |= 1<<2;
+     99e:	14 60       	ori	r17, 0x04	; 4
+     9a0:	27 c0       	rjmp	.+78     	; 0x9f0 <_ZN11StepControl4goToEiiih+0x274>
+  cntB = setB = 3 + (fMax / b);
+  cntC = setC = 3 + (fMax / c);
+    
+  dirA = (posA <= newA) ? 1 : -1;
+  dirB = (posB <= newB) ? 1 : -1;
+  dirC = (posC <= newC) ? 1 : -1;
+     9a2:	91 e0       	ldi	r25, 0x01	; 1
+     9a4:	f2 01       	movw	r30, r4
+     9a6:	94 8f       	std	Z+28, r25	; 0x1c
+
+  if( dirA > 0 ){
+     9a8:	11 e0       	ldi	r17, 0x01	; 1
+     9aa:	18 16       	cp	r1, r24
+     9ac:	c4 f3       	brlt	.-16     	; 0x99e <_ZN11StepControl4goToEiiih+0x222>
+     9ae:	10 e0       	ldi	r17, 0x00	; 0
+     9b0:	f6 cf       	rjmp	.-20     	; 0x99e <_ZN11StepControl4goToEiiih+0x222>
+  cntA = setA = 3 + (fMax / a);
+  cntB = setB = 3 + (fMax / b);
+  cntC = setC = 3 + (fMax / c);
+    
+  dirA = (posA <= newA) ? 1 : -1;
+  dirB = (posB <= newB) ? 1 : -1;
+     9b2:	9f ef       	ldi	r25, 0xFF	; 255
+     9b4:	93 8f       	std	Z+27, r25	; 0x1b
+  dirC = (posC <= newC) ? 1 : -1;
+     9b6:	2e 14       	cp	r2, r14
+     9b8:	3f 04       	cpc	r3, r15
+     9ba:	9c f7       	brge	.-26     	; 0x9a2 <_ZN11StepControl4goToEiiih+0x226>
+     9bc:	09 c0       	rjmp	.+18     	; 0x9d0 <_ZN11StepControl4goToEiiih+0x254>
+     9be:	91 e0       	ldi	r25, 0x01	; 1
+     9c0:	f2 01       	movw	r30, r4
+     9c2:	94 8f       	std	Z+28, r25	; 0x1c
+
+  if( dirA > 0 ){
+     9c4:	11 e0       	ldi	r17, 0x01	; 1
+     9c6:	18 16       	cp	r1, r24
+     9c8:	0c f0       	brlt	.+2      	; 0x9cc <_ZN11StepControl4goToEiiih+0x250>
+     9ca:	10 e0       	ldi	r17, 0x00	; 0
+  cntB = setB = 3 + (fMax / b);
+  cntC = setC = 3 + (fMax / c);
+    
+  dirA = (posA <= newA) ? 1 : -1;
+  dirB = (posB <= newB) ? 1 : -1;
+  dirC = (posC <= newC) ? 1 : -1;
+     9cc:	81 e0       	ldi	r24, 0x01	; 1
+     9ce:	e4 cf       	rjmp	.-56     	; 0x998 <_ZN11StepControl4goToEiiih+0x21c>
+     9d0:	9f ef       	ldi	r25, 0xFF	; 255
+     9d2:	94 8f       	std	Z+28, r25	; 0x1c
+
+  if( dirA > 0 ){
+     9d4:	11 e0       	ldi	r17, 0x01	; 1
+     9d6:	18 16       	cp	r1, r24
+     9d8:	5c f0       	brlt	.+22     	; 0x9f0 <_ZN11StepControl4goToEiiih+0x274>
+     9da:	10 e0       	ldi	r17, 0x00	; 0
+     9dc:	09 c0       	rjmp	.+18     	; 0x9f0 <_ZN11StepControl4goToEiiih+0x274>
+  cntB = setB = 3 + (fMax / b);
+  cntC = setC = 3 + (fMax / c);
+    
+  dirA = (posA <= newA) ? 1 : -1;
+  dirB = (posB <= newB) ? 1 : -1;
+  dirC = (posC <= newC) ? 1 : -1;
+     9de:	9f ef       	ldi	r25, 0xFF	; 255
+     9e0:	f2 01       	movw	r30, r4
+     9e2:	94 8f       	std	Z+28, r25	; 0x1c
+
+  if( dirA > 0 ){
+     9e4:	11 e0       	ldi	r17, 0x01	; 1
+     9e6:	18 16       	cp	r1, r24
+     9e8:	0c f0       	brlt	.+2      	; 0x9ec <_ZN11StepControl4goToEiiih+0x270>
+     9ea:	10 e0       	ldi	r17, 0x00	; 0
+}
+
+uint8_t StepControl::goTo(int16_t A, int16_t B, int16_t C, uint8_t coils){    
+  const float fMax = 200.0f;
+  float a,b,c;
+  uint8_t mask = 0;
+     9ec:	8f ef       	ldi	r24, 0xFF	; 255
+     9ee:	d4 cf       	rjmp	.-88     	; 0x998 <_ZN11StepControl4goToEiiih+0x21c>
+
+  if( dirC > 0){
+    mask |= 1<<2;
+  }
+  
+  nowCoils = coils;
+     9f0:	d2 01       	movw	r26, r4
+     9f2:	59 96       	adiw	r26, 0x19	; 25
+     9f4:	0c 93       	st	X, r16
+  setCoils();  
+     9f6:	c2 01       	movw	r24, r4
+     9f8:	0e 94 8b 03 	call	0x716	; 0x716 <_ZN11StepControl8setCoilsEv>
+  return mask;
+}
+     9fc:	81 2f       	mov	r24, r17
+     9fe:	2c 96       	adiw	r28, 0x0c	; 12
+     a00:	0f b6       	in	r0, 0x3f	; 63
+     a02:	f8 94       	cli
+     a04:	de bf       	out	0x3e, r29	; 62
+     a06:	0f be       	out	0x3f, r0	; 63
+     a08:	cd bf       	out	0x3d, r28	; 61
+     a0a:	df 91       	pop	r29
+     a0c:	cf 91       	pop	r28
+     a0e:	1f 91       	pop	r17
+     a10:	0f 91       	pop	r16
+     a12:	ff 90       	pop	r15
+     a14:	ef 90       	pop	r14
+     a16:	df 90       	pop	r13
+     a18:	cf 90       	pop	r12
+     a1a:	bf 90       	pop	r11
+     a1c:	af 90       	pop	r10
+     a1e:	9f 90       	pop	r9
+     a20:	8f 90       	pop	r8
+     a22:	7f 90       	pop	r7
+     a24:	6f 90       	pop	r6
+     a26:	5f 90       	pop	r5
+     a28:	4f 90       	pop	r4
+     a2a:	3f 90       	pop	r3
+     a2c:	2f 90       	pop	r2
+     a2e:	08 95       	ret
+
+00000a30 <_ZN11StepControl6onRiseEPS_>:
+
+uint8_t StepControl::onRise(StepControl *control){  
+     a30:	fc 01       	movw	r30, r24
+  uint8_t mask = 0;
+
+  if( control->cntA == (control->setA>>1) ){    
+     a32:	64 85       	ldd	r22, Z+12	; 0x0c
+     a34:	75 85       	ldd	r23, Z+13	; 0x0d
+     a36:	22 89       	ldd	r18, Z+18	; 0x12
+     a38:	33 89       	ldd	r19, Z+19	; 0x13
+     a3a:	36 95       	lsr	r19
+     a3c:	27 95       	ror	r18
+     a3e:	81 e0       	ldi	r24, 0x01	; 1
+     a40:	62 17       	cp	r22, r18
+     a42:	73 07       	cpc	r23, r19
+     a44:	09 f0       	breq	.+2      	; 0xa48 <_ZN11StepControl6onRiseEPS_+0x18>
+     a46:	80 e0       	ldi	r24, 0x00	; 0
+    mask |= 1 << 0;
+  }
+  if( control->cntB == (control->setB>>1) ){    
+     a48:	46 85       	ldd	r20, Z+14	; 0x0e
+     a4a:	57 85       	ldd	r21, Z+15	; 0x0f
+     a4c:	24 89       	ldd	r18, Z+20	; 0x14
+     a4e:	35 89       	ldd	r19, Z+21	; 0x15
+     a50:	36 95       	lsr	r19
+     a52:	27 95       	ror	r18
+     a54:	42 17       	cp	r20, r18
+     a56:	53 07       	cpc	r21, r19
+     a58:	09 f4       	brne	.+2      	; 0xa5c <_ZN11StepControl6onRiseEPS_+0x2c>
+    mask |= 1 << 1;
+     a5a:	82 60       	ori	r24, 0x02	; 2
+  }
+  if( control->cntC == (control->setC>>1) ){    
+     a5c:	20 89       	ldd	r18, Z+16	; 0x10
+     a5e:	31 89       	ldd	r19, Z+17	; 0x11
+     a60:	a6 89       	ldd	r26, Z+22	; 0x16
+     a62:	b7 89       	ldd	r27, Z+23	; 0x17
+     a64:	b6 95       	lsr	r27
+     a66:	a7 95       	ror	r26
+     a68:	2a 17       	cp	r18, r26
+     a6a:	3b 07       	cpc	r19, r27
+     a6c:	09 f4       	brne	.+2      	; 0xa70 <_ZN11StepControl6onRiseEPS_+0x40>
+    mask |= 1 << 2;
+     a6e:	84 60       	ori	r24, 0x04	; 4
+  }
+
+  if( control->cntA ){    
+     a70:	61 15       	cp	r22, r1
+     a72:	71 05       	cpc	r23, r1
+     a74:	21 f0       	breq	.+8      	; 0xa7e <_ZN11StepControl6onRiseEPS_+0x4e>
+    control->cntA--;
+     a76:	61 50       	subi	r22, 0x01	; 1
+     a78:	71 09       	sbc	r23, r1
+     a7a:	75 87       	std	Z+13, r23	; 0x0d
+     a7c:	64 87       	std	Z+12, r22	; 0x0c
+  } 
+  if( control->cntB ){    
+     a7e:	41 15       	cp	r20, r1
+     a80:	51 05       	cpc	r21, r1
+     a82:	21 f0       	breq	.+8      	; 0xa8c <_ZN11StepControl6onRiseEPS_+0x5c>
+    control->cntB--;
+     a84:	41 50       	subi	r20, 0x01	; 1
+     a86:	51 09       	sbc	r21, r1
+     a88:	57 87       	std	Z+15, r21	; 0x0f
+     a8a:	46 87       	std	Z+14, r20	; 0x0e
+  }
+  if( control->cntC ){    
+     a8c:	21 15       	cp	r18, r1
+     a8e:	31 05       	cpc	r19, r1
+     a90:	21 f0       	breq	.+8      	; 0xa9a <_ZN11StepControl6onRiseEPS_+0x6a>
+    control->cntC--;
+     a92:	21 50       	subi	r18, 0x01	; 1
+     a94:	31 09       	sbc	r19, r1
+     a96:	31 8b       	std	Z+17, r19	; 0x11
+     a98:	20 8b       	std	Z+16, r18	; 0x10
+  }    
+  return mask;
+}
+     a9a:	08 95       	ret
+
+00000a9c <_ZN11StepControl6onFallEPS_>:
+
+uint8_t StepControl::onFall(StepControl *control){  
+     a9c:	fc 01       	movw	r30, r24
+  uint8_t doneCnt = 0;
+  uint8_t mask = 0xFF;
+
+  if(!control->cntA && (control->posA != control->newA) ){
+     a9e:	84 85       	ldd	r24, Z+12	; 0x0c
+     aa0:	95 85       	ldd	r25, Z+13	; 0x0d
+     aa2:	89 2b       	or	r24, r25
+     aa4:	a9 f4       	brne	.+42     	; 0xad0 <_ZN11StepControl6onFallEPS_+0x34>
+     aa6:	80 81       	ld	r24, Z
+     aa8:	91 81       	ldd	r25, Z+1	; 0x01
+     aaa:	26 81       	ldd	r18, Z+6	; 0x06
+     aac:	37 81       	ldd	r19, Z+7	; 0x07
+     aae:	82 17       	cp	r24, r18
+     ab0:	93 07       	cpc	r25, r19
+     ab2:	89 f0       	breq	.+34     	; 0xad6 <_ZN11StepControl6onFallEPS_+0x3a>
+    mask &= ~(1 << 0);                                  
+    control->posA += control->dirA;
+     ab4:	22 8d       	ldd	r18, Z+26	; 0x1a
+     ab6:	82 0f       	add	r24, r18
+     ab8:	91 1d       	adc	r25, r1
+     aba:	27 fd       	sbrc	r18, 7
+     abc:	9a 95       	dec	r25
+     abe:	91 83       	std	Z+1, r25	; 0x01
+     ac0:	80 83       	st	Z, r24
+    control->cntA = control->setA;                      
+     ac2:	82 89       	ldd	r24, Z+18	; 0x12
+     ac4:	93 89       	ldd	r25, Z+19	; 0x13
+     ac6:	95 87       	std	Z+13, r25	; 0x0d
+     ac8:	84 87       	std	Z+12, r24	; 0x0c
+uint8_t StepControl::onFall(StepControl *control){  
+  uint8_t doneCnt = 0;
+  uint8_t mask = 0xFF;
+
+  if(!control->cntA && (control->posA != control->newA) ){
+    mask &= ~(1 << 0);                                  
+     aca:	8e ef       	ldi	r24, 0xFE	; 254
+    control->posA += control->dirA;
+    control->cntA = control->setA;                      
+    doneCnt++;                                          
+     acc:	91 e0       	ldi	r25, 0x01	; 1
+     ace:	05 c0       	rjmp	.+10     	; 0xada <_ZN11StepControl6onFallEPS_+0x3e>
+  return mask;
+}
+
+uint8_t StepControl::onFall(StepControl *control){  
+  uint8_t doneCnt = 0;
+  uint8_t mask = 0xFF;
+     ad0:	8f ef       	ldi	r24, 0xFF	; 255
+  }    
+  return mask;
+}
+
+uint8_t StepControl::onFall(StepControl *control){  
+  uint8_t doneCnt = 0;
+     ad2:	90 e0       	ldi	r25, 0x00	; 0
+     ad4:	02 c0       	rjmp	.+4      	; 0xada <_ZN11StepControl6onFallEPS_+0x3e>
+  uint8_t mask = 0xFF;
+     ad6:	8f ef       	ldi	r24, 0xFF	; 255
+  }    
+  return mask;
+}
+
+uint8_t StepControl::onFall(StepControl *control){  
+  uint8_t doneCnt = 0;
+     ad8:	90 e0       	ldi	r25, 0x00	; 0
+    mask &= ~(1 << 0);                                  
+    control->posA += control->dirA;
+    control->cntA = control->setA;                      
+    doneCnt++;                                          
+  }                                                     
+  if(!control->cntB && (control->posB != control->newB) ){
+     ada:	26 85       	ldd	r18, Z+14	; 0x0e
+     adc:	37 85       	ldd	r19, Z+15	; 0x0f
+     ade:	23 2b       	or	r18, r19
+     ae0:	a1 f4       	brne	.+40     	; 0xb0a <__stack+0xb>
+     ae2:	22 81       	ldd	r18, Z+2	; 0x02
+     ae4:	33 81       	ldd	r19, Z+3	; 0x03
+     ae6:	40 85       	ldd	r20, Z+8	; 0x08
+     ae8:	51 85       	ldd	r21, Z+9	; 0x09
+     aea:	24 17       	cp	r18, r20
+     aec:	35 07       	cpc	r19, r21
+     aee:	69 f0       	breq	.+26     	; 0xb0a <__stack+0xb>
+    mask &= ~(1 << 1);                                  
+     af0:	8d 7f       	andi	r24, 0xFD	; 253
+    control->posB += control->dirB;
+     af2:	43 8d       	ldd	r20, Z+27	; 0x1b
+     af4:	24 0f       	add	r18, r20
+     af6:	31 1d       	adc	r19, r1
+     af8:	47 fd       	sbrc	r20, 7
+     afa:	3a 95       	dec	r19
+     afc:	33 83       	std	Z+3, r19	; 0x03
+     afe:	22 83       	std	Z+2, r18	; 0x02
+    control->cntB = control->setB;                      
+     b00:	24 89       	ldd	r18, Z+20	; 0x14
+     b02:	35 89       	ldd	r19, Z+21	; 0x15
+     b04:	37 87       	std	Z+15, r19	; 0x0f
+     b06:	26 87       	std	Z+14, r18	; 0x0e
+    doneCnt++;                                          
+     b08:	9f 5f       	subi	r25, 0xFF	; 255
+  }                                                     
+  if(!control->cntC && (control->posC != control->newC) ){
+     b0a:	20 89       	ldd	r18, Z+16	; 0x10
+     b0c:	31 89       	ldd	r19, Z+17	; 0x11
+     b0e:	23 2b       	or	r18, r19
+     b10:	a1 f4       	brne	.+40     	; 0xb3a <__stack+0x3b>
+     b12:	24 81       	ldd	r18, Z+4	; 0x04
+     b14:	35 81       	ldd	r19, Z+5	; 0x05
+     b16:	42 85       	ldd	r20, Z+10	; 0x0a
+     b18:	53 85       	ldd	r21, Z+11	; 0x0b
+     b1a:	24 17       	cp	r18, r20
+     b1c:	35 07       	cpc	r19, r21
+     b1e:	69 f0       	breq	.+26     	; 0xb3a <__stack+0x3b>
+    mask &= ~(1 << 2);    
+     b20:	8b 7f       	andi	r24, 0xFB	; 251
+    control->posC += control->dirC;
+     b22:	44 8d       	ldd	r20, Z+28	; 0x1c
+     b24:	24 0f       	add	r18, r20
+     b26:	31 1d       	adc	r19, r1
+     b28:	47 fd       	sbrc	r20, 7
+     b2a:	3a 95       	dec	r19
+     b2c:	35 83       	std	Z+5, r19	; 0x05
+     b2e:	24 83       	std	Z+4, r18	; 0x04
+    control->cntC = control->setC;
+     b30:	26 89       	ldd	r18, Z+22	; 0x16
+     b32:	37 89       	ldd	r19, Z+23	; 0x17
+     b34:	31 8b       	std	Z+17, r19	; 0x11
+     b36:	20 8b       	std	Z+16, r18	; 0x10
+    doneCnt++;
+     b38:	9f 5f       	subi	r25, 0xFF	; 255
+  } 
+  
+  if( doneCnt>=3 ){
+     b3a:	93 30       	cpi	r25, 0x03	; 3
+     b3c:	18 f0       	brcs	.+6      	; 0xb44 <__stack+0x45>
+    control->isOnPoint = true;
+     b3e:	91 e0       	ldi	r25, 0x01	; 1
+     b40:	95 8f       	std	Z+29, r25	; 0x1d
+     b42:	08 95       	ret
+  } else {
+    control->isOnPoint = false;
+     b44:	15 8e       	std	Z+29, r1	; 0x1d
+  }
+  return mask;
+     b46:	08 95       	ret
+
+00000b48 <_ZN3USB7initPLLEv>:
+#include <avr/interrupt.h>
+#include <string.h>
+#include "usb.h"
+
+void USB::initPLL(){
+  PLLFRQ   = 0b01001010;     //Set PLL freq 96MHz and PLL USB divider 2
+     b48:	8a e4       	ldi	r24, 0x4A	; 74
+     b4a:	82 bf       	out	0x32, r24	; 50
+  PLLCSR  |= (1<<PINDIV);    //Set PLL div for 16MHz
+     b4c:	89 b5       	in	r24, 0x29	; 41
+     b4e:	80 61       	ori	r24, 0x10	; 16
+     b50:	89 bd       	out	0x29, r24	; 41
+  PLLCSR  |= (1<<PLLE);
+     b52:	89 b5       	in	r24, 0x29	; 41
+     b54:	82 60       	ori	r24, 0x02	; 2
+     b56:	89 bd       	out	0x29, r24	; 41
+
+  while( (PLLCSR & 0x01) == 0)
+     b58:	09 b4       	in	r0, 0x29	; 41
+     b5a:	00 fe       	sbrs	r0, 0
+     b5c:	fd cf       	rjmp	.-6      	; 0xb58 <_ZN3USB7initPLLEv+0x10>
+    ;
+}
+     b5e:	08 95       	ret
+
+00000b60 <_ZN3USB17initConfigurationEbbj>:
+  epCounter = 1;
+  initInternalEndpoint(0, CONTROL,IN,SIZE64,ONE);
+  sei();
+}
+
+void USB::initConfiguration(bool busPower, bool remoteWakeup, uint16_t powerVal){
+     b60:	fc 01       	movw	r30, r24
+  config.len              = sizeof(USB_Config_Descriptor);  
+     b62:	89 e0       	ldi	r24, 0x09	; 9
+     b64:	84 a7       	std	Z+44, r24	; 0x2c
+  config.dtype            = 0x02;
+     b66:	82 e0       	ldi	r24, 0x02	; 2
+     b68:	85 a7       	std	Z+45, r24	; 0x2d
+  config.clen             = config.len;			
+     b6a:	89 e0       	ldi	r24, 0x09	; 9
+     b6c:	90 e0       	ldi	r25, 0x00	; 0
+     b6e:	97 a7       	std	Z+47, r25	; 0x2f
+     b70:	86 a7       	std	Z+46, r24	; 0x2e
+  config.numInterfaces    = 0;
+     b72:	10 aa       	std	Z+48, r1	; 0x30
+  config.config           = 1;
+     b74:	81 e0       	ldi	r24, 0x01	; 1
+     b76:	81 ab       	std	Z+49, r24	; 0x31
+bool  USB::isEnumerate(){
+  return this->isEnum;
+}
+
+uint8_t  USB::getStrId(){
+  return (this->useStr?++this->stringCounter:0);
+     b78:	87 ad       	ldd	r24, Z+63	; 0x3f
+     b7a:	88 23       	and	r24, r24
+     b7c:	39 f0       	breq	.+14     	; 0xb8c <_ZN3USB17initConfigurationEbbj+0x2c>
+     b7e:	df 01       	movw	r26, r30
+     b80:	ad 5b       	subi	r26, 0xBD	; 189
+     b82:	bf 4f       	sbci	r27, 0xFF	; 255
+     b84:	8c 91       	ld	r24, X
+     b86:	8f 5f       	subi	r24, 0xFF	; 255
+     b88:	8c 93       	st	X, r24
+     b8a:	01 c0       	rjmp	.+2      	; 0xb8e <_ZN3USB17initConfigurationEbbj+0x2e>
+     b8c:	80 e0       	ldi	r24, 0x00	; 0
+  config.len              = sizeof(USB_Config_Descriptor);  
+  config.dtype            = 0x02;
+  config.clen             = config.len;			
+  config.numInterfaces    = 0;
+  config.config           = 1;
+  config.iconfig          = getStrId();
+     b8e:	82 ab       	std	Z+50, r24	; 0x32
+  config.attributes       = 0x80 | (busPower?0:0x40) | (remoteWakeup?0x20:0);
+     b90:	61 11       	cpse	r22, r1
+     b92:	02 c0       	rjmp	.+4      	; 0xb98 <_ZN3USB17initConfigurationEbbj+0x38>
+     b94:	80 ec       	ldi	r24, 0xC0	; 192
+     b96:	01 c0       	rjmp	.+2      	; 0xb9a <_ZN3USB17initConfigurationEbbj+0x3a>
+     b98:	80 e8       	ldi	r24, 0x80	; 128
+     b9a:	41 11       	cpse	r20, r1
+     b9c:	02 c0       	rjmp	.+4      	; 0xba2 <_ZN3USB17initConfigurationEbbj+0x42>
+     b9e:	90 e0       	ldi	r25, 0x00	; 0
+     ba0:	01 c0       	rjmp	.+2      	; 0xba4 <_ZN3USB17initConfigurationEbbj+0x44>
+     ba2:	90 e2       	ldi	r25, 0x20	; 32
+     ba4:	89 2b       	or	r24, r25
+     ba6:	83 ab       	std	Z+51, r24	; 0x33
+  config.maxPower         = powerVal >> 1;
+     ba8:	36 95       	lsr	r19
+     baa:	27 95       	ror	r18
+     bac:	24 ab       	std	Z+52, r18	; 0x34
+     bae:	08 95       	ret
+
+00000bb0 <_ZN3USB13initInterfaceEv>:
+}
+
+void USB::initInterface(void){
+     bb0:	fc 01       	movw	r30, r24
+  iface.bLength           = sizeof(USB_Interface_Descriptor);
+     bb2:	89 e0       	ldi	r24, 0x09	; 9
+     bb4:	85 ab       	std	Z+53, r24	; 0x35
+  iface.bDescriptorType   = 0x04;
+     bb6:	84 e0       	ldi	r24, 0x04	; 4
+     bb8:	86 ab       	std	Z+54, r24	; 0x36
+  iface.bInterfaceNumber  = 0; 
+     bba:	17 aa       	std	Z+55, r1	; 0x37
+  iface.bAlternateSetting = 0;
+     bbc:	10 ae       	std	Z+56, r1	; 0x38
+  iface.bNumEndpoints     = 0;
+     bbe:	11 ae       	std	Z+57, r1	; 0x39
+  iface.bInterfaceClass   = 0xFF;
+     bc0:	8f ef       	ldi	r24, 0xFF	; 255
+     bc2:	82 af       	std	Z+58, r24	; 0x3a
+  iface.bInterfaceSubClass= 0x00;
+     bc4:	13 ae       	std	Z+59, r1	; 0x3b
+  iface.bInterfaceProtocol= 0xFF;
+     bc6:	84 af       	std	Z+60, r24	; 0x3c
+bool  USB::isEnumerate(){
+  return this->isEnum;
+}
+
+uint8_t  USB::getStrId(){
+  return (this->useStr?++this->stringCounter:0);
+     bc8:	87 ad       	ldd	r24, Z+63	; 0x3f
+     bca:	88 23       	and	r24, r24
+     bcc:	39 f0       	breq	.+14     	; 0xbdc <_ZN3USB13initInterfaceEv+0x2c>
+     bce:	df 01       	movw	r26, r30
+     bd0:	ad 5b       	subi	r26, 0xBD	; 189
+     bd2:	bf 4f       	sbci	r27, 0xFF	; 255
+     bd4:	8c 91       	ld	r24, X
+     bd6:	8f 5f       	subi	r24, 0xFF	; 255
+     bd8:	8c 93       	st	X, r24
+     bda:	01 c0       	rjmp	.+2      	; 0xbde <_ZN3USB13initInterfaceEv+0x2e>
+     bdc:	80 e0       	ldi	r24, 0x00	; 0
+  iface.bAlternateSetting = 0;
+  iface.bNumEndpoints     = 0;
+  iface.bInterfaceClass   = 0xFF;
+  iface.bInterfaceSubClass= 0x00;
+  iface.bInterfaceProtocol= 0xFF;
+  iface.iInterface        = getStrId();
+     bde:	85 af       	std	Z+61, r24	; 0x3d
+
+  config.numInterfaces ++;
+     be0:	80 a9       	ldd	r24, Z+48	; 0x30
+     be2:	8f 5f       	subi	r24, 0xFF	; 255
+     be4:	80 ab       	std	Z+48, r24	; 0x30
+  config.clen += iface.bLength;
+     be6:	86 a5       	ldd	r24, Z+46	; 0x2e
+     be8:	97 a5       	ldd	r25, Z+47	; 0x2f
+     bea:	09 96       	adiw	r24, 0x09	; 9
+     bec:	97 a7       	std	Z+47, r25	; 0x2f
+     bee:	86 a7       	std	Z+46, r24	; 0x2e
+     bf0:	08 95       	ret
+
+00000bf2 <_ZN3USB12initEndpointEh23USB_Endpoint_Definition>:
+}
+
+bool USB::initEndpoint(uint8_t num, USB_Endpoint_Definition def){
+     bf2:	ef 92       	push	r14
+     bf4:	ff 92       	push	r15
+     bf6:	0f 93       	push	r16
+     bf8:	1f 93       	push	r17
+     bfa:	cf 93       	push	r28
+     bfc:	df 93       	push	r29
+     bfe:	cd b7       	in	r28, 0x3d	; 61
+     c00:	de b7       	in	r29, 0x3e	; 62
+     c02:	28 97       	sbiw	r28, 0x08	; 8
+     c04:	0f b6       	in	r0, 0x3f	; 63
+     c06:	f8 94       	cli
+     c08:	de bf       	out	0x3e, r29	; 62
+     c0a:	0f be       	out	0x3f, r0	; 63
+     c0c:	cd bf       	out	0x3d, r28	; 61
+     c0e:	e9 82       	std	Y+1, r14	; 0x01
+     c10:	7f 2d       	mov	r23, r15
+     c12:	fa 82       	std	Y+2, r15	; 0x02
+     c14:	0b 83       	std	Y+3, r16	; 0x03
+     c16:	1c 83       	std	Y+4, r17	; 0x04
+     c18:	2d 83       	std	Y+5, r18	; 0x05
+     c1a:	3e 83       	std	Y+6, r19	; 0x06
+     c1c:	4f 83       	std	Y+7, r20	; 0x07
+     c1e:	58 87       	std	Y+8, r21	; 0x08
+  cli();
+     c20:	f8 94       	cli
+  if( (num==0) || (num>6)) {
+     c22:	2f ef       	ldi	r18, 0xFF	; 255
+     c24:	26 0f       	add	r18, r22
+     c26:	26 30       	cpi	r18, 0x06	; 6
+     c28:	08 f0       	brcs	.+2      	; 0xc2c <_ZN3USB12initEndpointEh23USB_Endpoint_Definition+0x3a>
+     c2a:	9e c0       	rjmp	.+316    	; 0xd68 <_ZN3USB12initEndpointEh23USB_Endpoint_Definition+0x176>
+    return false;
+  }
+
+  memcpy(&epDefinitions[num],&def,sizeof(USB_Endpoint_Definition));
+     c2c:	46 2f       	mov	r20, r22
+     c2e:	50 e0       	ldi	r21, 0x00	; 0
+     c30:	fa 82       	std	Y+2, r15	; 0x02
+     c32:	9a 01       	movw	r18, r20
+     c34:	22 0f       	add	r18, r18
+     c36:	33 1f       	adc	r19, r19
+     c38:	22 0f       	add	r18, r18
+     c3a:	33 1f       	adc	r19, r19
+     c3c:	22 0f       	add	r18, r18
+     c3e:	33 1f       	adc	r19, r19
+     c40:	8c 01       	movw	r16, r24
+     c42:	02 0f       	add	r16, r18
+     c44:	13 1f       	adc	r17, r19
+     c46:	08 51       	subi	r16, 0x18	; 24
+     c48:	1f 4f       	sbci	r17, 0xFF	; 255
+     c4a:	68 94       	set
+     c4c:	ff 24       	eor	r15, r15
+     c4e:	f3 f8       	bld	r15, 3
+     c50:	fe 01       	movw	r30, r28
+     c52:	31 96       	adiw	r30, 0x01	; 1
+     c54:	d8 01       	movw	r26, r16
+     c56:	01 90       	ld	r0, Z+
+     c58:	0d 92       	st	X+, r0
+     c5a:	fa 94       	dec	r15
+     c5c:	e1 f7       	brne	.-8      	; 0xc56 <_ZN3USB12initEndpointEh23USB_Endpoint_Definition+0x64>
+  epDefinitions[num].init = 1;
+     c5e:	e1 e0       	ldi	r30, 0x01	; 1
+     c60:	d8 01       	movw	r26, r16
+     c62:	ec 93       	st	X, r30
+
+  USB_Endpoint_Descriptor *ep = &epDescriptors[num];
+  
+  ep->bLength           = sizeof(USB_Endpoint_Descriptor);
+     c64:	24 1b       	sub	r18, r20
+     c66:	35 0b       	sbc	r19, r21
+     c68:	28 0f       	add	r18, r24
+     c6a:	39 1f       	adc	r19, r25
+     c6c:	f9 01       	movw	r30, r18
+     c6e:	e9 54       	subi	r30, 0x49	; 73
+     c70:	ff 4f       	sbci	r31, 0xFF	; 255
+     c72:	a7 e0       	ldi	r26, 0x07	; 7
+     c74:	a0 83       	st	Z, r26
+  ep->bDescriptorType   = 0x05;
+     c76:	31 96       	adiw	r30, 0x01	; 1
+     c78:	25 e0       	ldi	r18, 0x05	; 5
+     c7a:	20 83       	st	Z, r18
+  ep->bEndpointAddress  = num | ((def.dir==IN)?0x80:0);
+     c7c:	2b 81       	ldd	r18, Y+3	; 0x03
+     c7e:	21 30       	cpi	r18, 0x01	; 1
+     c80:	11 f0       	breq	.+4      	; 0xc86 <_ZN3USB12initEndpointEh23USB_Endpoint_Definition+0x94>
+     c82:	a0 e0       	ldi	r26, 0x00	; 0
+     c84:	01 c0       	rjmp	.+2      	; 0xc88 <_ZN3USB12initEndpointEh23USB_Endpoint_Definition+0x96>
+     c86:	a0 e8       	ldi	r26, 0x80	; 128
+     c88:	9a 01       	movw	r18, r20
+     c8a:	22 0f       	add	r18, r18
+     c8c:	33 1f       	adc	r19, r19
+     c8e:	22 0f       	add	r18, r18
+     c90:	33 1f       	adc	r19, r19
+     c92:	22 0f       	add	r18, r18
+     c94:	33 1f       	adc	r19, r19
+     c96:	24 1b       	sub	r18, r20
+     c98:	35 0b       	sbc	r19, r21
+     c9a:	28 0f       	add	r18, r24
+     c9c:	39 1f       	adc	r19, r25
+     c9e:	f9 01       	movw	r30, r18
+     ca0:	e7 54       	subi	r30, 0x47	; 71
+     ca2:	ff 4f       	sbci	r31, 0xFF	; 255
+     ca4:	6a 2b       	or	r22, r26
+     ca6:	60 83       	st	Z, r22
+  ep->bmAttributes      = def.type & 0b11;
+     ca8:	31 96       	adiw	r30, 0x01	; 1
+     caa:	67 2f       	mov	r22, r23
+     cac:	63 70       	andi	r22, 0x03	; 3
+     cae:	60 83       	st	Z, r22
+  ep->wMaxPacketSize    = 8 * (1<<def.size);
+     cb0:	d9 01       	movw	r26, r18
+     cb2:	a5 54       	subi	r26, 0x45	; 69
+     cb4:	bf 4f       	sbci	r27, 0xFF	; 255
+     cb6:	e8 e0       	ldi	r30, 0x08	; 8
+     cb8:	f0 e0       	ldi	r31, 0x00	; 0
+     cba:	0c 80       	ldd	r0, Y+4	; 0x04
+     cbc:	02 c0       	rjmp	.+4      	; 0xcc2 <_ZN3USB12initEndpointEh23USB_Endpoint_Definition+0xd0>
+     cbe:	ee 0f       	add	r30, r30
+     cc0:	ff 1f       	adc	r31, r31
+     cc2:	0a 94       	dec	r0
+     cc4:	e2 f7       	brpl	.-8      	; 0xcbe <_ZN3USB12initEndpointEh23USB_Endpoint_Definition+0xcc>
+     cc6:	ed 93       	st	X+, r30
+     cc8:	fc 93       	st	X, r31
+  ep->bInterval         = 0;
+     cca:	f9 01       	movw	r30, r18
+     ccc:	e3 54       	subi	r30, 0x43	; 67
+     cce:	ff 4f       	sbci	r31, 0xFF	; 255
+     cd0:	10 82       	st	Z, r1
+
+  if( def.type == INT ){
+     cd2:	73 30       	cpi	r23, 0x03	; 3
+     cd4:	31 f4       	brne	.+12     	; 0xce2 <_ZN3USB12initEndpointEh23USB_Endpoint_Definition+0xf0>
+    ep->bInterval = def.interval;
+     cd6:	f9 01       	movw	r30, r18
+     cd8:	e3 54       	subi	r30, 0x43	; 67
+     cda:	ff 4f       	sbci	r31, 0xFF	; 255
+     cdc:	2e 81       	ldd	r18, Y+6	; 0x06
+     cde:	20 83       	st	Z, r18
+     ce0:	23 c0       	rjmp	.+70     	; 0xd28 <_ZN3USB12initEndpointEh23USB_Endpoint_Definition+0x136>
+  } else if( def.type == ISOCHR ){
+     ce2:	71 30       	cpi	r23, 0x01	; 1
+     ce4:	09 f5       	brne	.+66     	; 0xd28 <_ZN3USB12initEndpointEh23USB_Endpoint_Definition+0x136>
+    ep->bInterval = 1;
+     ce6:	fa 01       	movw	r30, r20
+     ce8:	ee 0f       	add	r30, r30
+     cea:	ff 1f       	adc	r31, r31
+     cec:	ee 0f       	add	r30, r30
+     cee:	ff 1f       	adc	r31, r31
+     cf0:	ee 0f       	add	r30, r30
+     cf2:	ff 1f       	adc	r31, r31
+     cf4:	e4 1b       	sub	r30, r20
+     cf6:	f5 0b       	sbc	r31, r21
+     cf8:	e8 0f       	add	r30, r24
+     cfa:	f9 1f       	adc	r31, r25
+     cfc:	df 01       	movw	r26, r30
+     cfe:	a3 54       	subi	r26, 0x43	; 67
+     d00:	bf 4f       	sbci	r27, 0xFF	; 255
+     d02:	21 e0       	ldi	r18, 0x01	; 1
+     d04:	2c 93       	st	X, r18
+    ep->bmAttributes |= ((def.sync & 0b11) <<2) | ((def.iType & 0b11) <<4); 
+     d06:	e6 54       	subi	r30, 0x46	; 70
+     d08:	ff 4f       	sbci	r31, 0xFF	; 255
+     d0a:	2f 81       	ldd	r18, Y+7	; 0x07
+     d0c:	23 70       	andi	r18, 0x03	; 3
+     d0e:	62 2f       	mov	r22, r18
+     d10:	66 0f       	add	r22, r22
+     d12:	66 0f       	add	r22, r22
+     d14:	38 85       	ldd	r19, Y+8	; 0x08
+     d16:	33 70       	andi	r19, 0x03	; 3
+     d18:	b0 e1       	ldi	r27, 0x10	; 16
+     d1a:	3b 9f       	mul	r19, r27
+     d1c:	90 01       	movw	r18, r0
+     d1e:	11 24       	eor	r1, r1
+     d20:	26 2b       	or	r18, r22
+     d22:	30 81       	ld	r19, Z
+     d24:	23 2b       	or	r18, r19
+     d26:	20 83       	st	Z, r18
+  }
+
+  iface.bNumEndpoints++;
+     d28:	fc 01       	movw	r30, r24
+     d2a:	21 ad       	ldd	r18, Z+57	; 0x39
+     d2c:	2f 5f       	subi	r18, 0xFF	; 255
+     d2e:	21 af       	std	Z+57, r18	; 0x39
+  config.clen += ep->bLength;
+     d30:	fa 01       	movw	r30, r20
+     d32:	ee 0f       	add	r30, r30
+     d34:	ff 1f       	adc	r31, r31
+     d36:	ee 0f       	add	r30, r30
+     d38:	ff 1f       	adc	r31, r31
+     d3a:	ee 0f       	add	r30, r30
+     d3c:	ff 1f       	adc	r31, r31
+     d3e:	e4 1b       	sub	r30, r20
+     d40:	f5 0b       	sbc	r31, r21
+     d42:	e8 0f       	add	r30, r24
+     d44:	f9 1f       	adc	r31, r25
+     d46:	e9 54       	subi	r30, 0x49	; 73
+     d48:	ff 4f       	sbci	r31, 0xFF	; 255
+     d4a:	40 81       	ld	r20, Z
+     d4c:	dc 01       	movw	r26, r24
+     d4e:	9e 96       	adiw	r26, 0x2e	; 46
+     d50:	2d 91       	ld	r18, X+
+     d52:	3c 91       	ld	r19, X
+     d54:	9f 97       	sbiw	r26, 0x2f	; 47
+     d56:	24 0f       	add	r18, r20
+     d58:	31 1d       	adc	r19, r1
+     d5a:	9f 96       	adiw	r26, 0x2f	; 47
+     d5c:	3c 93       	st	X, r19
+     d5e:	2e 93       	st	-X, r18
+     d60:	9e 97       	sbiw	r26, 0x2e	; 46
+  
+  sei();
+     d62:	78 94       	sei
+  return true;
+     d64:	81 e0       	ldi	r24, 0x01	; 1
+     d66:	01 c0       	rjmp	.+2      	; 0xd6a <_ZN3USB12initEndpointEh23USB_Endpoint_Definition+0x178>
+}
+
+bool USB::initEndpoint(uint8_t num, USB_Endpoint_Definition def){
+  cli();
+  if( (num==0) || (num>6)) {
+    return false;
+     d68:	80 e0       	ldi	r24, 0x00	; 0
+  iface.bNumEndpoints++;
+  config.clen += ep->bLength;
+  
+  sei();
+  return true;
+}
+     d6a:	28 96       	adiw	r28, 0x08	; 8
+     d6c:	0f b6       	in	r0, 0x3f	; 63
+     d6e:	f8 94       	cli
+     d70:	de bf       	out	0x3e, r29	; 62
+     d72:	0f be       	out	0x3f, r0	; 63
+     d74:	cd bf       	out	0x3d, r28	; 61
+     d76:	df 91       	pop	r29
+     d78:	cf 91       	pop	r28
+     d7a:	1f 91       	pop	r17
+     d7c:	0f 91       	pop	r16
+     d7e:	ff 90       	pop	r15
+     d80:	ef 90       	pop	r14
+     d82:	08 95       	ret
+
+00000d84 <_ZN3USB11isEnumerateEv>:
+  }
+}
+
+bool  USB::isEnumerate(){
+  return this->isEnum;
+}
+     d84:	fc 01       	movw	r30, r24
+     d86:	86 ad       	ldd	r24, Z+62	; 0x3e
+     d88:	08 95       	ret
+
+00000d8a <_ZN3USB6waitInEv>:
+  selectEndPoint(0);
+  UEIENX = (1 << RXSTPE);  
+}
+
+void USB::waitIn(void){
+  while (!(UEINTX & (1<<TXINI))) 
+     d8a:	e8 ee       	ldi	r30, 0xE8	; 232
+     d8c:	f0 e0       	ldi	r31, 0x00	; 0
+     d8e:	80 81       	ld	r24, Z
+     d90:	80 ff       	sbrs	r24, 0
+     d92:	fd cf       	rjmp	.-6      	; 0xd8e <_ZN3USB6waitInEv+0x4>
+    ;
+}
+     d94:	08 95       	ret
+
+00000d96 <_ZN3USB7clearInEv>:
+
+void USB::clearIn(void){
+  UEINTX &= ~((1<<FIFOCON) | (1<<RXOUTI) |(1<<TXINI)); 
+     d96:	e8 ee       	ldi	r30, 0xE8	; 232
+     d98:	f0 e0       	ldi	r31, 0x00	; 0
+     d9a:	20 81       	ld	r18, Z
+     d9c:	2a 77       	andi	r18, 0x7A	; 122
+     d9e:	20 83       	st	Z, r18
+  this->sendBufPos = 0;
+     da0:	fc 01       	movw	r30, r24
+     da2:	ee 5b       	subi	r30, 0xBE	; 190
+     da4:	ff 4f       	sbci	r31, 0xFF	; 255
+     da6:	10 82       	st	Z, r1
+     da8:	08 95       	ret
+
+00000daa <_ZN3USB5stallEv>:
+}
+
+void USB::stall(void){
+  UECONX |= (1<<STALLRQ);
+     daa:	eb ee       	ldi	r30, 0xEB	; 235
+     dac:	f0 e0       	ldi	r31, 0x00	; 0
+     dae:	80 81       	ld	r24, Z
+     db0:	80 62       	ori	r24, 0x20	; 32
+     db2:	80 83       	st	Z, r24
+     db4:	08 95       	ret
+
+00000db6 <_ZN3USB10clearStallEh>:
+    this->sendBufPos++;
+  }
+}
+
+void USB::selectEndPoint(uint8_t num){
+  UENUM  = ((num) & 0x0F);
+     db6:	6f 70       	andi	r22, 0x0F	; 15
+     db8:	60 93 e9 00 	sts	0x00E9, r22	; 0x8000e9 <__TEXT_REGION_LENGTH__+0x7e00e9>
+  UECONX |= (1<<STALLRQ);
+}
+
+void USB::clearStall(uint8_t num){
+  USB::selectEndPoint(num);
+  UECONX |= (1 << STALLRQC);
+     dbc:	eb ee       	ldi	r30, 0xEB	; 235
+     dbe:	f0 e0       	ldi	r31, 0x00	; 0
+     dc0:	80 81       	ld	r24, Z
+     dc2:	80 61       	ori	r24, 0x10	; 16
+     dc4:	80 83       	st	Z, r24
+     dc6:	08 95       	ret
+
+00000dc8 <_ZN3USB7readBufEPhh>:
+}
+
+void USB::readBuf(uint8_t *buffer, uint8_t size){
+  while(size--){
+     dc8:	8f ef       	ldi	r24, 0xFF	; 255
+     dca:	84 0f       	add	r24, r20
+     dcc:	44 23       	and	r20, r20
+     dce:	41 f0       	breq	.+16     	; 0xde0 <_ZN3USB7readBufEPhh+0x18>
+     dd0:	e6 2f       	mov	r30, r22
+     dd2:	f7 2f       	mov	r31, r23
+    *(buffer++) = UEDATX;
+     dd4:	a1 ef       	ldi	r26, 0xF1	; 241
+     dd6:	b0 e0       	ldi	r27, 0x00	; 0
+     dd8:	9c 91       	ld	r25, X
+     dda:	91 93       	st	Z+, r25
+  USB::selectEndPoint(num);
+  UECONX |= (1 << STALLRQC);
+}
+
+void USB::readBuf(uint8_t *buffer, uint8_t size){
+  while(size--){
+     ddc:	81 50       	subi	r24, 0x01	; 1
+     dde:	e0 f7       	brcc	.-8      	; 0xdd8 <_ZN3USB7readBufEPhh+0x10>
+     de0:	08 95       	ret
+
+00000de2 <_ZN3USB8writeBufEPKhhh>:
+    *(buffer++) = UEDATX;
+  }
+}
+
+void USB::writeBuf(const uint8_t *buffer, uint8_t bufSize, uint8_t maxSize){  
+     de2:	cf 93       	push	r28
+     de4:	df 93       	push	r29
+  if( (this->sendBufPos + bufSize) > maxSize ) {
+     de6:	dc 01       	movw	r26, r24
+     de8:	ae 5b       	subi	r26, 0xBE	; 190
+     dea:	bf 4f       	sbci	r27, 0xFF	; 255
+     dec:	3c 91       	ld	r19, X
+     dee:	84 2f       	mov	r24, r20
+     df0:	90 e0       	ldi	r25, 0x00	; 0
+     df2:	83 0f       	add	r24, r19
+     df4:	91 1d       	adc	r25, r1
+     df6:	30 e0       	ldi	r19, 0x00	; 0
+     df8:	28 17       	cp	r18, r24
+     dfa:	39 07       	cpc	r19, r25
+     dfc:	8c f0       	brlt	.+34     	; 0xe20 <_ZN3USB8writeBufEPKhhh+0x3e>
+    return;
+  }
+  uint8_t b,pos = 0;  
+  while( bufSize-- ){
+     dfe:	44 23       	and	r20, r20
+     e00:	79 f0       	breq	.+30     	; 0xe20 <_ZN3USB8writeBufEPKhhh+0x3e>
+     e02:	90 e0       	ldi	r25, 0x00	; 0
+    b = buffer[pos++];
+    UEDATX = b;
+     e04:	c1 ef       	ldi	r28, 0xF1	; 241
+     e06:	d0 e0       	ldi	r29, 0x00	; 0
+    this->sendBufPos++;
+     e08:	fd 01       	movw	r30, r26
+  if( (this->sendBufPos + bufSize) > maxSize ) {
+    return;
+  }
+  uint8_t b,pos = 0;  
+  while( bufSize-- ){
+    b = buffer[pos++];
+     e0a:	db 01       	movw	r26, r22
+     e0c:	a9 0f       	add	r26, r25
+     e0e:	b1 1d       	adc	r27, r1
+     e10:	8c 91       	ld	r24, X
+    UEDATX = b;
+     e12:	88 83       	st	Y, r24
+    this->sendBufPos++;
+     e14:	20 81       	ld	r18, Z
+     e16:	2f 5f       	subi	r18, 0xFF	; 255
+     e18:	20 83       	st	Z, r18
+  if( (this->sendBufPos + bufSize) > maxSize ) {
+    return;
+  }
+  uint8_t b,pos = 0;  
+  while( bufSize-- ){
+    b = buffer[pos++];
+     e1a:	9f 5f       	subi	r25, 0xFF	; 255
+void USB::writeBuf(const uint8_t *buffer, uint8_t bufSize, uint8_t maxSize){  
+  if( (this->sendBufPos + bufSize) > maxSize ) {
+    return;
+  }
+  uint8_t b,pos = 0;  
+  while( bufSize-- ){
+     e1c:	94 13       	cpse	r25, r20
+     e1e:	f5 cf       	rjmp	.-22     	; 0xe0a <_ZN3USB8writeBufEPKhhh+0x28>
+    b = buffer[pos++];
+    UEDATX = b;
+    this->sendBufPos++;
+  }
+}
+     e20:	df 91       	pop	r29
+     e22:	cf 91       	pop	r28
+     e24:	08 95       	ret
+
+00000e26 <_ZN3USB14selectEndPointEh>:
+
+void USB::selectEndPoint(uint8_t num){
+  UENUM  = ((num) & 0x0F);
+     e26:	8f 70       	andi	r24, 0x0F	; 15
+     e28:	80 93 e9 00 	sts	0x00E9, r24	; 0x8000e9 <__TEXT_REGION_LENGTH__+0x7e00e9>
+     e2c:	08 95       	ret
+
+00000e2e <_ZN3USB20initInternalEndpointEh6upType11upDirection6upSize6upBank>:
+}
+
+bool USB::initInternalEndpoint(const uint8_t num, upType type, upDirection dir,upSize size, upBank bank){
+     e2e:	0f 93       	push	r16
+     e30:	cf 93       	push	r28
+     e32:	df 93       	push	r29
+     e34:	00 d0       	rcall	.+0      	; 0xe36 <_ZN3USB20initInternalEndpointEh6upType11upDirection6upSize6upBank+0x8>
+     e36:	00 d0       	rcall	.+0      	; 0xe38 <_ZN3USB20initInternalEndpointEh6upType11upDirection6upSize6upBank+0xa>
+     e38:	00 d0       	rcall	.+0      	; 0xe3a <_ZN3USB20initInternalEndpointEh6upType11upDirection6upSize6upBank+0xc>
+     e3a:	cd b7       	in	r28, 0x3d	; 61
+     e3c:	de b7       	in	r29, 0x3e	; 62
+  volatile uint8_t b1 = 0,
+     e3e:	1e 82       	std	Y+6, r1	; 0x06
+          b2 = 0,
+     e40:	1d 82       	std	Y+5, r1	; 0x05
+          tp = (uint8_t) type,
+     e42:	6c 83       	std	Y+4, r22	; 0x04
+          dr = (uint8_t) dir,
+     e44:	4b 83       	std	Y+3, r20	; 0x03
+          sz = (uint8_t) size,
+     e46:	2a 83       	std	Y+2, r18	; 0x02
+          bn = (uint8_t) bank;
+     e48:	09 83       	std	Y+1, r16	; 0x01
+
+  b1 = (tp<<6) | dr;
+     e4a:	9c 81       	ldd	r25, Y+4	; 0x04
+     e4c:	4b 81       	ldd	r20, Y+3	; 0x03
+     e4e:	50 e4       	ldi	r21, 0x40	; 64
+     e50:	95 9f       	mul	r25, r21
+     e52:	90 01       	movw	r18, r0
+     e54:	11 24       	eor	r1, r1
+     e56:	24 2b       	or	r18, r20
+     e58:	2e 83       	std	Y+6, r18	; 0x06
+  b2 = (sz<<4) | (bn<<2);
+     e5a:	9a 81       	ldd	r25, Y+2	; 0x02
+     e5c:	29 81       	ldd	r18, Y+1	; 0x01
+     e5e:	42 2f       	mov	r20, r18
+     e60:	44 0f       	add	r20, r20
+     e62:	44 0f       	add	r20, r20
+     e64:	50 e1       	ldi	r21, 0x10	; 16
+     e66:	95 9f       	mul	r25, r21
+     e68:	90 01       	movw	r18, r0
+     e6a:	11 24       	eor	r1, r1
+     e6c:	24 2b       	or	r18, r20
+     e6e:	2d 83       	std	Y+5, r18	; 0x05
+    this->sendBufPos++;
+  }
+}
+
+void USB::selectEndPoint(uint8_t num){
+  UENUM  = ((num) & 0x0F);
+     e70:	8f 70       	andi	r24, 0x0F	; 15
+     e72:	80 93 e9 00 	sts	0x00E9, r24	; 0x8000e9 <__TEXT_REGION_LENGTH__+0x7e00e9>
+
+  b1 = (tp<<6) | dr;
+  b2 = (sz<<4) | (bn<<2);
+  
+  USB::selectEndPoint(num);  
+  UECONX |= (1<<EPEN);
+     e76:	eb ee       	ldi	r30, 0xEB	; 235
+     e78:	f0 e0       	ldi	r31, 0x00	; 0
+     e7a:	80 81       	ld	r24, Z
+     e7c:	81 60       	ori	r24, 0x01	; 1
+     e7e:	80 83       	st	Z, r24
+  
+  UECFG1X = 0;
+     e80:	ed ee       	ldi	r30, 0xED	; 237
+     e82:	f0 e0       	ldi	r31, 0x00	; 0
+     e84:	10 82       	st	Z, r1
+  UECFG0X = b1;
+     e86:	8e 81       	ldd	r24, Y+6	; 0x06
+     e88:	80 93 ec 00 	sts	0x00EC, r24	; 0x8000ec <__TEXT_REGION_LENGTH__+0x7e00ec>
+  UECFG1X = (1<<ALLOC) | b2; 
+     e8c:	8d 81       	ldd	r24, Y+5	; 0x05
+     e8e:	82 60       	ori	r24, 0x02	; 2
+     e90:	80 83       	st	Z, r24
+  
+  return (UESTA0X & (1<<CFGOK))?true:false;
+     e92:	80 91 ee 00 	lds	r24, 0x00EE	; 0x8000ee <__TEXT_REGION_LENGTH__+0x7e00ee>
+}
+     e96:	88 1f       	adc	r24, r24
+     e98:	88 27       	eor	r24, r24
+     e9a:	88 1f       	adc	r24, r24
+     e9c:	26 96       	adiw	r28, 0x06	; 6
+     e9e:	0f b6       	in	r0, 0x3f	; 63
+     ea0:	f8 94       	cli
+     ea2:	de bf       	out	0x3e, r29	; 62
+     ea4:	0f be       	out	0x3f, r0	; 63
+     ea6:	cd bf       	out	0x3d, r28	; 61
+     ea8:	df 91       	pop	r29
+     eaa:	cf 91       	pop	r28
+     eac:	0f 91       	pop	r16
+     eae:	08 95       	ret
+
+00000eb0 <_ZN3USB4initEjjfbbbj>:
+
+  while( (PLLCSR & 0x01) == 0)
+    ;
+}
+
+void USB::init(uint16_t vid, uint16_t pid, float usbVer, bool useString, bool busPower, bool remoteWakeup, uint16_t powerVal){
+     eb0:	2f 92       	push	r2
+     eb2:	3f 92       	push	r3
+     eb4:	4f 92       	push	r4
+     eb6:	5f 92       	push	r5
+     eb8:	6f 92       	push	r6
+     eba:	7f 92       	push	r7
+     ebc:	8f 92       	push	r8
+     ebe:	9f 92       	push	r9
+     ec0:	af 92       	push	r10
+     ec2:	cf 92       	push	r12
+     ec4:	ef 92       	push	r14
+     ec6:	ff 92       	push	r15
+     ec8:	0f 93       	push	r16
+     eca:	1f 93       	push	r17
+     ecc:	cf 93       	push	r28
+     ece:	df 93       	push	r29
+     ed0:	00 d0       	rcall	.+0      	; 0xed2 <_ZN3USB4initEjjfbbbj+0x22>
+     ed2:	00 d0       	rcall	.+0      	; 0xed4 <_ZN3USB4initEjjfbbbj+0x24>
+     ed4:	cd b7       	in	r28, 0x3d	; 61
+     ed6:	de b7       	in	r29, 0x3e	; 62
+     ed8:	3c 01       	movw	r6, r24
+     eda:	1b 01       	movw	r2, r22
+     edc:	2a 01       	movw	r4, r20
+     ede:	09 83       	std	Y+1, r16	; 0x01
+     ee0:	1a 83       	std	Y+2, r17	; 0x02
+     ee2:	2b 83       	std	Y+3, r18	; 0x03
+     ee4:	3c 83       	std	Y+4, r19	; 0x04
+  cli();
+     ee6:	f8 94       	cli
+
+  this->isEnum = false;
+     ee8:	dc 01       	movw	r26, r24
+     eea:	de 96       	adiw	r26, 0x3e	; 62
+     eec:	1c 92       	st	X, r1
+  this->initPLL();
+     eee:	0e 94 a4 05 	call	0xb48	; 0xb48 <_ZN3USB7initPLLEv>
+  UHWCON   = 0b00000001;
+     ef2:	ff 24       	eor	r15, r15
+     ef4:	f3 94       	inc	r15
+     ef6:	f0 92 d7 00 	sts	0x00D7, r15	; 0x8000d7 <__TEXT_REGION_LENGTH__+0x7e00d7>
+  USBCON  |= (1<<OTGPADE);
+     efa:	e8 ed       	ldi	r30, 0xD8	; 216
+     efc:	f0 e0       	ldi	r31, 0x00	; 0
+     efe:	80 81       	ld	r24, Z
+     f00:	80 61       	ori	r24, 0x10	; 16
+     f02:	80 83       	st	Z, r24
+  USBCON  |= (1<<USBE) | (1<<FRZCLK);
+     f04:	80 81       	ld	r24, Z
+     f06:	80 6a       	ori	r24, 0xA0	; 160
+     f08:	80 83       	st	Z, r24
+  USBCON &= ~(1<<FRZCLK);               // UNFREEZE;
+     f0a:	80 81       	ld	r24, Z
+     f0c:	8f 7d       	andi	r24, 0xDF	; 223
+     f0e:	80 83       	st	Z, r24
+
+  //_delay_ms(10);
+
+  UDCON &= ~(1<<DETACH);                // ATTACH;
+     f10:	e0 ee       	ldi	r30, 0xE0	; 224
+     f12:	f0 e0       	ldi	r31, 0x00	; 0
+     f14:	80 81       	ld	r24, Z
+     f16:	8e 7f       	andi	r24, 0xFE	; 254
+     f18:	80 83       	st	Z, r24
+
+  UDIEN = (1<<EORSTE); 
+     f1a:	88 e0       	ldi	r24, 0x08	; 8
+     f1c:	80 93 e2 00 	sts	0x00E2, r24	; 0x8000e2 <__TEXT_REGION_LENGTH__+0x7e00e2>
+
+  this->useStr = useString;
+     f20:	f3 01       	movw	r30, r6
+     f22:	e7 ae       	std	Z+63, r14	; 0x3f
+  float mul     = usbVer * 10;
+  uint8_t hiVer = (uint8_t)usbVer;
+     f24:	69 81       	ldd	r22, Y+1	; 0x01
+     f26:	7a 81       	ldd	r23, Y+2	; 0x02
+     f28:	8b 81       	ldd	r24, Y+3	; 0x03
+     f2a:	9c 81       	ldd	r25, Y+4	; 0x04
+     f2c:	0e 94 e0 0a 	call	0x15c0	; 0x15c0 <__fixunssfsi>
+  uint8_t loVer = (uint8_t)((mul - hiVer*10))<<4;
+     f30:	06 2f       	mov	r16, r22
+     f32:	10 e0       	ldi	r17, 0x00	; 0
+
+  this->device.len                    = sizeof(device);
+     f34:	82 e1       	ldi	r24, 0x12	; 18
+     f36:	d3 01       	movw	r26, r6
+     f38:	50 96       	adiw	r26, 0x10	; 16
+     f3a:	8c 93       	st	X, r24
+     f3c:	50 97       	sbiw	r26, 0x10	; 16
+  this->device.dtype                  = 0x01;
+     f3e:	51 96       	adiw	r26, 0x11	; 17
+     f40:	fc 92       	st	X, r15
+  UDCON &= ~(1<<DETACH);                // ATTACH;
+
+  UDIEN = (1<<EORSTE); 
+
+  this->useStr = useString;
+  float mul     = usbVer * 10;
+     f42:	20 e0       	ldi	r18, 0x00	; 0
+     f44:	30 e0       	ldi	r19, 0x00	; 0
+     f46:	40 e2       	ldi	r20, 0x20	; 32
+     f48:	51 e4       	ldi	r21, 0x41	; 65
+     f4a:	69 81       	ldd	r22, Y+1	; 0x01
+     f4c:	7a 81       	ldd	r23, Y+2	; 0x02
+     f4e:	8b 81       	ldd	r24, Y+3	; 0x03
+     f50:	9c 81       	ldd	r25, Y+4	; 0x04
+     f52:	0e 94 a2 0b 	call	0x1744	; 0x1744 <__mulsf3>
+     f56:	69 83       	std	Y+1, r22	; 0x01
+     f58:	7a 83       	std	Y+2, r23	; 0x02
+     f5a:	8b 83       	std	Y+3, r24	; 0x03
+     f5c:	9c 83       	std	Y+4, r25	; 0x04
+  uint8_t hiVer = (uint8_t)usbVer;
+  uint8_t loVer = (uint8_t)((mul - hiVer*10))<<4;
+     f5e:	b8 01       	movw	r22, r16
+     f60:	66 0f       	add	r22, r22
+     f62:	77 1f       	adc	r23, r23
+     f64:	c8 01       	movw	r24, r16
+     f66:	88 0f       	add	r24, r24
+     f68:	99 1f       	adc	r25, r25
+     f6a:	88 0f       	add	r24, r24
+     f6c:	99 1f       	adc	r25, r25
+     f6e:	88 0f       	add	r24, r24
+     f70:	99 1f       	adc	r25, r25
+     f72:	68 0f       	add	r22, r24
+     f74:	79 1f       	adc	r23, r25
+     f76:	07 2e       	mov	r0, r23
+     f78:	00 0c       	add	r0, r0
+     f7a:	88 0b       	sbc	r24, r24
+     f7c:	99 0b       	sbc	r25, r25
+     f7e:	0e 94 11 0b 	call	0x1622	; 0x1622 <__floatsisf>
+     f82:	9b 01       	movw	r18, r22
+     f84:	ac 01       	movw	r20, r24
+     f86:	69 81       	ldd	r22, Y+1	; 0x01
+     f88:	7a 81       	ldd	r23, Y+2	; 0x02
+     f8a:	8b 81       	ldd	r24, Y+3	; 0x03
+     f8c:	9c 81       	ldd	r25, Y+4	; 0x04
+     f8e:	0e 94 01 0a 	call	0x1402	; 0x1402 <__subsf3>
+     f92:	0e 94 e0 0a 	call	0x15c0	; 0x15c0 <__fixunssfsi>
+     f96:	62 95       	swap	r22
+     f98:	60 7f       	andi	r22, 0xF0	; 240
+
+  this->device.len                    = sizeof(device);
+  this->device.dtype                  = 0x01;
+  this->device.usbVersion             = (hiVer<<8) | loVer;
+     f9a:	10 2f       	mov	r17, r16
+     f9c:	00 27       	eor	r16, r16
+     f9e:	06 2b       	or	r16, r22
+     fa0:	f3 01       	movw	r30, r6
+     fa2:	13 8b       	std	Z+19, r17	; 0x13
+     fa4:	02 8b       	std	Z+18, r16	; 0x12
+  this->device.deviceClass            = 0x00;
+     fa6:	14 8a       	std	Z+20, r1	; 0x14
+  this->device.deviceSubClass         = 0x00;
+     fa8:	15 8a       	std	Z+21, r1	; 0x15
+  this->device.deviceProtocol         = 0x00;
+     faa:	16 8a       	std	Z+22, r1	; 0x16
+  this->device.packetSize0            = 64;
+     fac:	80 e4       	ldi	r24, 0x40	; 64
+     fae:	87 8b       	std	Z+23, r24	; 0x17
+  this->device.idVendor               = vid;
+     fb0:	31 8e       	std	Z+25, r3	; 0x19
+     fb2:	20 8e       	std	Z+24, r2	; 0x18
+  this->device.idProduct              = pid;
+     fb4:	53 8e       	std	Z+27, r5	; 0x1b
+     fb6:	42 8e       	std	Z+26, r4	; 0x1a
+  this->device.deviceVersion          = 0x0101;
+     fb8:	81 e0       	ldi	r24, 0x01	; 1
+     fba:	91 e0       	ldi	r25, 0x01	; 1
+     fbc:	95 8f       	std	Z+29, r25	; 0x1d
+     fbe:	84 8f       	std	Z+28, r24	; 0x1c
+bool  USB::isEnumerate(){
+  return this->isEnum;
+}
+
+uint8_t  USB::getStrId(){
+  return (this->useStr?++this->stringCounter:0);
+     fc0:	ee 20       	and	r14, r14
+     fc2:	09 f4       	brne	.+2      	; 0xfc6 <_ZN3USB4initEjjfbbbj+0x116>
+     fc4:	4c c0       	rjmp	.+152    	; 0x105e <_ZN3USB4initEjjfbbbj+0x1ae>
+     fc6:	ed 5b       	subi	r30, 0xBD	; 189
+     fc8:	ff 4f       	sbci	r31, 0xFF	; 255
+     fca:	80 81       	ld	r24, Z
+     fcc:	8f 5f       	subi	r24, 0xFF	; 255
+  this->device.deviceProtocol         = 0x00;
+  this->device.packetSize0            = 64;
+  this->device.idVendor               = vid;
+  this->device.idProduct              = pid;
+  this->device.deviceVersion          = 0x0101;
+  this->device.iManufacturer          = this->getStrId();
+     fce:	d3 01       	movw	r26, r6
+     fd0:	5e 96       	adiw	r26, 0x1e	; 30
+     fd2:	8c 93       	st	X, r24
+     fd4:	5e 97       	sbiw	r26, 0x1e	; 30
+bool  USB::isEnumerate(){
+  return this->isEnum;
+}
+
+uint8_t  USB::getStrId(){
+  return (this->useStr?++this->stringCounter:0);
+     fd6:	8f 5f       	subi	r24, 0xFF	; 255
+  this->device.packetSize0            = 64;
+  this->device.idVendor               = vid;
+  this->device.idProduct              = pid;
+  this->device.deviceVersion          = 0x0101;
+  this->device.iManufacturer          = this->getStrId();
+  this->device.iProduct               = this->getStrId();
+     fd8:	5f 96       	adiw	r26, 0x1f	; 31
+     fda:	8c 93       	st	X, r24
+bool  USB::isEnumerate(){
+  return this->isEnum;
+}
+
+uint8_t  USB::getStrId(){
+  return (this->useStr?++this->stringCounter:0);
+     fdc:	8f 5f       	subi	r24, 0xFF	; 255
+     fde:	80 83       	st	Z, r24
+  this->device.idVendor               = vid;
+  this->device.idProduct              = pid;
+  this->device.deviceVersion          = 0x0101;
+  this->device.iManufacturer          = this->getStrId();
+  this->device.iProduct               = this->getStrId();
+  this->device.iSerialNumber          = this->getStrId();
+     fe0:	f3 01       	movw	r30, r6
+     fe2:	80 a3       	std	Z+32, r24	; 0x20
+  this->device.bNumConfigurations     = 1;
+     fe4:	81 e0       	ldi	r24, 0x01	; 1
+     fe6:	81 a3       	std	Z+33, r24	; 0x21
+
+  qDevice.bLength             = sizeof(USB_Device_Qualifer_Descriptor);
+     fe8:	9a e0       	ldi	r25, 0x0A	; 10
+     fea:	92 a3       	std	Z+34, r25	; 0x22
+  qDevice.bDescriptorType     = 0x06;  
+     fec:	96 e0       	ldi	r25, 0x06	; 6
+     fee:	93 a3       	std	Z+35, r25	; 0x23
+  qDevice.bcdUSB              = (hiVer<<8)|loVer;
+     ff0:	15 a3       	std	Z+37, r17	; 0x25
+     ff2:	04 a3       	std	Z+36, r16	; 0x24
+  qDevice.bDeviceClass        = 0x00;
+     ff4:	16 a2       	std	Z+38, r1	; 0x26
+  qDevice.bDeviceSubClass     = 0x00;
+     ff6:	17 a2       	std	Z+39, r1	; 0x27
+  qDevice.bDeviceProtocol     = 0x00;
+     ff8:	10 a6       	std	Z+40, r1	; 0x28
+  qDevice.bMaxPacketSize0     = 64;
+     ffa:	90 e4       	ldi	r25, 0x40	; 64
+     ffc:	91 a7       	std	Z+41, r25	; 0x29
+  qDevice.bNumConfigurations  = 1;
+     ffe:	82 a7       	std	Z+42, r24	; 0x2a
+  qDevice.bReserved           = 0;
+    1000:	13 a6       	std	Z+43, r1	; 0x2b
+
+  initConfiguration(busPower, remoteWakeup, powerVal);
+    1002:	94 01       	movw	r18, r8
+    1004:	4a 2d       	mov	r20, r10
+    1006:	6c 2d       	mov	r22, r12
+    1008:	c3 01       	movw	r24, r6
+    100a:	0e 94 b0 05 	call	0xb60	; 0xb60 <_ZN3USB17initConfigurationEbbj>
+  initInterface();
+    100e:	c3 01       	movw	r24, r6
+    1010:	0e 94 d8 05 	call	0xbb0	; 0xbb0 <_ZN3USB13initInterfaceEv>
+
+  memset(&epDescriptors,0, sizeof(USB_Endpoint_Descriptor) * 7);
+    1014:	81 e3       	ldi	r24, 0x31	; 49
+    1016:	f3 01       	movw	r30, r6
+    1018:	e9 54       	subi	r30, 0x49	; 73
+    101a:	ff 4f       	sbci	r31, 0xFF	; 255
+    101c:	df 01       	movw	r26, r30
+    101e:	1d 92       	st	X+, r1
+    1020:	8a 95       	dec	r24
+    1022:	e9 f7       	brne	.-6      	; 0x101e <_ZN3USB4initEjjfbbbj+0x16e>
+    1024:	80 e0       	ldi	r24, 0x00	; 0
+    1026:	90 e0       	ldi	r25, 0x00	; 0
+
+  for(uint8_t i=0; i<7;i++){    
+    epEvents[i] = NULL;
+    1028:	fc 01       	movw	r30, r24
+    102a:	ee 0f       	add	r30, r30
+    102c:	ff 1f       	adc	r31, r31
+    102e:	e6 0d       	add	r30, r6
+    1030:	f7 1d       	adc	r31, r7
+    1032:	e7 55       	subi	r30, 0x57	; 87
+    1034:	ff 4f       	sbci	r31, 0xFF	; 255
+    1036:	11 82       	std	Z+1, r1	; 0x01
+    1038:	10 82       	st	Z, r1
+    103a:	01 96       	adiw	r24, 0x01	; 1
+  initConfiguration(busPower, remoteWakeup, powerVal);
+  initInterface();
+
+  memset(&epDescriptors,0, sizeof(USB_Endpoint_Descriptor) * 7);
+
+  for(uint8_t i=0; i<7;i++){    
+    103c:	87 30       	cpi	r24, 0x07	; 7
+    103e:	91 05       	cpc	r25, r1
+    1040:	99 f7       	brne	.-26     	; 0x1028 <_ZN3USB4initEjjfbbbj+0x178>
+    epEvents[i] = NULL;
+  }
+  epCounter = 1;
+    1042:	f3 01       	movw	r30, r6
+    1044:	ec 5b       	subi	r30, 0xBC	; 188
+    1046:	ff 4f       	sbci	r31, 0xFF	; 255
+    1048:	81 e0       	ldi	r24, 0x01	; 1
+    104a:	80 83       	st	Z, r24
+  initInternalEndpoint(0, CONTROL,IN,SIZE64,ONE);
+    104c:	00 e0       	ldi	r16, 0x00	; 0
+    104e:	23 e0       	ldi	r18, 0x03	; 3
+    1050:	41 e0       	ldi	r20, 0x01	; 1
+    1052:	60 e0       	ldi	r22, 0x00	; 0
+    1054:	80 e0       	ldi	r24, 0x00	; 0
+    1056:	0e 94 17 07 	call	0xe2e	; 0xe2e <_ZN3USB20initInternalEndpointEh6upType11upDirection6upSize6upBank>
+  sei();
+    105a:	78 94       	sei
+    105c:	05 c0       	rjmp	.+10     	; 0x1068 <_ZN3USB4initEjjfbbbj+0x1b8>
+  this->device.deviceProtocol         = 0x00;
+  this->device.packetSize0            = 64;
+  this->device.idVendor               = vid;
+  this->device.idProduct              = pid;
+  this->device.deviceVersion          = 0x0101;
+  this->device.iManufacturer          = this->getStrId();
+    105e:	f3 01       	movw	r30, r6
+    1060:	16 8e       	std	Z+30, r1	; 0x1e
+  this->device.iProduct               = this->getStrId();
+    1062:	17 8e       	std	Z+31, r1	; 0x1f
+bool  USB::isEnumerate(){
+  return this->isEnum;
+}
+
+uint8_t  USB::getStrId(){
+  return (this->useStr?++this->stringCounter:0);
+    1064:	80 e0       	ldi	r24, 0x00	; 0
+    1066:	bc cf       	rjmp	.-136    	; 0xfe0 <_ZN3USB4initEjjfbbbj+0x130>
+    epEvents[i] = NULL;
+  }
+  epCounter = 1;
+  initInternalEndpoint(0, CONTROL,IN,SIZE64,ONE);
+  sei();
+}
+    1068:	0f 90       	pop	r0
+    106a:	0f 90       	pop	r0
+    106c:	0f 90       	pop	r0
+    106e:	0f 90       	pop	r0
+    1070:	df 91       	pop	r29
+    1072:	cf 91       	pop	r28
+    1074:	1f 91       	pop	r17
+    1076:	0f 91       	pop	r16
+    1078:	ff 90       	pop	r15
+    107a:	ef 90       	pop	r14
+    107c:	cf 90       	pop	r12
+    107e:	af 90       	pop	r10
+    1080:	9f 90       	pop	r9
+    1082:	8f 90       	pop	r8
+    1084:	7f 90       	pop	r7
+    1086:	6f 90       	pop	r6
+    1088:	5f 90       	pop	r5
+    108a:	4f 90       	pop	r4
+    108c:	3f 90       	pop	r3
+    108e:	2f 90       	pop	r2
+    1090:	08 95       	ret
+
+00001092 <_ZN3USB17activateEndpointsEv>:
+  
+  sei();
+  return true;
+}
+
+void USB::activateEndpoints(void){
+    1092:	df 92       	push	r13
+    1094:	ef 92       	push	r14
+    1096:	ff 92       	push	r15
+    1098:	0f 93       	push	r16
+    109a:	1f 93       	push	r17
+    109c:	cf 93       	push	r28
+    109e:	df 93       	push	r29
+    10a0:	ec 01       	movw	r28, r24
+    10a2:	cc 50       	subi	r28, 0x0C	; 12
+    10a4:	df 4f       	sbci	r29, 0xFF	; 255
+  for(uint8_t i=1;i<7;i++){
+    10a6:	11 e0       	ldi	r17, 0x01	; 1
+    if( ep.init != 0 ){
+      initInternalEndpoint(i,ep.type,ep.dir,ep.size,ep.bank);
+      if( ep.dir == OUT ){
+        UEIENX |= (1<<RXOUTE);
+      } else {
+        UEIENX |= (1<< TXINE);
+    10a8:	0f 2e       	mov	r0, r31
+    10aa:	f0 ef       	ldi	r31, 0xF0	; 240
+    10ac:	ef 2e       	mov	r14, r31
+    10ae:	f1 2c       	mov	r15, r1
+    10b0:	f0 2d       	mov	r31, r0
+    10b2:	fe 01       	movw	r30, r28
+    10b4:	33 97       	sbiw	r30, 0x03	; 3
+  return true;
+}
+
+void USB::activateEndpoints(void){
+  for(uint8_t i=1;i<7;i++){
+    USB_Endpoint_Definition ep = epDefinitions[i];
+    10b6:	60 81       	ld	r22, Z
+    10b8:	31 96       	adiw	r30, 0x01	; 1
+    10ba:	d0 80       	ld	r13, Z
+    10bc:	31 96       	adiw	r30, 0x01	; 1
+    10be:	20 81       	ld	r18, Z
+    10c0:	08 81       	ld	r16, Y
+    10c2:	33 97       	sbiw	r30, 0x03	; 3
+    if( ep.init != 0 ){
+    10c4:	80 81       	ld	r24, Z
+    10c6:	88 23       	and	r24, r24
+    10c8:	79 f0       	breq	.+30     	; 0x10e8 <_ZN3USB17activateEndpointsEv+0x56>
+      initInternalEndpoint(i,ep.type,ep.dir,ep.size,ep.bank);
+    10ca:	4d 2d       	mov	r20, r13
+    10cc:	81 2f       	mov	r24, r17
+    10ce:	0e 94 17 07 	call	0xe2e	; 0xe2e <_ZN3USB20initInternalEndpointEh6upType11upDirection6upSize6upBank>
+      if( ep.dir == OUT ){
+    10d2:	d1 10       	cpse	r13, r1
+    10d4:	05 c0       	rjmp	.+10     	; 0x10e0 <_ZN3USB17activateEndpointsEv+0x4e>
+        UEIENX |= (1<<RXOUTE);
+    10d6:	f7 01       	movw	r30, r14
+    10d8:	80 81       	ld	r24, Z
+    10da:	84 60       	ori	r24, 0x04	; 4
+    10dc:	80 83       	st	Z, r24
+    10de:	04 c0       	rjmp	.+8      	; 0x10e8 <_ZN3USB17activateEndpointsEv+0x56>
+      } else {
+        UEIENX |= (1<< TXINE);
+    10e0:	f7 01       	movw	r30, r14
+    10e2:	80 81       	ld	r24, Z
+    10e4:	81 60       	ori	r24, 0x01	; 1
+    10e6:	80 83       	st	Z, r24
+  sei();
+  return true;
+}
+
+void USB::activateEndpoints(void){
+  for(uint8_t i=1;i<7;i++){
+    10e8:	1f 5f       	subi	r17, 0xFF	; 255
+    10ea:	28 96       	adiw	r28, 0x08	; 8
+    10ec:	17 30       	cpi	r17, 0x07	; 7
+    10ee:	09 f7       	brne	.-62     	; 0x10b2 <_ZN3USB17activateEndpointsEv+0x20>
+      } else {
+        UEIENX |= (1<< TXINE);
+      }
+    }
+  }
+}
+    10f0:	df 91       	pop	r29
+    10f2:	cf 91       	pop	r28
+    10f4:	1f 91       	pop	r17
+    10f6:	0f 91       	pop	r16
+    10f8:	ff 90       	pop	r15
+    10fa:	ef 90       	pop	r14
+    10fc:	df 90       	pop	r13
+    10fe:	08 95       	ret
+
+00001100 <_ZN3USB5eorstEv>:
+
+inline void  sof(void){
+
+}
+
+void USB::eorst(){   
+    1100:	0f 93       	push	r16
+  initInternalEndpoint(0,CONTROL,OUT,SIZE64,ONE);
+    1102:	00 e0       	ldi	r16, 0x00	; 0
+    1104:	23 e0       	ldi	r18, 0x03	; 3
+    1106:	40 e0       	ldi	r20, 0x00	; 0
+    1108:	60 e0       	ldi	r22, 0x00	; 0
+    110a:	80 e0       	ldi	r24, 0x00	; 0
+    110c:	0e 94 17 07 	call	0xe2e	; 0xe2e <_ZN3USB20initInternalEndpointEh6upType11upDirection6upSize6upBank>
+    this->sendBufPos++;
+  }
+}
+
+void USB::selectEndPoint(uint8_t num){
+  UENUM  = ((num) & 0x0F);
+    1110:	10 92 e9 00 	sts	0x00E9, r1	; 0x8000e9 <__TEXT_REGION_LENGTH__+0x7e00e9>
+}
+
+void USB::eorst(){   
+  initInternalEndpoint(0,CONTROL,OUT,SIZE64,ONE);
+  selectEndPoint(0);
+  UEIENX = (1 << RXSTPE);  
+    1114:	88 e0       	ldi	r24, 0x08	; 8
+    1116:	80 93 f0 00 	sts	0x00F0, r24	; 0x8000f0 <__TEXT_REGION_LENGTH__+0x7e00f0>
+}
+    111a:	0f 91       	pop	r16
+    111c:	08 95       	ret
+
+0000111e <_ZN3USB16registerCallbackEhPFbPvE>:
+  UECFG1X = (1<<ALLOC) | b2; 
+  
+  return (UESTA0X & (1<<CFGOK))?true:false;
+}
+
+void USB::registerCallback(uint8_t num, functptr funct){
+    111e:	fc 01       	movw	r30, r24
+  if( (num == 0) || (num > 6) ){
+    1120:	9f ef       	ldi	r25, 0xFF	; 255
+    1122:	96 0f       	add	r25, r22
+    1124:	96 30       	cpi	r25, 0x06	; 6
+    1126:	58 f4       	brcc	.+22     	; 0x113e <_ZN3USB16registerCallbackEhPFbPvE+0x20>
+    return;
+  }
+
+  epEvents[num] = funct;
+    1128:	70 e0       	ldi	r23, 0x00	; 0
+    112a:	66 0f       	add	r22, r22
+    112c:	77 1f       	adc	r23, r23
+    112e:	cf 01       	movw	r24, r30
+    1130:	86 0f       	add	r24, r22
+    1132:	97 1f       	adc	r25, r23
+    1134:	fc 01       	movw	r30, r24
+    1136:	e7 55       	subi	r30, 0x57	; 87
+    1138:	ff 4f       	sbci	r31, 0xFF	; 255
+    113a:	51 83       	std	Z+1, r21	; 0x01
+    113c:	40 83       	st	Z, r20
+    113e:	08 95       	ret
+
+00001140 <_ZN3USB10onGenEventEPS_>:
+  UEIENX |= (1 << RXSTPE);  
+
+}
+
+void USB::onGenEvent(USB *handle){
+  uint8_t state = UDINT;
+    1140:	e1 ee       	ldi	r30, 0xE1	; 225
+    1142:	f0 e0       	ldi	r31, 0x00	; 0
+    1144:	80 81       	ld	r24, Z
+  UDINT = 0;
+    1146:	10 82       	st	Z, r1
+  
+  if( state & (1<<EORSTI) ){
+    1148:	83 fd       	sbrc	r24, 3
+    handle->eorst();
+    114a:	0e 94 80 08 	call	0x1100	; 0x1100 <_ZN3USB5eorstEv>
+    114e:	08 95       	ret
+
+00001150 <_ZN3USB9getStatusEv>:
+    }
+  }
+  selectEndPoint(handle->currentEndpoins);
+}
+
+bool USB::getStatus(){
+    1150:	cf 93       	push	r28
+    1152:	df 93       	push	r29
+    1154:	00 d0       	rcall	.+0      	; 0x1156 <_ZN3USB9getStatusEv+0x6>
+    1156:	cd b7       	in	r28, 0x3d	; 61
+    1158:	de b7       	in	r29, 0x3e	; 62
+  uint8_t status[2] = {0,0};
+    115a:	19 82       	std	Y+1, r1	; 0x01
+    115c:	1a 82       	std	Y+2, r1	; 0x02
+  writeBuf((const uint8_t*)&status,2,controlHeader.wLengthL);
+    115e:	fc 01       	movw	r30, r24
+    1160:	26 81       	ldd	r18, Z+6	; 0x06
+    1162:	42 e0       	ldi	r20, 0x02	; 2
+    1164:	be 01       	movw	r22, r28
+    1166:	6f 5f       	subi	r22, 0xFF	; 255
+    1168:	7f 4f       	sbci	r23, 0xFF	; 255
+    116a:	0e 94 f1 06 	call	0xde2	; 0xde2 <_ZN3USB8writeBufEPKhhh>
+  return true;
+}
+    116e:	81 e0       	ldi	r24, 0x01	; 1
+    1170:	0f 90       	pop	r0
+    1172:	0f 90       	pop	r0
+    1174:	df 91       	pop	r29
+    1176:	cf 91       	pop	r28
+    1178:	08 95       	ret
+
+0000117a <_ZN3USB9setAddresEv>:
+
+bool USB::setAddres(){   
+   UDADDR  = controlHeader.wValueL;
+    117a:	fc 01       	movw	r30, r24
+    117c:	82 81       	ldd	r24, Z+2	; 0x02
+    117e:	e3 ee       	ldi	r30, 0xE3	; 227
+    1180:	f0 e0       	ldi	r31, 0x00	; 0
+    1182:	80 83       	st	Z, r24
+   UDADDR |= (1<<ADDEN);
+    1184:	80 81       	ld	r24, Z
+    1186:	80 68       	ori	r24, 0x80	; 128
+    1188:	80 83       	st	Z, r24
+   return true;
+}
+    118a:	81 e0       	ldi	r24, 0x01	; 1
+    118c:	08 95       	ret
+
+0000118e <_ZN3USB13getDescriptorEv>:
+
+bool  USB::getDescriptor(){
+    118e:	ef 92       	push	r14
+    1190:	ff 92       	push	r15
+    1192:	0f 93       	push	r16
+    1194:	1f 93       	push	r17
+    1196:	cf 93       	push	r28
+    1198:	df 93       	push	r29
+    119a:	8c 01       	movw	r16, r24
+  switch( controlHeader.wValueH ){
+    119c:	fc 01       	movw	r30, r24
+    119e:	83 81       	ldd	r24, Z+3	; 0x03
+    11a0:	82 30       	cpi	r24, 0x02	; 2
+    11a2:	71 f0       	breq	.+28     	; 0x11c0 <_ZN3USB13getDescriptorEv+0x32>
+    11a4:	86 30       	cpi	r24, 0x06	; 6
+    11a6:	a9 f1       	breq	.+106    	; 0x1212 <_ZN3USB13getDescriptorEv+0x84>
+    11a8:	81 30       	cpi	r24, 0x01	; 1
+    11aa:	f1 f5       	brne	.+124    	; 0x1228 <_ZN3USB13getDescriptorEv+0x9a>
+    case GET_DESCRIPTOR_DEVICE:
+      writeBuf((const uint8_t*)&device,sizeof(USB_Device_Descriptor), this->controlHeader.wLengthL);
+    11ac:	b8 01       	movw	r22, r16
+    11ae:	60 5f       	subi	r22, 0xF0	; 240
+    11b0:	7f 4f       	sbci	r23, 0xFF	; 255
+    11b2:	26 81       	ldd	r18, Z+6	; 0x06
+    11b4:	42 e1       	ldi	r20, 0x12	; 18
+    11b6:	c8 01       	movw	r24, r16
+    11b8:	0e 94 f1 06 	call	0xde2	; 0xde2 <_ZN3USB8writeBufEPKhhh>
+      writeBuf((const uint8_t*)&qDevice,sizeof(USB_Device_Qualifer_Descriptor), controlHeader.wLengthL);            
+    break;
+    default:
+      return false;
+  }
+  return true;
+    11bc:	81 e0       	ldi	r24, 0x01	; 1
+
+bool  USB::getDescriptor(){
+  switch( controlHeader.wValueH ){
+    case GET_DESCRIPTOR_DEVICE:
+      writeBuf((const uint8_t*)&device,sizeof(USB_Device_Descriptor), this->controlHeader.wLengthL);
+    break;
+    11be:	35 c0       	rjmp	.+106    	; 0x122a <_ZN3USB13getDescriptorEv+0x9c>
+    case GET_DESCRIPTOR_CONFIG:
+      writeBuf((const uint8_t*)&config, sizeof(USB_Config_Descriptor),    this->controlHeader.wLengthL);
+    11c0:	f8 01       	movw	r30, r16
+    11c2:	26 81       	ldd	r18, Z+6	; 0x06
+    11c4:	49 e0       	ldi	r20, 0x09	; 9
+    11c6:	b8 01       	movw	r22, r16
+    11c8:	64 5d       	subi	r22, 0xD4	; 212
+    11ca:	7f 4f       	sbci	r23, 0xFF	; 255
+    11cc:	c8 01       	movw	r24, r16
+    11ce:	0e 94 f1 06 	call	0xde2	; 0xde2 <_ZN3USB8writeBufEPKhhh>
+      writeBuf((const uint8_t*)&iface,  sizeof(USB_Interface_Descriptor), this->controlHeader.wLengthL);
+    11d2:	f8 01       	movw	r30, r16
+    11d4:	26 81       	ldd	r18, Z+6	; 0x06
+    11d6:	49 e0       	ldi	r20, 0x09	; 9
+    11d8:	b8 01       	movw	r22, r16
+    11da:	6b 5c       	subi	r22, 0xCB	; 203
+    11dc:	7f 4f       	sbci	r23, 0xFF	; 255
+    11de:	c8 01       	movw	r24, r16
+    11e0:	0e 94 f1 06 	call	0xde2	; 0xde2 <_ZN3USB8writeBufEPKhhh>
+    11e4:	e8 01       	movw	r28, r16
+    11e6:	c2 54       	subi	r28, 0x42	; 66
+    11e8:	df 4f       	sbci	r29, 0xFF	; 255
+    11ea:	78 01       	movw	r14, r16
+    11ec:	f8 ee       	ldi	r31, 0xE8	; 232
+    11ee:	ef 0e       	add	r14, r31
+    11f0:	f1 1c       	adc	r15, r1
+      for(uint8_t pos = 1; pos<7;pos++){
+        if( epDescriptors[pos].bLength != 0){
+    11f2:	88 81       	ld	r24, Y
+    11f4:	88 23       	and	r24, r24
+    11f6:	39 f0       	breq	.+14     	; 0x1206 <_ZN3USB13getDescriptorEv+0x78>
+          writeBuf((const uint8_t*)&epDescriptors[pos],  sizeof(USB_Endpoint_Descriptor), this->controlHeader.wLengthL);
+    11f8:	f8 01       	movw	r30, r16
+    11fa:	26 81       	ldd	r18, Z+6	; 0x06
+    11fc:	47 e0       	ldi	r20, 0x07	; 7
+    11fe:	be 01       	movw	r22, r28
+    1200:	c8 01       	movw	r24, r16
+    1202:	0e 94 f1 06 	call	0xde2	; 0xde2 <_ZN3USB8writeBufEPKhhh>
+    1206:	27 96       	adiw	r28, 0x07	; 7
+      writeBuf((const uint8_t*)&device,sizeof(USB_Device_Descriptor), this->controlHeader.wLengthL);
+    break;
+    case GET_DESCRIPTOR_CONFIG:
+      writeBuf((const uint8_t*)&config, sizeof(USB_Config_Descriptor),    this->controlHeader.wLengthL);
+      writeBuf((const uint8_t*)&iface,  sizeof(USB_Interface_Descriptor), this->controlHeader.wLengthL);
+      for(uint8_t pos = 1; pos<7;pos++){
+    1208:	ce 15       	cp	r28, r14
+    120a:	df 05       	cpc	r29, r15
+    120c:	91 f7       	brne	.-28     	; 0x11f2 <_ZN3USB13getDescriptorEv+0x64>
+      writeBuf((const uint8_t*)&qDevice,sizeof(USB_Device_Qualifer_Descriptor), controlHeader.wLengthL);            
+    break;
+    default:
+      return false;
+  }
+  return true;
+    120e:	81 e0       	ldi	r24, 0x01	; 1
+    1210:	0c c0       	rjmp	.+24     	; 0x122a <_ZN3USB13getDescriptorEv+0x9c>
+    break;
+    case GET_DESCRIPTOR_STRING:      
+      return false;
+    break;
+    case GET_DESCRIPTOR_QUALIFER:
+      writeBuf((const uint8_t*)&qDevice,sizeof(USB_Device_Qualifer_Descriptor), controlHeader.wLengthL);            
+    1212:	b8 01       	movw	r22, r16
+    1214:	6e 5d       	subi	r22, 0xDE	; 222
+    1216:	7f 4f       	sbci	r23, 0xFF	; 255
+    1218:	f8 01       	movw	r30, r16
+    121a:	26 81       	ldd	r18, Z+6	; 0x06
+    121c:	4a e0       	ldi	r20, 0x0A	; 10
+    121e:	c8 01       	movw	r24, r16
+    1220:	0e 94 f1 06 	call	0xde2	; 0xde2 <_ZN3USB8writeBufEPKhhh>
+    break;
+    default:
+      return false;
+  }
+  return true;
+    1224:	81 e0       	ldi	r24, 0x01	; 1
+    case GET_DESCRIPTOR_STRING:      
+      return false;
+    break;
+    case GET_DESCRIPTOR_QUALIFER:
+      writeBuf((const uint8_t*)&qDevice,sizeof(USB_Device_Qualifer_Descriptor), controlHeader.wLengthL);            
+    break;
+    1226:	01 c0       	rjmp	.+2      	; 0x122a <_ZN3USB13getDescriptorEv+0x9c>
+          writeBuf((const uint8_t*)&epDescriptors[pos],  sizeof(USB_Endpoint_Descriptor), this->controlHeader.wLengthL);
+        }
+      }      
+    break;
+    case GET_DESCRIPTOR_STRING:      
+      return false;
+    1228:	80 e0       	ldi	r24, 0x00	; 0
+    break;
+    default:
+      return false;
+  }
+  return true;
+}
+    122a:	df 91       	pop	r29
+    122c:	cf 91       	pop	r28
+    122e:	1f 91       	pop	r17
+    1230:	0f 91       	pop	r16
+    1232:	ff 90       	pop	r15
+    1234:	ef 90       	pop	r14
+    1236:	08 95       	ret
+
+00001238 <_ZN3USB10onComEventEPS_>:
+  if( state & (1<<EORSTI) ){
+    handle->eorst();
+  }  
+}
+
+void USB::onComEvent(USB *handle){  
+    1238:	8f 92       	push	r8
+    123a:	9f 92       	push	r9
+    123c:	af 92       	push	r10
+    123e:	bf 92       	push	r11
+    1240:	cf 92       	push	r12
+    1242:	df 92       	push	r13
+    1244:	ef 92       	push	r14
+    1246:	ff 92       	push	r15
+    1248:	0f 93       	push	r16
+    124a:	1f 93       	push	r17
+    124c:	cf 93       	push	r28
+    124e:	df 93       	push	r29
+    1250:	1f 92       	push	r1
+    1252:	cd b7       	in	r28, 0x3d	; 61
+    1254:	de b7       	in	r29, 0x3e	; 62
+    1256:	7c 01       	movw	r14, r24
+  uint8_t pos, mask;
+  
+  handle->activeEP = UEINT;
+    1258:	80 91 f4 00 	lds	r24, 0x00F4	; 0x8000f4 <__TEXT_REGION_LENGTH__+0x7e00f4>
+    125c:	f7 01       	movw	r30, r14
+    125e:	ef 5b       	subi	r30, 0xBF	; 191
+    1260:	ff 4f       	sbci	r31, 0xFF	; 255
+    1262:	80 83       	st	Z, r24
+  handle->currentEndpoins = UENUM;
+    1264:	e9 ee       	ldi	r30, 0xE9	; 233
+    1266:	f0 e0       	ldi	r31, 0x00	; 0
+    1268:	80 81       	ld	r24, Z
+    126a:	d7 01       	movw	r26, r14
+    126c:	a0 5c       	subi	r26, 0xC0	; 192
+    126e:	bf 4f       	sbci	r27, 0xFF	; 255
+    1270:	8c 93       	st	X, r24
+    this->sendBufPos++;
+  }
+}
+
+void USB::selectEndPoint(uint8_t num){
+  UENUM  = ((num) & 0x0F);
+    1272:	10 82       	st	Z, r1
+}
+
+inline void USB::ControlRequest(){
+  selectEndPoint(0);
+
+  volatile uint8_t intStatus = UEINTX;  
+    1274:	80 91 e8 00 	lds	r24, 0x00E8	; 0x8000e8 <__TEXT_REGION_LENGTH__+0x7e00e8>
+    1278:	89 83       	std	Y+1, r24	; 0x01
+
+  if( (intStatus & (1<<RXSTPI)) == 0 ){    
+    127a:	89 81       	ldd	r24, Y+1	; 0x01
+    127c:	83 ff       	sbrs	r24, 3
+    127e:	89 c0       	rjmp	.+274    	; 0x1392 <_ZN3USB10onComEventEPS_+0x15a>
+    return;
+  }
+
+  UEIENX &= ~(1<<RXSTPE);       
+    1280:	e0 ef       	ldi	r30, 0xF0	; 240
+    1282:	f0 e0       	ldi	r31, 0x00	; 0
+    1284:	80 81       	ld	r24, Z
+    1286:	87 7f       	andi	r24, 0xF7	; 247
+    1288:	80 83       	st	Z, r24
+  uint16_t cnt = UEBCX;
+    128a:	40 91 f2 00 	lds	r20, 0x00F2	; 0x8000f2 <__TEXT_REGION_LENGTH__+0x7e00f2>
+    128e:	50 91 f3 00 	lds	r21, 0x00F3	; 0x8000f3 <__TEXT_REGION_LENGTH__+0x7e00f3>
+  this->readBuf((uint8_t*)&this->controlHeader,(uint8_t)cnt);  
+    1292:	b7 01       	movw	r22, r14
+    1294:	c7 01       	movw	r24, r14
+    1296:	0e 94 e4 06 	call	0xdc8	; 0xdc8 <_ZN3USB7readBufEPhh>
+  UEINTX = ~( (1<<RXSTPI) | (1<<RXOUTI) | (1<<TXINI) );
+    129a:	82 ef       	ldi	r24, 0xF2	; 242
+    129c:	80 93 e8 00 	sts	0x00E8, r24	; 0x8000e8 <__TEXT_REGION_LENGTH__+0x7e00e8>
+  sei();
+    12a0:	78 94       	sei
+
+  if( (controlHeader.bmRequestType & 0x80) == 0x80 ) { waitIn(); } else { clearIn(); };    
+    12a2:	d7 01       	movw	r26, r14
+    12a4:	8c 91       	ld	r24, X
+    12a6:	88 23       	and	r24, r24
+    12a8:	24 f4       	brge	.+8      	; 0x12b2 <_ZN3USB10onComEventEPS_+0x7a>
+    12aa:	c7 01       	movw	r24, r14
+    12ac:	0e 94 c5 06 	call	0xd8a	; 0xd8a <_ZN3USB6waitInEv>
+    12b0:	62 c0       	rjmp	.+196    	; 0x1376 <_ZN3USB10onComEventEPS_+0x13e>
+    12b2:	c7 01       	movw	r24, r14
+    12b4:	0e 94 cb 06 	call	0xd96	; 0xd96 <_ZN3USB7clearInEv>
+    12b8:	5e c0       	rjmp	.+188    	; 0x1376 <_ZN3USB10onComEventEPS_+0x13e>
+
+  bool accepted = true;  
+  switch(controlHeader.bRequest){
+    case GET_STATUS:      
+        accepted = this->getStatus();
+    12ba:	c7 01       	movw	r24, r14
+    12bc:	0e 94 a8 08 	call	0x1150	; 0x1150 <_ZN3USB9getStatusEv>
+    12c0:	22 c0       	rjmp	.+68     	; 0x1306 <_ZN3USB10onComEventEPS_+0xce>
+      break;
+    case CLEAR_FEATURE:
+//        accepted = this->clearFeature();
+        nop();
+    12c2:	00 00       	nop
+    12c4:	22 c0       	rjmp	.+68     	; 0x130a <_ZN3USB10onComEventEPS_+0xd2>
+      break;
+    case SET_FEATURE:
+//        accepted = this->setFeature();
+        nop();
+    12c6:	00 00       	nop
+    12c8:	20 c0       	rjmp	.+64     	; 0x130a <_ZN3USB10onComEventEPS_+0xd2>
+      break;
+    case SET_ADDRESS:
+        waitIn();
+    12ca:	c7 01       	movw	r24, r14
+    12cc:	0e 94 c5 06 	call	0xd8a	; 0xd8a <_ZN3USB6waitInEv>
+        accepted = this->setAddres();
+    12d0:	c7 01       	movw	r24, r14
+    12d2:	0e 94 bd 08 	call	0x117a	; 0x117a <_ZN3USB9setAddresEv>
+    12d6:	17 c0       	rjmp	.+46     	; 0x1306 <_ZN3USB10onComEventEPS_+0xce>
+      break;
+    case GET_DESCRIPTOR:
+        accepted = this->getDescriptor();
+    12d8:	c7 01       	movw	r24, r14
+    12da:	0e 94 c7 08 	call	0x118e	; 0x118e <_ZN3USB13getDescriptorEv>
+    12de:	13 c0       	rjmp	.+38     	; 0x1306 <_ZN3USB10onComEventEPS_+0xce>
+bool  getConfiguration(){
+  return false;
+}
+
+bool USB::setConfiguration(){
+  activateEndpoints();
+    12e0:	c7 01       	movw	r24, r14
+    12e2:	0e 94 49 08 	call	0x1092	; 0x1092 <_ZN3USB17activateEndpointsEv>
+  this->isEnum = true;
+    12e6:	81 e0       	ldi	r24, 0x01	; 1
+    12e8:	f7 01       	movw	r30, r14
+    12ea:	86 af       	std	Z+62, r24	; 0x3e
+    12ec:	0e c0       	rjmp	.+28     	; 0x130a <_ZN3USB10onComEventEPS_+0xd2>
+    case GET_INTERFACE:
+    case SET_INTERFACE:
+        accepted = false;        
+      break;
+    default:
+      if( this->epEvents[0] != 0){
+    12ee:	f7 01       	movw	r30, r14
+    12f0:	e7 55       	subi	r30, 0x57	; 87
+    12f2:	ff 4f       	sbci	r31, 0xFF	; 255
+    12f4:	80 81       	ld	r24, Z
+    12f6:	91 81       	ldd	r25, Z+1	; 0x01
+    12f8:	89 2b       	or	r24, r25
+    12fa:	59 f0       	breq	.+22     	; 0x1312 <_ZN3USB10onComEventEPS_+0xda>
+        accepted = epEvents[0](this);
+    12fc:	01 90       	ld	r0, Z+
+    12fe:	f0 81       	ld	r31, Z
+    1300:	e0 2d       	mov	r30, r0
+    1302:	c7 01       	movw	r24, r14
+    1304:	09 95       	icall
+      } else {
+        accepted = false;
+      }
+  }
+  if( accepted ){
+    1306:	88 23       	and	r24, r24
+    1308:	21 f0       	breq	.+8      	; 0x1312 <_ZN3USB10onComEventEPS_+0xda>
+    clearIn(); 
+    130a:	c7 01       	movw	r24, r14
+    130c:	0e 94 cb 06 	call	0xd96	; 0xd96 <_ZN3USB7clearInEv>
+    1310:	03 c0       	rjmp	.+6      	; 0x1318 <_ZN3USB10onComEventEPS_+0xe0>
+  } else {
+    this->stall();
+    1312:	c7 01       	movw	r24, r14
+    1314:	0e 94 d5 06 	call	0xdaa	; 0xdaa <_ZN3USB5stallEv>
+    this->sendBufPos++;
+  }
+}
+
+void USB::selectEndPoint(uint8_t num){
+  UENUM  = ((num) & 0x0F);
+    1318:	10 92 e9 00 	sts	0x00E9, r1	; 0x8000e9 <__TEXT_REGION_LENGTH__+0x7e00e9>
+    clearIn(); 
+  } else {
+    this->stall();
+  }  
+  selectEndPoint(0);
+  UEIENX |= (1 << RXSTPE);  
+    131c:	e0 ef       	ldi	r30, 0xF0	; 240
+    131e:	f0 e0       	ldi	r31, 0x00	; 0
+    1320:	80 81       	ld	r24, Z
+    1322:	88 60       	ori	r24, 0x08	; 8
+    1324:	80 83       	st	Z, r24
+    1326:	35 c0       	rjmp	.+106    	; 0x1392 <_ZN3USB10onComEventEPS_+0x15a>
+    1328:	30 2f       	mov	r19, r16
+  handle->activeEP = UEINT;
+  handle->currentEndpoins = UENUM;
+  handle->ControlRequest();  
+ 
+  for(pos = 1;pos<7;pos++){
+    mask = (1<<pos);
+    132a:	a8 01       	movw	r20, r16
+    if( ((handle->activeEP & mask) == mask) && (handle->epEvents[pos] != 0)) {
+    132c:	d6 01       	movw	r26, r12
+    132e:	2c 91       	ld	r18, X
+    1330:	c5 01       	movw	r24, r10
+    1332:	00 2e       	mov	r0, r16
+    1334:	02 c0       	rjmp	.+4      	; 0x133a <_ZN3USB10onComEventEPS_+0x102>
+    1336:	88 0f       	add	r24, r24
+    1338:	99 1f       	adc	r25, r25
+    133a:	0a 94       	dec	r0
+    133c:	e2 f7       	brpl	.-8      	; 0x1336 <_ZN3USB10onComEventEPS_+0xfe>
+    133e:	92 2f       	mov	r25, r18
+    1340:	98 23       	and	r25, r24
+    1342:	98 13       	cpse	r25, r24
+    1344:	0b c0       	rjmp	.+22     	; 0x135c <_ZN3USB10onComEventEPS_+0x124>
+    1346:	f8 01       	movw	r30, r16
+    1348:	ee 0f       	add	r30, r30
+    134a:	ff 1f       	adc	r31, r31
+    134c:	ee 0d       	add	r30, r14
+    134e:	ff 1d       	adc	r31, r15
+    1350:	e7 55       	subi	r30, 0x57	; 87
+    1352:	ff 4f       	sbci	r31, 0xFF	; 255
+    1354:	80 81       	ld	r24, Z
+    1356:	91 81       	ldd	r25, Z+1	; 0x01
+    1358:	89 2b       	or	r24, r25
+    135a:	51 f5       	brne	.+84     	; 0x13b0 <_ZN3USB10onComEventEPS_+0x178>
+    135c:	0f 5f       	subi	r16, 0xFF	; 255
+    135e:	1f 4f       	sbci	r17, 0xFF	; 255
+  
+  handle->activeEP = UEINT;
+  handle->currentEndpoins = UENUM;
+  handle->ControlRequest();  
+ 
+  for(pos = 1;pos<7;pos++){
+    1360:	07 30       	cpi	r16, 0x07	; 7
+    1362:	11 05       	cpc	r17, r1
+    1364:	09 f7       	brne	.-62     	; 0x1328 <_ZN3USB10onComEventEPS_+0xf0>
+      USB::selectEndPoint(pos);
+      handle->epEvents[pos](handle);
+      handle->clearIn();      
+    }
+  }
+  selectEndPoint(handle->currentEndpoins);
+    1366:	f7 01       	movw	r30, r14
+    1368:	e0 5c       	subi	r30, 0xC0	; 192
+    136a:	ff 4f       	sbci	r31, 0xFF	; 255
+    this->sendBufPos++;
+  }
+}
+
+void USB::selectEndPoint(uint8_t num){
+  UENUM  = ((num) & 0x0F);
+    136c:	80 81       	ld	r24, Z
+    136e:	8f 70       	andi	r24, 0x0F	; 15
+    1370:	80 93 e9 00 	sts	0x00E9, r24	; 0x8000e9 <__TEXT_REGION_LENGTH__+0x7e00e9>
+    1374:	30 c0       	rjmp	.+96     	; 0x13d6 <_ZN3USB10onComEventEPS_+0x19e>
+  sei();
+
+  if( (controlHeader.bmRequestType & 0x80) == 0x80 ) { waitIn(); } else { clearIn(); };    
+
+  bool accepted = true;  
+  switch(controlHeader.bRequest){
+    1376:	d7 01       	movw	r26, r14
+    1378:	11 96       	adiw	r26, 0x01	; 1
+    137a:	ec 91       	ld	r30, X
+    137c:	8e 2f       	mov	r24, r30
+    137e:	90 e0       	ldi	r25, 0x00	; 0
+    1380:	8c 30       	cpi	r24, 0x0C	; 12
+    1382:	91 05       	cpc	r25, r1
+    1384:	08 f0       	brcs	.+2      	; 0x1388 <_ZN3USB10onComEventEPS_+0x150>
+    1386:	b3 cf       	rjmp	.-154    	; 0x12ee <_ZN3USB10onComEventEPS_+0xb6>
+    1388:	fc 01       	movw	r30, r24
+    138a:	ea 5a       	subi	r30, 0xAA	; 170
+    138c:	ff 4f       	sbci	r31, 0xFF	; 255
+    138e:	0c 94 33 0c 	jmp	0x1866	; 0x1866 <__tablejump2__>
+  if( state & (1<<EORSTI) ){
+    handle->eorst();
+  }  
+}
+
+void USB::onComEvent(USB *handle){  
+    1392:	01 e0       	ldi	r16, 0x01	; 1
+    1394:	10 e0       	ldi	r17, 0x00	; 0
+  handle->activeEP = UEINT;
+  handle->currentEndpoins = UENUM;
+  handle->ControlRequest();  
+ 
+  for(pos = 1;pos<7;pos++){
+    mask = (1<<pos);
+    1396:	aa 24       	eor	r10, r10
+    1398:	a3 94       	inc	r10
+    139a:	b1 2c       	mov	r11, r1
+    if( ((handle->activeEP & mask) == mask) && (handle->epEvents[pos] != 0)) {
+    139c:	67 01       	movw	r12, r14
+    139e:	b1 e4       	ldi	r27, 0x41	; 65
+    13a0:	cb 0e       	add	r12, r27
+    13a2:	d1 1c       	adc	r13, r1
+    this->sendBufPos++;
+  }
+}
+
+void USB::selectEndPoint(uint8_t num){
+  UENUM  = ((num) & 0x0F);
+    13a4:	0f 2e       	mov	r0, r31
+    13a6:	f9 ee       	ldi	r31, 0xE9	; 233
+    13a8:	8f 2e       	mov	r8, r31
+    13aa:	91 2c       	mov	r9, r1
+    13ac:	f0 2d       	mov	r31, r0
+    13ae:	bc cf       	rjmp	.-136    	; 0x1328 <_ZN3USB10onComEventEPS_+0xf0>
+    13b0:	3f 70       	andi	r19, 0x0F	; 15
+    13b2:	f4 01       	movw	r30, r8
+    13b4:	30 83       	st	Z, r19
+ 
+  for(pos = 1;pos<7;pos++){
+    mask = (1<<pos);
+    if( ((handle->activeEP & mask) == mask) && (handle->epEvents[pos] != 0)) {
+      USB::selectEndPoint(pos);
+      handle->epEvents[pos](handle);
+    13b6:	44 0f       	add	r20, r20
+    13b8:	55 1f       	adc	r21, r21
+    13ba:	4e 0d       	add	r20, r14
+    13bc:	5f 1d       	adc	r21, r15
+    13be:	fa 01       	movw	r30, r20
+    13c0:	e7 55       	subi	r30, 0x57	; 87
+    13c2:	ff 4f       	sbci	r31, 0xFF	; 255
+    13c4:	01 90       	ld	r0, Z+
+    13c6:	f0 81       	ld	r31, Z
+    13c8:	e0 2d       	mov	r30, r0
+    13ca:	c7 01       	movw	r24, r14
+    13cc:	09 95       	icall
+      handle->clearIn();      
+    13ce:	c7 01       	movw	r24, r14
+    13d0:	0e 94 cb 06 	call	0xd96	; 0xd96 <_ZN3USB7clearInEv>
+    13d4:	c3 cf       	rjmp	.-122    	; 0x135c <_ZN3USB10onComEventEPS_+0x124>
+    }
+  }
+  selectEndPoint(handle->currentEndpoins);
+}
+    13d6:	0f 90       	pop	r0
+    13d8:	df 91       	pop	r29
+    13da:	cf 91       	pop	r28
+    13dc:	1f 91       	pop	r17
+    13de:	0f 91       	pop	r16
+    13e0:	ff 90       	pop	r15
+    13e2:	ef 90       	pop	r14
+    13e4:	df 90       	pop	r13
+    13e6:	cf 90       	pop	r12
+    13e8:	bf 90       	pop	r11
+    13ea:	af 90       	pop	r10
+    13ec:	9f 90       	pop	r9
+    13ee:	8f 90       	pop	r8
+    13f0:	08 95       	ret
+
+000013f2 <_Z13setDescriptorv>:
+  return true;
+}
+
+bool  setDescriptor(){
+  return false;
+}
+    13f2:	80 e0       	ldi	r24, 0x00	; 0
+    13f4:	08 95       	ret
+
+000013f6 <_Z16getConfigurationv>:
+
+bool  getConfiguration(){
+  return false;
+}
+    13f6:	80 e0       	ldi	r24, 0x00	; 0
+    13f8:	08 95       	ret
+
+000013fa <_Z12getInterfacev>:
+  return true;
+}
+
+bool  getInterface(){
+  return false;
+}
+    13fa:	80 e0       	ldi	r24, 0x00	; 0
+    13fc:	08 95       	ret
+
+000013fe <_Z12setInterfacev>:
+
+bool  setInterface(){
+  return false;
+}
+    13fe:	80 e0       	ldi	r24, 0x00	; 0
+    1400:	08 95       	ret
+
+00001402 <__subsf3>:
+    1402:	50 58       	subi	r21, 0x80	; 128
+
+00001404 <__addsf3>:
+    1404:	bb 27       	eor	r27, r27
+    1406:	aa 27       	eor	r26, r26
+    1408:	0e 94 19 0a 	call	0x1432	; 0x1432 <__addsf3x>
+    140c:	0c 94 63 0b 	jmp	0x16c6	; 0x16c6 <__fp_round>
+    1410:	0e 94 55 0b 	call	0x16aa	; 0x16aa <__fp_pscA>
+    1414:	38 f0       	brcs	.+14     	; 0x1424 <__addsf3+0x20>
+    1416:	0e 94 5c 0b 	call	0x16b8	; 0x16b8 <__fp_pscB>
+    141a:	20 f0       	brcs	.+8      	; 0x1424 <__addsf3+0x20>
+    141c:	39 f4       	brne	.+14     	; 0x142c <__addsf3+0x28>
+    141e:	9f 3f       	cpi	r25, 0xFF	; 255
+    1420:	19 f4       	brne	.+6      	; 0x1428 <__addsf3+0x24>
+    1422:	26 f4       	brtc	.+8      	; 0x142c <__addsf3+0x28>
+    1424:	0c 94 52 0b 	jmp	0x16a4	; 0x16a4 <__fp_nan>
+    1428:	0e f4       	brtc	.+2      	; 0x142c <__addsf3+0x28>
+    142a:	e0 95       	com	r30
+    142c:	e7 fb       	bst	r30, 7
+    142e:	0c 94 4c 0b 	jmp	0x1698	; 0x1698 <__fp_inf>
+
+00001432 <__addsf3x>:
+    1432:	e9 2f       	mov	r30, r25
+    1434:	0e 94 74 0b 	call	0x16e8	; 0x16e8 <__fp_split3>
+    1438:	58 f3       	brcs	.-42     	; 0x1410 <__addsf3+0xc>
+    143a:	ba 17       	cp	r27, r26
+    143c:	62 07       	cpc	r22, r18
+    143e:	73 07       	cpc	r23, r19
+    1440:	84 07       	cpc	r24, r20
+    1442:	95 07       	cpc	r25, r21
+    1444:	20 f0       	brcs	.+8      	; 0x144e <__addsf3x+0x1c>
+    1446:	79 f4       	brne	.+30     	; 0x1466 <__addsf3x+0x34>
+    1448:	a6 f5       	brtc	.+104    	; 0x14b2 <__addsf3x+0x80>
+    144a:	0c 94 96 0b 	jmp	0x172c	; 0x172c <__fp_zero>
+    144e:	0e f4       	brtc	.+2      	; 0x1452 <__addsf3x+0x20>
+    1450:	e0 95       	com	r30
+    1452:	0b 2e       	mov	r0, r27
+    1454:	ba 2f       	mov	r27, r26
+    1456:	a0 2d       	mov	r26, r0
+    1458:	0b 01       	movw	r0, r22
+    145a:	b9 01       	movw	r22, r18
+    145c:	90 01       	movw	r18, r0
+    145e:	0c 01       	movw	r0, r24
+    1460:	ca 01       	movw	r24, r20
+    1462:	a0 01       	movw	r20, r0
+    1464:	11 24       	eor	r1, r1
+    1466:	ff 27       	eor	r31, r31
+    1468:	59 1b       	sub	r21, r25
+    146a:	99 f0       	breq	.+38     	; 0x1492 <__addsf3x+0x60>
+    146c:	59 3f       	cpi	r21, 0xF9	; 249
+    146e:	50 f4       	brcc	.+20     	; 0x1484 <__addsf3x+0x52>
+    1470:	50 3e       	cpi	r21, 0xE0	; 224
+    1472:	68 f1       	brcs	.+90     	; 0x14ce <__addsf3x+0x9c>
+    1474:	1a 16       	cp	r1, r26
+    1476:	f0 40       	sbci	r31, 0x00	; 0
+    1478:	a2 2f       	mov	r26, r18
+    147a:	23 2f       	mov	r18, r19
+    147c:	34 2f       	mov	r19, r20
+    147e:	44 27       	eor	r20, r20
+    1480:	58 5f       	subi	r21, 0xF8	; 248
+    1482:	f3 cf       	rjmp	.-26     	; 0x146a <__addsf3x+0x38>
+    1484:	46 95       	lsr	r20
+    1486:	37 95       	ror	r19
+    1488:	27 95       	ror	r18
+    148a:	a7 95       	ror	r26
+    148c:	f0 40       	sbci	r31, 0x00	; 0
+    148e:	53 95       	inc	r21
+    1490:	c9 f7       	brne	.-14     	; 0x1484 <__addsf3x+0x52>
+    1492:	7e f4       	brtc	.+30     	; 0x14b2 <__addsf3x+0x80>
+    1494:	1f 16       	cp	r1, r31
+    1496:	ba 0b       	sbc	r27, r26
+    1498:	62 0b       	sbc	r22, r18
+    149a:	73 0b       	sbc	r23, r19
+    149c:	84 0b       	sbc	r24, r20
+    149e:	ba f0       	brmi	.+46     	; 0x14ce <__addsf3x+0x9c>
+    14a0:	91 50       	subi	r25, 0x01	; 1
+    14a2:	a1 f0       	breq	.+40     	; 0x14cc <__addsf3x+0x9a>
+    14a4:	ff 0f       	add	r31, r31
+    14a6:	bb 1f       	adc	r27, r27
+    14a8:	66 1f       	adc	r22, r22
+    14aa:	77 1f       	adc	r23, r23
+    14ac:	88 1f       	adc	r24, r24
+    14ae:	c2 f7       	brpl	.-16     	; 0x14a0 <__addsf3x+0x6e>
+    14b0:	0e c0       	rjmp	.+28     	; 0x14ce <__addsf3x+0x9c>
+    14b2:	ba 0f       	add	r27, r26
+    14b4:	62 1f       	adc	r22, r18
+    14b6:	73 1f       	adc	r23, r19
+    14b8:	84 1f       	adc	r24, r20
+    14ba:	48 f4       	brcc	.+18     	; 0x14ce <__addsf3x+0x9c>
+    14bc:	87 95       	ror	r24
+    14be:	77 95       	ror	r23
+    14c0:	67 95       	ror	r22
+    14c2:	b7 95       	ror	r27
+    14c4:	f7 95       	ror	r31
+    14c6:	9e 3f       	cpi	r25, 0xFE	; 254
+    14c8:	08 f0       	brcs	.+2      	; 0x14cc <__addsf3x+0x9a>
+    14ca:	b0 cf       	rjmp	.-160    	; 0x142c <__addsf3+0x28>
+    14cc:	93 95       	inc	r25
+    14ce:	88 0f       	add	r24, r24
+    14d0:	08 f0       	brcs	.+2      	; 0x14d4 <__addsf3x+0xa2>
+    14d2:	99 27       	eor	r25, r25
+    14d4:	ee 0f       	add	r30, r30
+    14d6:	97 95       	ror	r25
+    14d8:	87 95       	ror	r24
+    14da:	08 95       	ret
+
+000014dc <__divsf3>:
+    14dc:	0e 94 82 0a 	call	0x1504	; 0x1504 <__divsf3x>
+    14e0:	0c 94 63 0b 	jmp	0x16c6	; 0x16c6 <__fp_round>
+    14e4:	0e 94 5c 0b 	call	0x16b8	; 0x16b8 <__fp_pscB>
+    14e8:	58 f0       	brcs	.+22     	; 0x1500 <__divsf3+0x24>
+    14ea:	0e 94 55 0b 	call	0x16aa	; 0x16aa <__fp_pscA>
+    14ee:	40 f0       	brcs	.+16     	; 0x1500 <__divsf3+0x24>
+    14f0:	29 f4       	brne	.+10     	; 0x14fc <__divsf3+0x20>
+    14f2:	5f 3f       	cpi	r21, 0xFF	; 255
+    14f4:	29 f0       	breq	.+10     	; 0x1500 <__divsf3+0x24>
+    14f6:	0c 94 4c 0b 	jmp	0x1698	; 0x1698 <__fp_inf>
+    14fa:	51 11       	cpse	r21, r1
+    14fc:	0c 94 97 0b 	jmp	0x172e	; 0x172e <__fp_szero>
+    1500:	0c 94 52 0b 	jmp	0x16a4	; 0x16a4 <__fp_nan>
+
+00001504 <__divsf3x>:
+    1504:	0e 94 74 0b 	call	0x16e8	; 0x16e8 <__fp_split3>
+    1508:	68 f3       	brcs	.-38     	; 0x14e4 <__divsf3+0x8>
+
+0000150a <__divsf3_pse>:
+    150a:	99 23       	and	r25, r25
+    150c:	b1 f3       	breq	.-20     	; 0x14fa <__divsf3+0x1e>
+    150e:	55 23       	and	r21, r21
+    1510:	91 f3       	breq	.-28     	; 0x14f6 <__divsf3+0x1a>
+    1512:	95 1b       	sub	r25, r21
+    1514:	55 0b       	sbc	r21, r21
+    1516:	bb 27       	eor	r27, r27
+    1518:	aa 27       	eor	r26, r26
+    151a:	62 17       	cp	r22, r18
+    151c:	73 07       	cpc	r23, r19
+    151e:	84 07       	cpc	r24, r20
+    1520:	38 f0       	brcs	.+14     	; 0x1530 <__divsf3_pse+0x26>
+    1522:	9f 5f       	subi	r25, 0xFF	; 255
+    1524:	5f 4f       	sbci	r21, 0xFF	; 255
+    1526:	22 0f       	add	r18, r18
+    1528:	33 1f       	adc	r19, r19
+    152a:	44 1f       	adc	r20, r20
+    152c:	aa 1f       	adc	r26, r26
+    152e:	a9 f3       	breq	.-22     	; 0x151a <__divsf3_pse+0x10>
+    1530:	35 d0       	rcall	.+106    	; 0x159c <__divsf3_pse+0x92>
+    1532:	0e 2e       	mov	r0, r30
+    1534:	3a f0       	brmi	.+14     	; 0x1544 <__divsf3_pse+0x3a>
+    1536:	e0 e8       	ldi	r30, 0x80	; 128
+    1538:	32 d0       	rcall	.+100    	; 0x159e <__divsf3_pse+0x94>
+    153a:	91 50       	subi	r25, 0x01	; 1
+    153c:	50 40       	sbci	r21, 0x00	; 0
+    153e:	e6 95       	lsr	r30
+    1540:	00 1c       	adc	r0, r0
+    1542:	ca f7       	brpl	.-14     	; 0x1536 <__divsf3_pse+0x2c>
+    1544:	2b d0       	rcall	.+86     	; 0x159c <__divsf3_pse+0x92>
+    1546:	fe 2f       	mov	r31, r30
+    1548:	29 d0       	rcall	.+82     	; 0x159c <__divsf3_pse+0x92>
+    154a:	66 0f       	add	r22, r22
+    154c:	77 1f       	adc	r23, r23
+    154e:	88 1f       	adc	r24, r24
+    1550:	bb 1f       	adc	r27, r27
+    1552:	26 17       	cp	r18, r22
+    1554:	37 07       	cpc	r19, r23
+    1556:	48 07       	cpc	r20, r24
+    1558:	ab 07       	cpc	r26, r27
+    155a:	b0 e8       	ldi	r27, 0x80	; 128
+    155c:	09 f0       	breq	.+2      	; 0x1560 <__divsf3_pse+0x56>
+    155e:	bb 0b       	sbc	r27, r27
+    1560:	80 2d       	mov	r24, r0
+    1562:	bf 01       	movw	r22, r30
+    1564:	ff 27       	eor	r31, r31
+    1566:	93 58       	subi	r25, 0x83	; 131
+    1568:	5f 4f       	sbci	r21, 0xFF	; 255
+    156a:	3a f0       	brmi	.+14     	; 0x157a <__divsf3_pse+0x70>
+    156c:	9e 3f       	cpi	r25, 0xFE	; 254
+    156e:	51 05       	cpc	r21, r1
+    1570:	78 f0       	brcs	.+30     	; 0x1590 <__divsf3_pse+0x86>
+    1572:	0c 94 4c 0b 	jmp	0x1698	; 0x1698 <__fp_inf>
+    1576:	0c 94 97 0b 	jmp	0x172e	; 0x172e <__fp_szero>
+    157a:	5f 3f       	cpi	r21, 0xFF	; 255
+    157c:	e4 f3       	brlt	.-8      	; 0x1576 <__divsf3_pse+0x6c>
+    157e:	98 3e       	cpi	r25, 0xE8	; 232
+    1580:	d4 f3       	brlt	.-12     	; 0x1576 <__divsf3_pse+0x6c>
+    1582:	86 95       	lsr	r24
+    1584:	77 95       	ror	r23
+    1586:	67 95       	ror	r22
+    1588:	b7 95       	ror	r27
+    158a:	f7 95       	ror	r31
+    158c:	9f 5f       	subi	r25, 0xFF	; 255
+    158e:	c9 f7       	brne	.-14     	; 0x1582 <__divsf3_pse+0x78>
+    1590:	88 0f       	add	r24, r24
+    1592:	91 1d       	adc	r25, r1
+    1594:	96 95       	lsr	r25
+    1596:	87 95       	ror	r24
+    1598:	97 f9       	bld	r25, 7
+    159a:	08 95       	ret
+    159c:	e1 e0       	ldi	r30, 0x01	; 1
+    159e:	66 0f       	add	r22, r22
+    15a0:	77 1f       	adc	r23, r23
+    15a2:	88 1f       	adc	r24, r24
+    15a4:	bb 1f       	adc	r27, r27
+    15a6:	62 17       	cp	r22, r18
+    15a8:	73 07       	cpc	r23, r19
+    15aa:	84 07       	cpc	r24, r20
+    15ac:	ba 07       	cpc	r27, r26
+    15ae:	20 f0       	brcs	.+8      	; 0x15b8 <__divsf3_pse+0xae>
+    15b0:	62 1b       	sub	r22, r18
+    15b2:	73 0b       	sbc	r23, r19
+    15b4:	84 0b       	sbc	r24, r20
+    15b6:	ba 0b       	sbc	r27, r26
+    15b8:	ee 1f       	adc	r30, r30
+    15ba:	88 f7       	brcc	.-30     	; 0x159e <__divsf3_pse+0x94>
+    15bc:	e0 95       	com	r30
+    15be:	08 95       	ret
+
+000015c0 <__fixunssfsi>:
+    15c0:	0e 94 7c 0b 	call	0x16f8	; 0x16f8 <__fp_splitA>
+    15c4:	88 f0       	brcs	.+34     	; 0x15e8 <__fixunssfsi+0x28>
+    15c6:	9f 57       	subi	r25, 0x7F	; 127
+    15c8:	98 f0       	brcs	.+38     	; 0x15f0 <__fixunssfsi+0x30>
+    15ca:	b9 2f       	mov	r27, r25
+    15cc:	99 27       	eor	r25, r25
+    15ce:	b7 51       	subi	r27, 0x17	; 23
+    15d0:	b0 f0       	brcs	.+44     	; 0x15fe <__fixunssfsi+0x3e>
+    15d2:	e1 f0       	breq	.+56     	; 0x160c <__fixunssfsi+0x4c>
+    15d4:	66 0f       	add	r22, r22
+    15d6:	77 1f       	adc	r23, r23
+    15d8:	88 1f       	adc	r24, r24
+    15da:	99 1f       	adc	r25, r25
+    15dc:	1a f0       	brmi	.+6      	; 0x15e4 <__fixunssfsi+0x24>
+    15de:	ba 95       	dec	r27
+    15e0:	c9 f7       	brne	.-14     	; 0x15d4 <__fixunssfsi+0x14>
+    15e2:	14 c0       	rjmp	.+40     	; 0x160c <__fixunssfsi+0x4c>
+    15e4:	b1 30       	cpi	r27, 0x01	; 1
+    15e6:	91 f0       	breq	.+36     	; 0x160c <__fixunssfsi+0x4c>
+    15e8:	0e 94 96 0b 	call	0x172c	; 0x172c <__fp_zero>
+    15ec:	b1 e0       	ldi	r27, 0x01	; 1
+    15ee:	08 95       	ret
+    15f0:	0c 94 96 0b 	jmp	0x172c	; 0x172c <__fp_zero>
+    15f4:	67 2f       	mov	r22, r23
+    15f6:	78 2f       	mov	r23, r24
+    15f8:	88 27       	eor	r24, r24
+    15fa:	b8 5f       	subi	r27, 0xF8	; 248
+    15fc:	39 f0       	breq	.+14     	; 0x160c <__fixunssfsi+0x4c>
+    15fe:	b9 3f       	cpi	r27, 0xF9	; 249
+    1600:	cc f3       	brlt	.-14     	; 0x15f4 <__fixunssfsi+0x34>
+    1602:	86 95       	lsr	r24
+    1604:	77 95       	ror	r23
+    1606:	67 95       	ror	r22
+    1608:	b3 95       	inc	r27
+    160a:	d9 f7       	brne	.-10     	; 0x1602 <__fixunssfsi+0x42>
+    160c:	3e f4       	brtc	.+14     	; 0x161c <__fixunssfsi+0x5c>
+    160e:	90 95       	com	r25
+    1610:	80 95       	com	r24
+    1612:	70 95       	com	r23
+    1614:	61 95       	neg	r22
+    1616:	7f 4f       	sbci	r23, 0xFF	; 255
+    1618:	8f 4f       	sbci	r24, 0xFF	; 255
+    161a:	9f 4f       	sbci	r25, 0xFF	; 255
+    161c:	08 95       	ret
+
+0000161e <__floatunsisf>:
+    161e:	e8 94       	clt
+    1620:	09 c0       	rjmp	.+18     	; 0x1634 <__floatsisf+0x12>
+
+00001622 <__floatsisf>:
+    1622:	97 fb       	bst	r25, 7
+    1624:	3e f4       	brtc	.+14     	; 0x1634 <__floatsisf+0x12>
+    1626:	90 95       	com	r25
+    1628:	80 95       	com	r24
+    162a:	70 95       	com	r23
+    162c:	61 95       	neg	r22
+    162e:	7f 4f       	sbci	r23, 0xFF	; 255
+    1630:	8f 4f       	sbci	r24, 0xFF	; 255
+    1632:	9f 4f       	sbci	r25, 0xFF	; 255
+    1634:	99 23       	and	r25, r25
+    1636:	a9 f0       	breq	.+42     	; 0x1662 <__floatsisf+0x40>
+    1638:	f9 2f       	mov	r31, r25
+    163a:	96 e9       	ldi	r25, 0x96	; 150
+    163c:	bb 27       	eor	r27, r27
+    163e:	93 95       	inc	r25
+    1640:	f6 95       	lsr	r31
+    1642:	87 95       	ror	r24
+    1644:	77 95       	ror	r23
+    1646:	67 95       	ror	r22
+    1648:	b7 95       	ror	r27
+    164a:	f1 11       	cpse	r31, r1
+    164c:	f8 cf       	rjmp	.-16     	; 0x163e <__floatsisf+0x1c>
+    164e:	fa f4       	brpl	.+62     	; 0x168e <__floatsisf+0x6c>
+    1650:	bb 0f       	add	r27, r27
+    1652:	11 f4       	brne	.+4      	; 0x1658 <__floatsisf+0x36>
+    1654:	60 ff       	sbrs	r22, 0
+    1656:	1b c0       	rjmp	.+54     	; 0x168e <__floatsisf+0x6c>
+    1658:	6f 5f       	subi	r22, 0xFF	; 255
+    165a:	7f 4f       	sbci	r23, 0xFF	; 255
+    165c:	8f 4f       	sbci	r24, 0xFF	; 255
+    165e:	9f 4f       	sbci	r25, 0xFF	; 255
+    1660:	16 c0       	rjmp	.+44     	; 0x168e <__floatsisf+0x6c>
+    1662:	88 23       	and	r24, r24
+    1664:	11 f0       	breq	.+4      	; 0x166a <__floatsisf+0x48>
+    1666:	96 e9       	ldi	r25, 0x96	; 150
+    1668:	11 c0       	rjmp	.+34     	; 0x168c <__floatsisf+0x6a>
+    166a:	77 23       	and	r23, r23
+    166c:	21 f0       	breq	.+8      	; 0x1676 <__floatsisf+0x54>
+    166e:	9e e8       	ldi	r25, 0x8E	; 142
+    1670:	87 2f       	mov	r24, r23
+    1672:	76 2f       	mov	r23, r22
+    1674:	05 c0       	rjmp	.+10     	; 0x1680 <__floatsisf+0x5e>
+    1676:	66 23       	and	r22, r22
+    1678:	71 f0       	breq	.+28     	; 0x1696 <__floatsisf+0x74>
+    167a:	96 e8       	ldi	r25, 0x86	; 134
+    167c:	86 2f       	mov	r24, r22
+    167e:	70 e0       	ldi	r23, 0x00	; 0
+    1680:	60 e0       	ldi	r22, 0x00	; 0
+    1682:	2a f0       	brmi	.+10     	; 0x168e <__floatsisf+0x6c>
+    1684:	9a 95       	dec	r25
+    1686:	66 0f       	add	r22, r22
+    1688:	77 1f       	adc	r23, r23
+    168a:	88 1f       	adc	r24, r24
+    168c:	da f7       	brpl	.-10     	; 0x1684 <__floatsisf+0x62>
+    168e:	88 0f       	add	r24, r24
+    1690:	96 95       	lsr	r25
+    1692:	87 95       	ror	r24
+    1694:	97 f9       	bld	r25, 7
+    1696:	08 95       	ret
+
+00001698 <__fp_inf>:
+    1698:	97 f9       	bld	r25, 7
+    169a:	9f 67       	ori	r25, 0x7F	; 127
+    169c:	80 e8       	ldi	r24, 0x80	; 128
+    169e:	70 e0       	ldi	r23, 0x00	; 0
+    16a0:	60 e0       	ldi	r22, 0x00	; 0
+    16a2:	08 95       	ret
+
+000016a4 <__fp_nan>:
+    16a4:	9f ef       	ldi	r25, 0xFF	; 255
+    16a6:	80 ec       	ldi	r24, 0xC0	; 192
+    16a8:	08 95       	ret
+
+000016aa <__fp_pscA>:
+    16aa:	00 24       	eor	r0, r0
+    16ac:	0a 94       	dec	r0
+    16ae:	16 16       	cp	r1, r22
+    16b0:	17 06       	cpc	r1, r23
+    16b2:	18 06       	cpc	r1, r24
+    16b4:	09 06       	cpc	r0, r25
+    16b6:	08 95       	ret
+
+000016b8 <__fp_pscB>:
+    16b8:	00 24       	eor	r0, r0
+    16ba:	0a 94       	dec	r0
+    16bc:	12 16       	cp	r1, r18
+    16be:	13 06       	cpc	r1, r19
+    16c0:	14 06       	cpc	r1, r20
+    16c2:	05 06       	cpc	r0, r21
+    16c4:	08 95       	ret
+
+000016c6 <__fp_round>:
+    16c6:	09 2e       	mov	r0, r25
+    16c8:	03 94       	inc	r0
+    16ca:	00 0c       	add	r0, r0
+    16cc:	11 f4       	brne	.+4      	; 0x16d2 <__fp_round+0xc>
+    16ce:	88 23       	and	r24, r24
+    16d0:	52 f0       	brmi	.+20     	; 0x16e6 <__fp_round+0x20>
+    16d2:	bb 0f       	add	r27, r27
+    16d4:	40 f4       	brcc	.+16     	; 0x16e6 <__fp_round+0x20>
+    16d6:	bf 2b       	or	r27, r31
+    16d8:	11 f4       	brne	.+4      	; 0x16de <__fp_round+0x18>
+    16da:	60 ff       	sbrs	r22, 0
+    16dc:	04 c0       	rjmp	.+8      	; 0x16e6 <__fp_round+0x20>
+    16de:	6f 5f       	subi	r22, 0xFF	; 255
+    16e0:	7f 4f       	sbci	r23, 0xFF	; 255
+    16e2:	8f 4f       	sbci	r24, 0xFF	; 255
+    16e4:	9f 4f       	sbci	r25, 0xFF	; 255
+    16e6:	08 95       	ret
+
+000016e8 <__fp_split3>:
+    16e8:	57 fd       	sbrc	r21, 7
+    16ea:	90 58       	subi	r25, 0x80	; 128
+    16ec:	44 0f       	add	r20, r20
+    16ee:	55 1f       	adc	r21, r21
+    16f0:	59 f0       	breq	.+22     	; 0x1708 <__fp_splitA+0x10>
+    16f2:	5f 3f       	cpi	r21, 0xFF	; 255
+    16f4:	71 f0       	breq	.+28     	; 0x1712 <__fp_splitA+0x1a>
+    16f6:	47 95       	ror	r20
+
+000016f8 <__fp_splitA>:
+    16f8:	88 0f       	add	r24, r24
+    16fa:	97 fb       	bst	r25, 7
+    16fc:	99 1f       	adc	r25, r25
+    16fe:	61 f0       	breq	.+24     	; 0x1718 <__fp_splitA+0x20>
+    1700:	9f 3f       	cpi	r25, 0xFF	; 255
+    1702:	79 f0       	breq	.+30     	; 0x1722 <__fp_splitA+0x2a>
+    1704:	87 95       	ror	r24
+    1706:	08 95       	ret
+    1708:	12 16       	cp	r1, r18
+    170a:	13 06       	cpc	r1, r19
+    170c:	14 06       	cpc	r1, r20
+    170e:	55 1f       	adc	r21, r21
+    1710:	f2 cf       	rjmp	.-28     	; 0x16f6 <__fp_split3+0xe>
+    1712:	46 95       	lsr	r20
+    1714:	f1 df       	rcall	.-30     	; 0x16f8 <__fp_splitA>
+    1716:	08 c0       	rjmp	.+16     	; 0x1728 <__fp_splitA+0x30>
+    1718:	16 16       	cp	r1, r22
+    171a:	17 06       	cpc	r1, r23
+    171c:	18 06       	cpc	r1, r24
+    171e:	99 1f       	adc	r25, r25
+    1720:	f1 cf       	rjmp	.-30     	; 0x1704 <__fp_splitA+0xc>
+    1722:	86 95       	lsr	r24
+    1724:	71 05       	cpc	r23, r1
+    1726:	61 05       	cpc	r22, r1
+    1728:	08 94       	sec
+    172a:	08 95       	ret
+
+0000172c <__fp_zero>:
+    172c:	e8 94       	clt
+
+0000172e <__fp_szero>:
+    172e:	bb 27       	eor	r27, r27
+    1730:	66 27       	eor	r22, r22
+    1732:	77 27       	eor	r23, r23
+    1734:	cb 01       	movw	r24, r22
+    1736:	97 f9       	bld	r25, 7
+    1738:	08 95       	ret
+
+0000173a <__gesf2>:
+    173a:	0e 94 0f 0c 	call	0x181e	; 0x181e <__fp_cmp>
+    173e:	08 f4       	brcc	.+2      	; 0x1742 <__gesf2+0x8>
+    1740:	8f ef       	ldi	r24, 0xFF	; 255
+    1742:	08 95       	ret
+
+00001744 <__mulsf3>:
+    1744:	0e 94 b5 0b 	call	0x176a	; 0x176a <__mulsf3x>
+    1748:	0c 94 63 0b 	jmp	0x16c6	; 0x16c6 <__fp_round>
+    174c:	0e 94 55 0b 	call	0x16aa	; 0x16aa <__fp_pscA>
+    1750:	38 f0       	brcs	.+14     	; 0x1760 <__mulsf3+0x1c>
+    1752:	0e 94 5c 0b 	call	0x16b8	; 0x16b8 <__fp_pscB>
+    1756:	20 f0       	brcs	.+8      	; 0x1760 <__mulsf3+0x1c>
+    1758:	95 23       	and	r25, r21
+    175a:	11 f0       	breq	.+4      	; 0x1760 <__mulsf3+0x1c>
+    175c:	0c 94 4c 0b 	jmp	0x1698	; 0x1698 <__fp_inf>
+    1760:	0c 94 52 0b 	jmp	0x16a4	; 0x16a4 <__fp_nan>
+    1764:	11 24       	eor	r1, r1
+    1766:	0c 94 97 0b 	jmp	0x172e	; 0x172e <__fp_szero>
+
+0000176a <__mulsf3x>:
+    176a:	0e 94 74 0b 	call	0x16e8	; 0x16e8 <__fp_split3>
+    176e:	70 f3       	brcs	.-36     	; 0x174c <__mulsf3+0x8>
+
+00001770 <__mulsf3_pse>:
+    1770:	95 9f       	mul	r25, r21
+    1772:	c1 f3       	breq	.-16     	; 0x1764 <__mulsf3+0x20>
+    1774:	95 0f       	add	r25, r21
+    1776:	50 e0       	ldi	r21, 0x00	; 0
+    1778:	55 1f       	adc	r21, r21
+    177a:	62 9f       	mul	r22, r18
+    177c:	f0 01       	movw	r30, r0
+    177e:	72 9f       	mul	r23, r18
+    1780:	bb 27       	eor	r27, r27
+    1782:	f0 0d       	add	r31, r0
+    1784:	b1 1d       	adc	r27, r1
+    1786:	63 9f       	mul	r22, r19
+    1788:	aa 27       	eor	r26, r26
+    178a:	f0 0d       	add	r31, r0
+    178c:	b1 1d       	adc	r27, r1
+    178e:	aa 1f       	adc	r26, r26
+    1790:	64 9f       	mul	r22, r20
+    1792:	66 27       	eor	r22, r22
+    1794:	b0 0d       	add	r27, r0
+    1796:	a1 1d       	adc	r26, r1
+    1798:	66 1f       	adc	r22, r22
+    179a:	82 9f       	mul	r24, r18
+    179c:	22 27       	eor	r18, r18
+    179e:	b0 0d       	add	r27, r0
+    17a0:	a1 1d       	adc	r26, r1
+    17a2:	62 1f       	adc	r22, r18
+    17a4:	73 9f       	mul	r23, r19
+    17a6:	b0 0d       	add	r27, r0
+    17a8:	a1 1d       	adc	r26, r1
+    17aa:	62 1f       	adc	r22, r18
+    17ac:	83 9f       	mul	r24, r19
+    17ae:	a0 0d       	add	r26, r0
+    17b0:	61 1d       	adc	r22, r1
+    17b2:	22 1f       	adc	r18, r18
+    17b4:	74 9f       	mul	r23, r20
+    17b6:	33 27       	eor	r19, r19
+    17b8:	a0 0d       	add	r26, r0
+    17ba:	61 1d       	adc	r22, r1
+    17bc:	23 1f       	adc	r18, r19
+    17be:	84 9f       	mul	r24, r20
+    17c0:	60 0d       	add	r22, r0
+    17c2:	21 1d       	adc	r18, r1
+    17c4:	82 2f       	mov	r24, r18
+    17c6:	76 2f       	mov	r23, r22
+    17c8:	6a 2f       	mov	r22, r26
+    17ca:	11 24       	eor	r1, r1
+    17cc:	9f 57       	subi	r25, 0x7F	; 127
+    17ce:	50 40       	sbci	r21, 0x00	; 0
+    17d0:	9a f0       	brmi	.+38     	; 0x17f8 <__mulsf3_pse+0x88>
+    17d2:	f1 f0       	breq	.+60     	; 0x1810 <__mulsf3_pse+0xa0>
+    17d4:	88 23       	and	r24, r24
+    17d6:	4a f0       	brmi	.+18     	; 0x17ea <__mulsf3_pse+0x7a>
+    17d8:	ee 0f       	add	r30, r30
+    17da:	ff 1f       	adc	r31, r31
+    17dc:	bb 1f       	adc	r27, r27
+    17de:	66 1f       	adc	r22, r22
+    17e0:	77 1f       	adc	r23, r23
+    17e2:	88 1f       	adc	r24, r24
+    17e4:	91 50       	subi	r25, 0x01	; 1
+    17e6:	50 40       	sbci	r21, 0x00	; 0
+    17e8:	a9 f7       	brne	.-22     	; 0x17d4 <__mulsf3_pse+0x64>
+    17ea:	9e 3f       	cpi	r25, 0xFE	; 254
+    17ec:	51 05       	cpc	r21, r1
+    17ee:	80 f0       	brcs	.+32     	; 0x1810 <__mulsf3_pse+0xa0>
+    17f0:	0c 94 4c 0b 	jmp	0x1698	; 0x1698 <__fp_inf>
+    17f4:	0c 94 97 0b 	jmp	0x172e	; 0x172e <__fp_szero>
+    17f8:	5f 3f       	cpi	r21, 0xFF	; 255
+    17fa:	e4 f3       	brlt	.-8      	; 0x17f4 <__mulsf3_pse+0x84>
+    17fc:	98 3e       	cpi	r25, 0xE8	; 232
+    17fe:	d4 f3       	brlt	.-12     	; 0x17f4 <__mulsf3_pse+0x84>
+    1800:	86 95       	lsr	r24
+    1802:	77 95       	ror	r23
+    1804:	67 95       	ror	r22
+    1806:	b7 95       	ror	r27
+    1808:	f7 95       	ror	r31
+    180a:	e7 95       	ror	r30
+    180c:	9f 5f       	subi	r25, 0xFF	; 255
+    180e:	c1 f7       	brne	.-16     	; 0x1800 <__mulsf3_pse+0x90>
+    1810:	fe 2b       	or	r31, r30
+    1812:	88 0f       	add	r24, r24
+    1814:	91 1d       	adc	r25, r1
+    1816:	96 95       	lsr	r25
+    1818:	87 95       	ror	r24
+    181a:	97 f9       	bld	r25, 7
+    181c:	08 95       	ret
+
+0000181e <__fp_cmp>:
+    181e:	99 0f       	add	r25, r25
+    1820:	00 08       	sbc	r0, r0
+    1822:	55 0f       	add	r21, r21
+    1824:	aa 0b       	sbc	r26, r26
+    1826:	e0 e8       	ldi	r30, 0x80	; 128
+    1828:	fe ef       	ldi	r31, 0xFE	; 254
+    182a:	16 16       	cp	r1, r22
+    182c:	17 06       	cpc	r1, r23
+    182e:	e8 07       	cpc	r30, r24
+    1830:	f9 07       	cpc	r31, r25
+    1832:	c0 f0       	brcs	.+48     	; 0x1864 <__fp_cmp+0x46>
+    1834:	12 16       	cp	r1, r18
+    1836:	13 06       	cpc	r1, r19
+    1838:	e4 07       	cpc	r30, r20
+    183a:	f5 07       	cpc	r31, r21
+    183c:	98 f0       	brcs	.+38     	; 0x1864 <__fp_cmp+0x46>
+    183e:	62 1b       	sub	r22, r18
+    1840:	73 0b       	sbc	r23, r19
+    1842:	84 0b       	sbc	r24, r20
+    1844:	95 0b       	sbc	r25, r21
+    1846:	39 f4       	brne	.+14     	; 0x1856 <__fp_cmp+0x38>
+    1848:	0a 26       	eor	r0, r26
+    184a:	61 f0       	breq	.+24     	; 0x1864 <__fp_cmp+0x46>
+    184c:	23 2b       	or	r18, r19
+    184e:	24 2b       	or	r18, r20
+    1850:	25 2b       	or	r18, r21
+    1852:	21 f4       	brne	.+8      	; 0x185c <__fp_cmp+0x3e>
+    1854:	08 95       	ret
+    1856:	0a 26       	eor	r0, r26
+    1858:	09 f4       	brne	.+2      	; 0x185c <__fp_cmp+0x3e>
+    185a:	a1 40       	sbci	r26, 0x01	; 1
+    185c:	a6 95       	lsr	r26
+    185e:	8f ef       	ldi	r24, 0xFF	; 255
+    1860:	81 1d       	adc	r24, r1
+    1862:	81 1d       	adc	r24, r1
+    1864:	08 95       	ret
+
+00001866 <__tablejump2__>:
+    1866:	ee 0f       	add	r30, r30
+    1868:	ff 1f       	adc	r31, r31
+    186a:	05 90       	lpm	r0, Z+
+    186c:	f4 91       	lpm	r31, Z
+    186e:	e0 2d       	mov	r30, r0
+    1870:	09 94       	ijmp
+
+00001872 <_exit>:
+    1872:	f8 94       	cli
+
+00001874 <__stop_program>:
+    1874:	ff cf       	rjmp	.-2      	; 0x1874 <__stop_program>

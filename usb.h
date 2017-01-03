@@ -29,8 +29,6 @@ extern "C" void USB_COM_vect(void) __attribute__ ((signal));
 #define GET_DESCRIPTOR_STRING     0x03
 #define GET_DESCRIPTOR_QUALIFER   0x06
 
-typedef bool (*functptr)(void *);
-
 #pragma pack(1)
 
 union USB_Request_Header_Extend{
@@ -120,6 +118,9 @@ struct USB_Endpoint_Descriptor{
   uint8_t  bInterval;        /* Interval for polling EP in ms */
 };
 
+typedef bool (*functptr)(void *);
+typedef bool (*functCtrlptr)(void *, USB_Request_Header);
+
 enum upType{CONTROL,ISOCHR,BULK,INT};
 enum upDirection{OUT,IN};
 enum upBank{ONE,TWO};
@@ -175,6 +176,7 @@ class USB{
     uint8_t epCounter;
 
     wchar_t *strings[50];
+    volatile functCtrlptr extendControl;
     volatile functptr epEvents[7];
     USB_Endpoint_Descriptor epDescriptors[7];    
     USB_Endpoint_Definition epDefinitions[7];
@@ -196,6 +198,7 @@ class USB{
     void readBuf(uint8_t *buffer, uint8_t size);
     void writeBuf(const uint8_t *buffer, uint8_t bufSize, uint8_t maxSize);
     void registerCallback(uint8_t num, functptr funct);
+    void registerControlCallback(functCtrlptr funct);
     void clearStall(uint8_t num);
 
     static void onComEvent(USB *handle);

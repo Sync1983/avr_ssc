@@ -13,6 +13,20 @@
 #include "../pincontrol.h"
 extern "C" void TIMER0_COMPA_vect(void) __attribute__ ((signal));
 extern "C" void TIMER0_COMPB_vect(void) __attribute__ ((signal));
+extern bool isFault;
+extern volatile int16_t dZeroA;
+extern volatile int16_t dZeroB;
+extern volatile int16_t dZeroC;
+#ifndef TIMER_STEP_STOP
+#define TIMER_STEP_STOP    TCCR0B  = 0b00000000;
+#endif
+
+#ifndef TIMER_INIT_START
+#define TIMER_INIT_START  TCCR0B  = 0b00000011;
+#endif
+
+
+
 
 class StepControl{
   private:    
@@ -25,21 +39,26 @@ class StepControl{
     int8_t  dirA, dirB, dirC;
     
     bool    isOnPoint;
-    
-    pinIO   *dirStepA, *dirStepB, *dirStepC;
   protected:
     void setCoils();
+    bool initAxist(uint8_t num);
+    uint8_t fallMask();
+    uint8_t raiseMask();
   public:
     bool isDone();
-    void init(pinIO *DIR_A, pinIO *DIR_B, pinIO *DIR_C);
+    void init();
     uint8_t goTo(int16_t A, int16_t B, int16_t C, uint8_t coils);    
     int16_t getPosA();
     int16_t getPosB();
     int16_t getPosC();
     uint8_t getCoils();
+    uint8_t getInputs();
+    void proclaimPois(uint8_t num, int16_t pos);
+    bool initialize();
+     
 
-    static uint8_t onRise(StepControl *control);
-    static uint8_t onFall(StepControl *control);
+    static void onRise(StepControl *control);
+    static void onFall(StepControl *control);
     friend void TIMER0_COMPA_vect( void );
     friend void TIMER0_COMPB_vect( void );
 };

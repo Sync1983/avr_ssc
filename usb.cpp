@@ -232,11 +232,15 @@ bool USB::initInternalEndpoint(const uint8_t num, upType type, upDirection dir,u
 }
 
 void USB::registerCallback(uint8_t num, functptr funct){
-  if( (num == 0) || (num > 6) ){
+  if( (num ==0) | (num > 6) ){
     return;
   }
 
   epEvents[num] = funct;
+}
+
+void USB::registerControlCallback(functCtrlptr funct){
+  this->extendControl = funct;
 }
 
 inline void USB::ControlRequest(){
@@ -288,8 +292,8 @@ inline void USB::ControlRequest(){
         accepted = false;        
       break;
     default:
-      if( this->epEvents[0] != 0){
-        accepted = epEvents[0](this);
+      if( this->extendControl != 0){
+        accepted = extendControl(this, this->controlHeader);
       } else {
         accepted = false;
       }
